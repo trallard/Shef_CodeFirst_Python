@@ -1,0 +1,59 @@
+/** Customised template for slides  **/
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans');
+
+/*********************************************
+* PERSONAL
+*********************************************/
+$deep-carmine: #EF3A34;
+$white: #fff;
+$gray: #C1CAD6;
+$pineapple: #413C58;
+$blue: #119DA4;
+
+$title-font:'Lobster Two', cursive;
+$base-font: 'Open Sans', sans-serif;
+
+/*********************************************
+ * OVER WRITING
+ *********************************************/
+.reveal {
+  font-family: $base-font;}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: $deep-carmine;
+  font-family: $title-font;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+  color: $blue;
+}
+
+.reveal .controls {
+  color: $pineapple; }
+
+.reveal .progress span {
+  background: $pineapple;}
+
+
+/*********************************************
+ * Adding logo
+ *********************************************/
+ .logo{
+   position: fixed;
+    display: block;
+    left: 8px;
+    bottom: 8px;
+    z-index: 31;
+    background-image: url("../../assets/CF-logo.png");
+    background-size: 20%;
+    background-position: 0% 100%;
+    background-repeat: no-repeat; }
