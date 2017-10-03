@@ -1,5 +1,5 @@
 /** Customised template for slides  **/
-@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans:400+400i");
 /*********************************************
 * PERSONAL
 *********************************************/
@@ -26,13 +26,13 @@
   color: #119DA4; }
 
 .reveal .controls {
-  color: #413C58; }
+  color: #C1CAD6; }
 
 .reveal .progress span {
-  background: #413C58; }
+  background: #C1CAD6; }
 
 /*********************************************
- * Adding logo
+ * other
  *********************************************/
 .logo {
   position: fixed;
@@ -44,5 +44,12 @@
   background-size: 20%;
   background-position: 0% 100%;
   background-repeat: no-repeat; }
+
+.author {
+  font-family: "Open Sans", sans-serif;
+  color: #8E24AA;
+  font-size: 30px !important;
+  font-style: italic !important;
+  padding-top: 20px !important; }
 
 /*# sourceMappingURL=custom.css.map */

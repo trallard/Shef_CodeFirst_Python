@@ -1,13 +1,12 @@
 /** Customised template for slides  **/
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans:400+400i');
 
 /*********************************************
 * PERSONAL
 *********************************************/
 $deep-carmine: #EF3A34;
-$white: #fff;
 $gray: #C1CAD6;
-$pineapple: #413C58;
+$violet: #8E24AA;
 $blue: #119DA4;
 
 $title-font:'Lobster Two', cursive;
@@ -38,14 +37,14 @@ $base-font: 'Open Sans', sans-serif;
 }
 
 .reveal .controls {
-  color: $pineapple; }
+  color: $gray; }
 
 .reveal .progress span {
-  background: $pineapple;}
+  background: $gray;}
 
 
 /*********************************************
- * Adding logo
+ * other
  *********************************************/
  .logo{
    position: fixed;
@@ -57,3 +56,11 @@ $base-font: 'Open Sans', sans-serif;
     background-size: 20%;
     background-position: 0% 100%;
     background-repeat: no-repeat; }
+
+.author{
+  font-family: $base-font;
+  color: $violet;
+  font-size: 30px!important;
+  font-style: italic!important;
+  padding-top: 20px!important;
+}
