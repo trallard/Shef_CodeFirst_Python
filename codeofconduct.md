@@ -22,6 +22,13 @@ These guidelines aim to support a community where all people should feel safe to
 - Geographic location
 - Any other dimension of diversity
 
+
+Our main aim is not only to _teach individuals how to code_ but to **build a supportive and empowering community** for and by women interested in pursuing a career in tech.
+
+Hence all the instructors, attendees, helpers, ambassadors, and invited speakers have to adhere to this code of conduct.
+
+Behaviours violating this code of conduct will not be tolerated. If you witness any behaviour violating this CoC please inform your lead instructors: Tania Allard and Darren Vong.
+
 ## Expected Behavior
 The following behaviors are expected of all instructors
 and attendees of CodeFirst girls courses:
