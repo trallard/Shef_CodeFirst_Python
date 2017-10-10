@@ -113,3 +113,7 @@ Bad behaviour from any attendee o instructor will not be tolerated.
 Reports of harassment/discrimination will be promptly and thoroughly investigated by the people responsible for the safety of the space, event or activity. Appropriate measures will be taken to address the situation.
 
 Anyone asked to stop unacceptable behavior is expected to comply immediately. Violation of these guidelines can result in you being ask to leave an event or online space, either temporarily or for the duration of the event, or being banned from participation in spaces, or future events and activities in perpetuity.
+
+
+## Reporting
+If you believe you’re experiencing unacceptable behavior that will not be tolerated as outlined above, please contact t.allard@sheffield.ac.uk
