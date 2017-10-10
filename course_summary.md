@@ -1,5 +1,3 @@
-![logo](./assets/CFG-logo.png)
-
 # Code First Girls Advanced Python Course 2017
 
 # Course Summary
