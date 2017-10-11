@@ -59,7 +59,7 @@ Now you've got your brand new Python file saved, let's run it!
 
 | MAC / Linux users | Windows users |
 | --- | --- |
-| To begin, right click anywhere inside the file you just created, and pick the Copy File Path option. <img src='assets/s1_path.png' style='display: block; padding:10px' width='200px'> <br/> Next, you'll need to open your command line. You'll remember this from the pre-course notes. Note this is your Terminal app. <br/> Once the command line is open, type `python` (always in lowercase) followed by a space, and then paste the file path you just copied, inside quotation marks. The quotation marks make sure that everything works properly if you have spaces in any of your folder names. <br/><br/>What you type will look something like this: ```python "/users/andreas/cfg-python work/hello.py"```.<br/> Now all you need to do is hit enter, and you should see `Hello, World!` printed in your command line window. | Find the location of the file you just created (use your file Explorer) and right click anywhere in there. Now click on **Git Bash Here.** <img src='assets/s1_pathw.png' style='display: block; padding:10px' width='200px'> <br/> A terminal will open at the file location. <br/><br/>Once the terminal is open type: `python hello.py`. <br/>Now all you need to do is hit **enter** , and you should see `Hello, World!` printed in your command line window. |
+| To begin, right click anywhere inside the file you just created, and pick the Copy File Path option. <br/> <img src='assets/s1_path.png' style='display: block; padding:10px' width='200px'> <br/> Next, you'll need to open your command line. You'll remember this from the pre-course notes. Note this is your Terminal app. <br/> Once the command line is open, type `python` (always in lowercase) followed by a space, and then paste the file path you just copied, inside quotation marks. The quotation marks make sure that everything works properly if you have spaces in any of your folder names. <br/><br/>What you type will look something like this: ```python "/users/andreas/cfg-python work/hello.py"```.<br/> Now all you need to do is hit enter, and you should see `Hello, World!` printed in your command line window. | Find the location of the file you just created (use your file Explorer) and right click anywhere in there. Now click on **Git Bash Here.** <br/> <img src='assets/s1_pathw.png' style='display: block; padding:10px' width='200px'> <br/> A terminal will open at the file location. <br/><br/>Once the terminal is open type: `python hello.py`. <br/>Now all you need to do is hit **enter** , and you should see `Hello, World!` printed in your command line window. |
 
 Each line you type in your code editor is a single Python `statement` – a small piece of code that Python can evaluate to either produce a result or to do something. Python programs are simply long lists of statements spread across one or more (sometimes thousands!) of files. Python reads and performs each of these statements one after another.
 
@@ -79,7 +79,8 @@ You can do maths in Python too! Let's add some code to our hello.py file to solv
 
 ---
 #### Task
-**TASK:** Use your Python file to print answers in your command line for the following maths problems:
+
+Use your Python file to print answers in your command line for the following maths problems:
 - 5 - 6
 - 8 \* 9
 - 6 / 2
