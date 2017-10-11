@@ -39,7 +39,7 @@ During the beginners course you learned how to make HTML websites, to show infor
 
 On this course, you'll learn how to take things to the next level – you'll be making an interactive website that uses both Python and HTML to get information from your website's visitors, do stuff with it using internet services, and show results to your visitors, either on your website, or via email, Twitter, etc.
 
-You might hear us using the terms &quot;web application&quot; or &quot;web app&quot; or &quot;interactive website&quot; – for the purposes of this course, they all mean the same thing.
+You might hear us using the terms "web application" or "web app" or "interactive website" – for the purposes of this course, they all mean the same thing.
 
 #### Creating and running your first Python file script
 
@@ -47,17 +47,19 @@ Open your code editor (Atom or Sublime), and create a new file. In this file, le
 
 `print 'Hello, World!'`
 
-It doesn't matter if you use single or double quotation marks, as long as you use them together, in pairs. Now save your file – let's call it **hello.py** (the .py extension means we're dealing with a Python file).
+It doesn't matter if you use single or double quotation marks, as long as you use them together, in pairs.
+
+Now save your file – let's call it **hello.py** (the .py extension means we're dealing with a Python file).
 
 Did you notice anything change in your text editor when you saved the file?
 
-It's important that you don't name any of your folders for this course **ython.py** – things won't work if you do!
+It's important that you don't name any of your folders for this course **python.py** – things won't work if you do!
 
 Now you've got your brand new Python file saved, let's run it!
 
 | MAC / Linux users | Windows users |
 | --- | --- |
-| To begin, right click anywhere inside the file you just created, and pick the Copy File Path option: Next, you'll need to open your command line. You'll remember this from the pre-course notes. Note this is your Terminal app. Once the command line is open, type `python` (always in lowercase) followed by a space, and then paste the file path you just copied, inside quotation marks. The quotation marks make sure that everything works properly if you have spaces in any of your folder names. ** What you type will look something like this: `python &quot;/users/andreas/cfg-python work/hello.py` **. Now all you need to do is hit enter, and you should see `Hello, World!`` printed in your command line window. | Find the location of the file you just created (use your file Explorer) and right click anywhwere in there. Now click on **Git Bash Here.**  A terminal will open at the file location. Once the terminal is open type: `python hello.py`. Now all you need to do is hit **enter** , and you should see `Hello, World!` printed in your command line window. |
+| To begin, right click anywhere inside the file you just created, and pick the Copy File Path option. <img src='assets/s1_path.png' style='display: block; padding:10px' width='200px'> <br/> Next, you'll need to open your command line. You'll remember this from the pre-course notes. Note this is your Terminal app. <br/> Once the command line is open, type `python` (always in lowercase) followed by a space, and then paste the file path you just copied, inside quotation marks. The quotation marks make sure that everything works properly if you have spaces in any of your folder names. <br/><br/>What you type will look something like this: ```python "/users/andreas/cfg-python work/hello.py"```.<br/> Now all you need to do is hit enter, and you should see `Hello, World!` printed in your command line window. | Find the location of the file you just created (use your file Explorer) and right click anywhere in there. Now click on **Git Bash Here.** <img src='assets/s1_pathw.png' style='display: block; padding:10px' width='200px'> <br/> A terminal will open at the file location. <br/><br/>Once the terminal is open type: `python hello.py`. <br/>Now all you need to do is hit **enter** , and you should see `Hello, World!` printed in your command line window. |
 
 Each line you type in your code editor is a single Python `statement` – a small piece of code that Python can evaluate to either produce a result or to do something. Python programs are simply long lists of statements spread across one or more (sometimes thousands!) of files. Python reads and performs each of these statements one after another.
 
@@ -110,21 +112,21 @@ You might have seen a few results you didn't expect in the task above.
 
 If you give Python integers (whole numbers), it will do integer division. For example, 5 / 2 gives an answer of 2, because that's the largest whole number of times you can remove 2 from 5.
 
-If you give Python decimal numbers (called &quot;floating point numbers&quot; or &quot;floats&quot; in many programming languages) it will do normal division. Any number with a decimal point is considered to be a float.
+If you give Python decimal numbers (called "floating point numbers" or "floats" in many programming languages) it will do normal division. Any number with a decimal point is considered to be a float.
 
-You might remember from your school days that a remainder is just what's left over from your whole number division. We can use % (&quot;modulo&quot;) to get the remainder of an expression. So, 5 % 2, gives the answer 1.
+You might remember from your school days that a remainder is just what's left over from your whole number division. We can use % ("modulo") to get the remainder of an expression. So, 5 % 2, gives the answer 1.
 
 For a few more examples you can try, have a look at the homework at the end of these notes.
 
 #### Strings in Python
 
-At the start of today's session we printed some text. In most programming languages, values like this are called &quot;strings&quot;, because they're formed from a string of individual characters.
+At the start of today's session we printed some text. In most programming languages, values like this are called "strings", because they're formed from a string of individual characters.
 
-To write a string in Python you can either use ' or &quot;. In Python, 'hello' and &quot;hello&quot; are exactly the same. It doesn't matter whether you use a single quote or a double quote, but pick one and be consistent!
+To write a string in Python you can either use ' or ". In Python, 'hello' and "hello" are exactly the same. It doesn't matter whether you use a single quote or a double quote, but pick one and be consistent!
 
 Python can do some clever things with strings. Let's see what happens when we run our file with this:
 
-`print 'hello' + 'world'`
+`print ('hello' + 'world')`
 
 As you see here, you can combine strings using +, which appends the second one to the first.
 
@@ -140,74 +142,68 @@ print("the lord of the rings".title())
 ```
 ---
 
-TASK:
+`.upper(), .lower(), and .title()` are called "methods".
+ Attaching a method to a string tells Python to do some processing on the string – in this case, it converts all of the characters to uppercase, lowercase, or a title. You can find out more about string methods in the Python documentation [here](https://docs.python.org/2/library/string.html).
 
-Let's add some code to our **hello.py** file to do some cool stuff with strings.
+Sometimes when you type things in a Python file and run it, you'll see an error message instead of a result. Turns out that you can't add a string to an integer. Have another read of the error message that was given out.
 
-print&quot;Bob&quot;\*3
-print&quot;Bob&quot;+3
-print&quot;hello&quot;.upper()
-print&quot;GOODBYE&quot;.lower()
-print&quot;the lord of the rings&quot;.title()
-
-.upper(), .lower(), and .title() are called &quot;methods&quot;. Attaching a method to a string tells Python to do some processing on the string – in this case, it converts all of the characters to uppercase, lowercase, or a title. You can find out more about string methods in the Python documentation [here](https://docs.python.org/2/library/string.html).
-
-Sometimes when you type things in a Python file and run it, you'll see an error message instead of a result. Turns out that you can't add a string to an integer. Have another read of the error message that was given out. Can you figure out what it's saying? When something goes wrong, Python tries to be as helpful as it can.
+Can you figure out what it's saying? When something goes wrong, Python tries to be as helpful as it can.
 
 #### Names &amp; Variables
 
 Programming becomes a lot more powerful when you're able to give values names. A name is just something you can use to refer to a value in the future.
 
-In Python you create a name by using the assignment operator = . For example:
+In Python you create a name by using the assignment operator `=` . For example:
 
-age =5
+`age = 5 `
 
 You can change the value associated with a name at any point. The new value doesn't even have to be the same type as the old one. Here we change the value associated with age from an integer (number) to a string (text):
 
-age =&quot;almost three&quot;
+`age ="almost three"`
 
 In Python it's convention for variable names to start with a lowercase letter. If you want to use multiple words in a name, you can separate them with an underscore, like this:
 
-a\_longer\_name =&quot;hello, CFG!&quot;
+`a_longer_name ="hello, CFG!"`
 
 You can print the a variable's value like this:
 
-print age
-print a\_longer\_name
+```Python
+print (age)
+print (a_longer_name)
+```
 
 #### String formatting
 
-String formatting is a way of taking one or more variables and putting them inside a string, using placeholders for the values. There are a few ways you can do this in Python, but not all of them work in different versions of Python, so on this course we use {} because it's the most reliable.
+String formatting is a way of taking one or more variables and putting them inside a string, using placeholders for the values. There are a few ways you can do this in Python, but not all of them work in different versions of Python, so on this course we use `{}` because it's the most reliable.
 
 Let's use an example of a 5 year old who likes to paint. We need two variables to hold this information:
 
-age =5
-like =&quot;painting&quot;
+```python
+age = 5
+like ="painting"
+```
 
 So, we've got some variables, but how do we print this information in a sentence that looks nice? There are a few different ways we can do this:
 
-age\_description =&quot;My age is {} and I like {}.&quot;.format(age, like)
+```python
+age_description ="My age is {} and I like {}.".format(age, like)
+```
 
 or we could also do it this way:
 
-age\_description =&quot;My age is {0} and I like {1}.&quot;.format(age, like)
+```python
+age_description = "My age is {0} and I like {1}.".format(age, like)
+```
 
 These will both give you the same result:
 
 'My age is 5 and I like painting.'
 
-Sometimes, when you're doing exercises or looking at code online, you might see string formatting done with % instead of {}. This is from older versions of Python. If you see %, it just means this:
+Sometimes, when you're doing exercises or looking at code online, you might see string formatting done with `%` instead of `{}`. This is from older versions of Python. If you see `%`, it just means this:
 
-%s → {} %d → {} %r → {}
-
-If you're wondering what the letters stand for, &quot;s&quot; is for string, &quot;d&quot; is for decimal, and &quot;r&quot; is used to format a string in a particular way (you can read
-#
-[ANNOTATION:
-
-BY 'Tania Sanchez'
-ON '2017-08-07T11:38:00'TS
-NOTE: 'Broken link here']
-more about %r here). It's best to use {} to make sure your code works.
+`%s → {} %d → {} %r → {}
+`
+If you're wondering what the letters stand for, "s" is for string, "d" is for decimal, and "r" is used to format a string in a particular way.
 
 #### Comments
 
@@ -215,48 +211,50 @@ In Python, any part of a line that comes after a # is ignored. This is useful wh
 
 Here are some comments in action:
 
-greeting =&quot;Hello World!&quot;        _#This creates a variable_
-greeting.upper()                        _#This converts the string to uppercase_
-print greeting \*3                        _#This prints the string 3 times_
 
+```python
+greeting ="Hello World!"        #This creates a variable_
+greeting.upper()                #This converts the string to uppercase_
+print (greeting*3)              #This prints the string 3 times_
+```
 
+---
 
 ## Homework
 
 1. Add code your Python file to print the answers to these expressions in your command line:
+  - 10 / 3
+  - 0 / 0
+  - 10 % 3
+  - 0 % 0
 
-- 10/3
-0/0
-10%3
-0%0
+2. Create a new Python file with the following statements in it, then run it. Were the things that were printed what you expected to see?
 
-1. Create a new Python file with the following statements in it, then run it. Were the things that were printed what you expected to see?
+  - a =1
+  - a = a +1
+  - print (a)
+  - b = "hello"
+  - print (b)
+  - c = b.title()
+  - print b
+  - print c
+  - d ="hello"
+  - e = d.title()
+  - print (d)
+  - print (e)
+  - name = "Dave"
+  - f = "Hello {0}! ".format(name)
+  - print (f)
+  - name = "Sarah"
+  - print (f)
+  - print (f * 5)
 
-- a =1
-a = a +1
-print a
-b =&quot;hello&quot;
-print b
-c = b.title()
-print b
-print c
-d =&quot;hello&quot;
-e = d.title()
-print d
-print e
-name =&quot;Dave&quot;
-f =&quot;Hello {0}! &quot;.format(name)
-print f
-name =&quot;Sarah&quot;
-print f
-print f \*5
+It might seem obvious, but it's worth pointing out that = is an "assignment operator". This means "set the name on the left equal to the value on the right". It isn't the same equals as you see in maths!
 
-It might seem obvious, but it's worth pointing out that = is an &quot;assignment operator&quot;. This means &quot;set the name on the left equal to the value on the right&quot;. It isn't the same equals as you see in maths!
+This means that strings are a little bit different. String formatting happens when you write it down. So, when you first write `f = "Hello {0}!".format(name)` Python immediately looks up name and bakes it straight into the string called `f`. Setting name to something different later on won't change `f`.
 
-This means that strings are a little bit different. String formatting happens when you write it down. So, when you first write f = &quot;Hello {0}!&quot;.format(name) Python immediately looks up name and bakes it straight into the string called f. Setting name to something different later on won't change f.
-
-1. Work your way through exercises 1 to 10 on [Learn Python The Hard Way](https://learnpythonthehardway.org/book/ex1.html).
+3. Work your way through exercises 1 to 10 on [Learn Python The Hard Way](https://learnpythonthehardway.org/book/ex1.html).
 
 ## Extra Homework (optional)
 
-1. Continue up to exercise 35 on Learn Python The Hard Way.
+- Continue up to exercise 35 on Learn Python The Hard Way.
