@@ -17,6 +17,7 @@
 - How do you print a formatted string to your command line?
 - What are the two number types we learned about last week and what's the difference between them?
 
+
 ## Let's get started!
 
 #### Getting input from a user
@@ -53,13 +54,13 @@ In Python, a function is a really similar idea – it's a distinct block of our 
 Here's an example of a really simple function:
 
 ```python
-**def** hello_world():
+def hello_world():
         print"Hello World!"
 ```
 
 Any time you write a function in Python, it'll have the following things:
 
-- **def** at the very beginning, so that Python knows the indented code below is part of a function (you're "defining" your function below this line).
+- def at the very beginning, so that Python knows the indented code below is part of a function (you're "defining" your function below this line).
 - A unique name, with no spaces in it. It's important that you don't have two functions with the exact same name in your code. You also don't want to name your function "function", "sum" or "python" (or later on in this course "email", "mailgun", or "tweepy"). If you name your function after a Python library or package or built-in function, Python will get really confused and your code won't run.
 
 - You'll also need to put brackets and a colon right after the name.
@@ -119,7 +120,7 @@ add_two_numbers()
 Here's another function that adds two numbers together. Notice how this function takes two arguments: number1 and number2.
 
 ```python
-**def** add_two_numbers_from_args(number1, number2): _#These can only be variable names_
+def add_two_numbers_from_args(number1, number2): _#These can only be variable names_
         answer = number1 + number2
         print"{} plus {} is {}".format(number1, number2, answer)
 
@@ -148,7 +149,7 @@ Functions can return a number, a string, a list, or even another function (we'll
 Let's have a look at the code below:
 ```python
 
-**def** add_two_numbers_and_return_value():
+def add_two_numbers_and_return_value():
         number1 =1
         number2 =2
         answer = number1 + number2   # answer = 3_
@@ -237,11 +238,12 @@ Imagine you're going to a coding party with some friends from class, and you nee
 
 Before you get to the checkout counter, you want to print the contents of your cart, to make sure you have everything. Here's how you'd do that in Python, using a for loop:
 
+```python
 my_shopping_cart = ["cake", "plates", "plastic forks", "juice", "cups"]
 
-**for** item **in** my_shopping_cart:
-        print item
-
+for item in my_shopping_cart:
+        print (item)
+```
 The only condition the Python interpreter cares about in your for loop is whether there's anything left to iterate through. Since you've only got 5 items in your shopping cart, your loop will only run 5 times. Python's clever that way.
 
 A few helpful things about for loops:
@@ -250,8 +252,10 @@ A few helpful things about for loops:
 - For loops don't return anything (they're not functions)
 - This is the format that you need to use when you write a for loop:
 
-**for** x **in** name_of_thing_to_iterate_through:
-        print x
+```python
+for x in name_of_thing_to_iterate_through:
+        print (x)
+```
 
 The x can be called anything – you could call it "x", or "bananas", or "count", or "item" – it's basically just a placeholder name. But the name of the thing you're iterating through is important – it's the name of your list, so Python what to iterate through.
 
