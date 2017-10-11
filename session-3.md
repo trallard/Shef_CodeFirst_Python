@@ -67,7 +67,6 @@ For this reason, if you've got a Windows computer, you should use [Cygwin](file:
 ---
 #### Task
 
-TASK
 
 Work through the following exercises with your buddy/group:
 
@@ -194,17 +193,19 @@ You can read more about merge conflicts [here](https://help.github.com/articles/
 
 #### Branches
 
-Code branches are a useful way for different team members to work on building differerent parts of your project at the same time. With branches, you can test and commit changes on a separate branch of code before merging those changes into your master code branch.
+Code branches are a useful way for different team members to work on building different parts of your project at the same time. With branches, you can test and commit changes on a separate branch of code before merging those changes into your master code branch.
 
 Atlassian offers a great walkthrough [here](https://www.atlassian.com/git/tutorials/using-branches), covering how to create a branch, switch between branches, check which branch you're on, and push to a branch that's not your master branch.
 
 Remember, if you're using branches, never delete your **master** branch!
 
---- 
+---
 ## Homework
 
 1. Review what you've learned from Sessions 1 and 2. If there's anything you're a bit stuck with, please ask an instructor or classmate for help.
 2. Start thinking of a few ideas for your course competition project. Next week we'll be learning how to make Python and HTML work together using something called Flask, which means you'll be ready to make a start on your projects! Feel free to have a look at the Session 8 notes to see what the course competition involves.
+
+----
 
 ## Preparation for next week's session
 
