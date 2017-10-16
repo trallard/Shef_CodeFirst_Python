@@ -52,4 +52,15 @@
   font-style: italic !important;
   padding-top: 20px !important; }
 
+.reveal code {
+  color: #119DA4;
+  font-size: 0.95em; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
 /*# sourceMappingURL=custom.css.map */
