@@ -6,7 +6,7 @@ There are a few things you'll need to get set up before our first class, so that
 
 Things we need to do (we&#39;ll explain each of them in these notes):
 
-1. Check Python&#39;s installed
+1. Check Python is installed
 2. Install pip
 3. Install a text editor
 4. Make sure you&#39;ve got a GitHub account
