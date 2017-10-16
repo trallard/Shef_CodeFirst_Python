@@ -30,7 +30,7 @@ We need Git to serve as our default version control tool, it will also provide a
 Python does not come pre-installed with Windows
 
 1. Head to the Python main website ([here](https://www.python.org/downloads/windows/)) and download the latest version.
-2. Make sure you choose a '2.x' version
+2. Make sure you choose a '3.x' version
 3. Once this has been downloaded click on the **.exe** file and follow the installer instructions
 
 ### Install pip
@@ -47,9 +47,9 @@ you should see a legend stating the version of pip you have installed and the lo
 
 Download  [get-pip.py](https://bootstrap.pypa.io/get-pip.py), being careful to save it as a .py file rather than .txt. Then, run it from the command prompt:
 
-python get-pip.py
+`python get-pip.py`
 
-You possibly need an administrator command prompt to do this. Follow  [_Start a Command Prompt as an Administrator_](http://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) (Microsoft TechNet).
+You possibly need an administrator command prompt to do this. Follow  [Start a Command Prompt as an Administrator](http://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx).
 
 ## Install a text editor
 
