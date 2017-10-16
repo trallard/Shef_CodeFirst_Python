@@ -49,18 +49,23 @@
   font-family: "Open Sans", sans-serif;
   color: #8E24AA;
   font-size: 30px !important;
-  font-style: italic !important;
   padding-top: 20px !important; }
 
 .reveal code {
   color: #119DA4;
-  font-size: 0.95em; }
+  font-size: 1em; }
 
 .reveal pre code {
   display: block;
-  padding: 5px;
+  padding: 10px;
   overflow: auto;
   max-height: 400px;
-  word-wrap: normal; }
+  word-wrap: normal;
+  font-size: 1.25em; }
+
+.reveal section img {
+  margin: 15px 0px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 /*# sourceMappingURL=custom.css.map */
