@@ -45,7 +45,7 @@ You might hear us using the terms "web application" or "web app" or "interactive
 
 Open your code editor (Atom or Sublime), and create a new file. In this file, let's just type one thing:
 
-`print 'Hello, World!'`
+`print ('Hello, World!')`
 
 It doesn't matter if you use single or double quotation marks, as long as you use them together, in pairs.
 
