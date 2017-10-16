@@ -25,6 +25,8 @@ In order to access this follow the next instructions:
 
 - Create a [GitHub](https://github.com) account
 - Log into your personal account
-- Go to [https://github.com/trallard/Shef_CodeFirst_Python/tree/master](https://github.com/trallard/Shef_CodeFirst_Python/tree/master) and click on the ![fork](./assets/fork.gif) button located at the top right corner of the webpage
+- Go to [https://github.com/trallard/Shef_CodeFirst_Python/tree/master](https://github.com/trallard/Shef_CodeFirst_Python/tree/master) and click on the ![fork](./assets/Fork.gif) button located at the top right corner of the webpage
 - Open GitKraken and clone the repository to your local computer (see gif below)
 ![clone](./assets/clone_gitkraken.gif)
+
+You should have now a copy of the main repository!!!! 🤓🎉🎈
