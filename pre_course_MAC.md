@@ -16,12 +16,11 @@ Things we need to do (we&#39;ll explain each of them in these notes):
 
 Python comes pre-installed on Macs.
 
-1. You can check what version you&#39;ve got by opening **Terminal** and typing `python
---version` and then hitting enter. Note the space and two dashes in that command.
+1. You can check what version you&#39;ve got by opening **Terminal** and typing `python --version` and then hitting enter. Note the space and two dashes in that command.
 
 You can find Terminal in your **Utilities** folder, which is in your **Applications** folder.
 
-2. After you hit enter, you should see Python&#39;s version number printed in Terminal. As long as you have 2.x installed (i.e. any version 2), you&#39;re find. If you have 3.x, then please let your instructor know.
+2. After you hit enter, you should see Python&#39;s version number printed in Terminal. As long as you have 3.x installed (i.e. any version 3), you&#39;re fine. If you have 2.x, then please let your instructor know.
 
 3. To save time, you should add Terminal to your dock, by clicking the Terminal icon in the Utilities folder, and dragging the item to your dock (you can read about your dock [here](https://support.apple.com/en-gb/HT201730))
 
@@ -49,5 +48,6 @@ You should have a GitHub account already, from the beginners course. If you don&
 
 **git** is the version control system you used on the beginners course. It should already be installed on your laptop, but we&#39;ll check just in case.
 
-1. Check that you&#39;ve got git installed by opening Terminal and typing git --version. You should then see a response that tells you what version you have. If you see this, you don&#39;t have to do anything else.
+1. Check that you&#39;ve got git installed by opening Terminal and typing `git --version`. 
+You should then see a response that tells you what version you have. If you see this, you don&#39;t have to do anything else.
 2. **Only if you get an error** should you follow the steps for **Git for Mac Installer** [here](https://www.atlassian.com/git/tutorials/install-git). Choose the latest version from the SourceForge page the link takes you do (which is above the table full of download options on the SourceForge page). When you&#39;re asked for your username and email as part of the setup process, use the login details for your GitHub account.
