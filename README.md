@@ -30,3 +30,8 @@ In order to access this follow the next instructions:
 ![clone](./assets/clone_gitkraken.gif)
 
 You should have now a copy of the main repository!!!! 🤓🎉🎈
+
+
+## Additional materials
+- [GitHub super useful cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+- [Mini terminal / command line tutorial](./terminal.md)
