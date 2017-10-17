@@ -214,9 +214,9 @@ Here are some comments in action:
 
 
 ```python
-greeting ="Hello World!"        #This creates a variable_
-greeting.upper()                #This converts the string to uppercase_
-print (greeting*3)              #This prints the string 3 times_
+greeting ="Hello World!"        #This creates a variable
+greeting.upper()                #This converts the string to uppercase
+print (greeting*3)              #This prints the string 3 times
 ```
 
 ---
@@ -255,6 +255,8 @@ It might seem obvious, but it's worth pointing out that = is an "assignment oper
 This means that strings are a little bit different. String formatting happens when you write it down. So, when you first write `f = "Hello {0}!".format(name)` Python immediately looks up name and bakes it straight into the string called `f`. Setting name to something different later on won't change `f`.
 
 3. Work your way through exercises 1 to 10 on [Learn Python The Hard Way](https://learnpythonthehardway.org/book/ex1.html).
+
+---
 
 ## Extra Homework (optional)
 
