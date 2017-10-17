@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title> CodeFirst: girls Sheffield</title>
+		<title> CFG session 1</title>
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
@@ -25,7 +25,7 @@
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -38,7 +38,12 @@
 					<p>
 						 Welcome to the autumn/winter courses
 					</p>
-					<p class='author'> Tania Allard, PhD </p>
+					<p class='author'> Tania Allard, PhD
+					<br>
+				 <a href="http://twitter.com/ixek" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+				 @ixek </i> </a>
+ 		 			</p>
 				</section>
 
 				<section>
@@ -104,11 +109,11 @@
 				</section>
 
 				<section>
-					<h3><i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+					<h3><i class="fa fa-cogs" aria-hidden="true"></i>
 						Hands on: Creating your first script</h3>
 					Open your text editor and create a new script called
-					<strong> hello.py </strong>.
-					<br>
+					<strong> hello.py </strong>
+					<hr>
 					Type the folowing command
 					<pre><code>print("Hello World!")</code></pre>
 					and save the script
@@ -127,7 +132,11 @@
 				</section>
 
 				<section data-markdown>
-					Let's add some code to our **hello.py** file to do some cool stuff with strings.
+					Let's add some code to our **hello.py** file to do some cool stuff
+					with strings
+					<br><br>
+					<accent-text> String: collection of characters enoted by " "
+					</accent-text>
 					```python
 					print('Bob'*3)
 					print('Bob'+3)
@@ -145,12 +154,13 @@
 
 					<code>.upper() .lower() .title()</code> are called
 					<strong>methods</strong>
-
-				When attached to a 'string' tells Python to do some processing on the strings
+				<br><br>
+				When attached to a 'string' they tell Python to do some processing
+				 on the strings
 				</section>
 
 				<section>
-					<h2><i class="fa fa-key" aria-hidden="true"></i>
+					<h2><i class="fa fa-star" aria-hidden="true"></i>
 					Names & Variables </h2>
 					You can assign a name to a value in Python e.g.
 					<code>age = 25</code>
@@ -162,7 +172,8 @@
 				</section>
 
 				<section>
-					<h3> Notes on naming variables</h3>
+					<h3><i class="fa fa-sticky-note" aria-hidden="true"></i>
+						 Notes on naming variables</h3>
 					<ul>
 						<li class='fragment'> Start with  lowercase letter:
 						<br><code>chocolate ='yum'</code></li>
@@ -181,8 +192,23 @@
 					age = 25
 					hobby = dancing
 					description = " Her age is {} and she likes {}.".format(age, like)
-
+          print(description)
 					```
+					***
+					Add this to your script and run it!
+				</section>
+
+				<section data-markdown>
+					### Commenting
+
+					You can write comments for you or others using a `#` in Python
+					meaning that everything after this symbol will be ignored
+					```python
+					greeting ="Hello World!"        # This creates a variable
+					greeting.upper()                # This converts the string to uppercase
+					print (greeting*3)              # This prints the string 3 times
+					```
+				</section>
 				</section>
 
 			</div>
