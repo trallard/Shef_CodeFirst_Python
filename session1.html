@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 1</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+				<section>
+					<h2> Session 1: Python basics </h2>
+					<p>
+						 Welcome to the autumn/winter courses
+					</p>
+					<p class='author'> Tania Allard, PhD
+					<br>
+				 <a href="http://twitter.com/ixek" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+				 @ixek </i> </a>
+ 		 			</p>
+				</section>
+
+				<section>
+					<h2> First things first... </h2>
+					<h3> Make sure you have all the following components </h3>
+					<ul>
+						<li> Python3.x (3.6 preferably)</li>
+						<li> Git </li>
+						<li> A text editor: Atom, Sublime </li>
+						<li> GitKraken </li>
+						<li> pip </li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Where can I find the material? </h2>
+					You can find all the slides, links to the curriculum, and
+					to the GitHub repository at:
+					<br>
+					<br>
+					<p class='fragment grow'>
+						<a href="http://bitsandchips.me/Shef_CodeFirst_Python/">
+							http://bitsandchips.me/Shef_CodeFirst_Python/</a></p>
+				</section>
+
+				<section>
+					<h3>What is Python?</h3>
+					<img src="./assets/python_logo.jpg" alt="python logo"
+					style='float: left'>
+					<p> It is an <strong>open source</strong> programming language
+						with an emphasis on code readability...</p>
+					<p class='fragment'>which makes it great for beginners!!!
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-terminal" aria-hidden="true"></i>
+						 Using Python from the terminal </h3>
+					Open a terminal (Mac) or Git Bash (Windows) and open Python
+					in interactive mode by typing:
+					<code>python -i</code>
+					<br>
+					Your terminal will look similar to this:
+					<img src="./assets/python_i.png" alt="interactive">
+				</section>
+
+				<section>
+					The <a href="https://www.python.org/dev/peps/pep-0020/">
+					Zen of Python</a> summarises the language's core principles.
+					<br><br>
+					Type <code> import this </code> and see what you get!
+					<br><br>
+					 <p class='fragment'>
+						 <accent-text>Note: if you want to exit Python
+							 type <code>quit()</code> </accent-text>
+					</p>
+				</section>
+
+				<section>
+					<h3>What will we be doing during this course?</h3>
+					<img src="./assets/webapp.png" alt="web app">
+					<img src="./assets/html.png" alt="html logo">
+				</section>
+
+				<section>
+					<h3><i class="fa fa-cogs" aria-hidden="true"></i>
+						Hands on: Creating your first script</h3>
+					Open your text editor and create a new script called
+					<strong> hello.py </strong>
+					<hr>
+					Type the folowing command
+					<pre><code>print("Hello World!")</code></pre>
+					and save the script
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-code" aria-hidden="true"></i>
+						Time to run your script</h3>
+					<ul>
+						<li> Open your terminal if needed </li>
+						<li> Make sure you are in the file location
+						(if you need to make sure type <code>ls</code>)</li>
+						<li> Type the following command </li>
+						<pre><code>python hello.py</code></pre>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					Let's add some code to our **hello.py** file to do some cool stuff
+					with strings
+					<br><br>
+					<accent-text> 
+						String: collection of characters denoted by " "
+					</accent-text>
+					```python
+					print('Bob'*3)
+					print('Bob'+3)
+					print('hello'.upper())
+					print('GOODBYE'.lower())
+					print("the lord of the rings".title())
+					```
+					Now run your script from the terminal:
+					```bash
+					python hello.py
+					```
+				</section>
+
+				<section>
+
+					<code>.upper() .lower() .title()</code> are called
+					<strong>methods</strong>
+				<br><br>
+				When attached to a 'string' they tell Python to do some processing
+				 on the strings
+				</section>
+
+				<section>
+					<h2><i class="fa fa-star" aria-hidden="true"></i>
+					Names & Variables </h2>
+					You can assign a name to a value in Python e.g.
+					<code>age = 25</code>
+					<br>
+					<p class='fragment'>
+					you can change the name at any point
+					<br>
+					<code>age ='still young'</code> </p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-sticky-note" aria-hidden="true"></i>
+						 Notes on naming variables</h3>
+					<ul>
+						<li class='fragment'> Start with  lowercase letter:
+						<br><code>chocolate ='yum'</code></li>
+						<li class='fragment'> Use underscore to separate words:
+						<br><code>my_name = 'Tania'</code></li>
+						<li class='fragment'> Use meaningful names:
+						<br><code>speed = 100</code> instead of <code>x = 100</code></li>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					### String formatting
+					When you place the <strong>value of a variable</strong> and place it
+					in a string:
+					``` python
+					age = 25
+					hobby = dancing
+					description = " Her age is {} and she likes {}.".format(age, like)
+          print(description)
+					```
+					***
+					Add this to your script and run it!
+				</section>
+
+				<section data-markdown>
+					### Commenting
+
+					You can write comments for you or others using a `#` in Python
+					meaning that everything after this symbol will be ignored
+					```python
+					greeting ="Hello World!"        # This creates a variable
+					greeting.upper()                # This converts the string to uppercase
+					print (greeting*3)              # This prints the string 3 times
+					```
+				</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
