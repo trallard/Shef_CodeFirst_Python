@@ -17,6 +17,9 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
+		<!-- Font awesome -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -72,7 +75,8 @@
 				</section>
 
 				<section>
-					<h3> Using Python from terminal </h3>
+					<h3><i class="fa fa-terminal" aria-hidden="true"></i>
+						 Using Python from the terminal </h3>
 					Open a terminal (Mac) or Git Bash (Windows) and open Python
 					in interactive mode by typing:
 					<code>python -i</code>
@@ -87,8 +91,10 @@
 					<br><br>
 					Type <code> import this </code> and see what you get!
 					<br><br>
-					<p class='fragment'> Note: if you want to exit Python
-					type <code>quit()</code></p>
+					 <p class='fragment'>
+						 <accent-text>Note: if you want to exit Python
+							 type <code>quit()</code> </accent-text>
+					</p>
 				</section>
 
 				<section>
@@ -98,8 +104,8 @@
 				</section>
 
 				<section>
-					<h3>Hands on</h3>
-					<h4>Creating your first script</h4>
+					<h3><i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+						Hands on: Creating your first script</h3>
 					Open your text editor and create a new script called
 					<strong> hello.py </strong>.
 					<br>
@@ -109,7 +115,8 @@
 				</section>
 
 				<section>
-					<h3> Time to run your script</h3>
+					<h3> <i class="fa fa-code" aria-hidden="true"></i>
+						Time to run your script</h3>
 					<ul>
 						<li> Open your terminal if needed </li>
 						<li> Make sure you are in the file location
@@ -128,17 +135,54 @@
 					print('GOODBYE'.lower())
 					print("the lord of the rings".title())
 					```
-					Now run your script from the terminal
+					Now run your script from the terminal:
+					```bash
+					python hello.py
+					```
+				</section>
+
+				<section>
+
+					<code>.upper() .lower() .title()</code> are called
+					<strong>methods</strong>
+
+				When attached to a 'string' tells Python to do some processing on the strings
+				</section>
+
+				<section>
+					<h2><i class="fa fa-key" aria-hidden="true"></i>
+					Names & Variables </h2>
+					You can assign a name to a value in Python e.g.
+					<code>age = 25</code>
 					<br>
-					`.upper()` `.lower()` `.title()` are called 'methods'
+					<p class='fragment'>
+					you can change the name at any point
+					<br>
+					<code>age ='still young'</code> </p>
+				</section>
+
+				<section>
+					<h3> Notes on naming variables</h3>
+					<ul>
+						<li class='fragment'> Start with  lowercase letter:
+						<br><code>chocolate ='yum'</code></li>
+						<li class='fragment'> Use underscore to separate words:
+						<br><code>my_name = 'Tania'</code></li>
+						<li class='fragment'> Use meaningful names:
+						<br><code>speed = 100</code> instead of <code>x = 100</code></li>
+					</ul>
 				</section>
 
 				<section data-markdown>
-					### Names & Variables
-					You can assign a name to a value in Python e.g.
-					`age = 25`
-					you can change the name at any point
-					`age = 'still young'`
+					### String formatting
+					When you place the <strong>value of a variable</strong> and place it
+					in a string:
+					``` python
+					age = 25
+					hobby = dancing
+					description = " Her age is {} and she likes {}.".format(age, like)
+
+					```
 				</section>
 
 			</div>
