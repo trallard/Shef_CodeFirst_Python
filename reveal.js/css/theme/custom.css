@@ -59,7 +59,6 @@
 .reveal pre code {
   display: block;
   padding: 10px;
-  overflow: auto;
   max-height: 400px;
   word-wrap: normal;
   font-size: 1.25em; }
