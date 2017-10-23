@@ -3,8 +3,9 @@
 /*********************************************
 * PERSONAL
 *********************************************/
+/* Sea blue not blue blue */
 /*********************************************
- * OVER WRITING
+ * OVER WRITING DEFAULT STYLES
  *********************************************/
 .reveal {
   font-family: "Open Sans", sans-serif; }
@@ -23,7 +24,7 @@
 .reveal strong,
 .reveal b {
   font-weight: bold;
-  color: #119DA4; }
+  color: #8E24AA; }
 
 .reveal .controls {
   color: #C1CAD6; }
@@ -49,7 +50,29 @@
   font-family: "Open Sans", sans-serif;
   color: #8E24AA;
   font-size: 30px !important;
-  font-style: italic !important;
   padding-top: 20px !important; }
+
+.reveal code {
+  color: #119DA4;
+  font-size: 1em; }
+
+.reveal pre code {
+  display: block;
+  padding: 10px;
+  max-height: 400px;
+  word-wrap: normal;
+  font-size: 1.25em; }
+
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border: 0px; }
+
+.reveal accent-text {
+  font-weight: bold;
+  border: 4px solid #8E24AA;
+  padding: 8px;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=custom.css.map */
