@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title> CFG session 1</title>
+		<title> CFG session 2</title>
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
@@ -176,7 +176,7 @@
 						<div data-markdown>
 						```python
 						def hello_world():
-						    print"Hello World!"
+						    print("Hello World!")
 
 						hello_world()
 						hello_world()
@@ -195,7 +195,7 @@
 						<li><strong>def</strong> tells python we are <strong>defining</strong> a function</li>
 						<li><strong>hello_world</strong> is the unique name of our function*</li>
 						<li><strong>()</strong> the brackets tell python this function has zero <strong>arguments</strong></li>
-						<li><strong>:</strong> the colon tells python the indended lines below this line are a <strong>code block</strong></li>
+						<li><strong>:</strong> the colon tells python the indented lines below this line are a <strong>code block</strong></li>
 						<li><strong>hello_world()</strong> is how we <strong>call</strong> our function</li>
 					</ul>
 					<p>
@@ -214,27 +214,6 @@
 						<li>Arguments go in the brackets <strong>()</strong> when calling a function</li>
 						<li>e.g. <strong>print("hello")</strong> prints the value of its argument, which happens to be the string <strong>"hello"</strong></li>
 					</ul>
-				</section>
-
-				<section>
-				Let's look at another python builtin function called <strong>range</strong>
-				</section>
-
-				<section>
-					<br>
-					Create a new file called <strong>arguments.py</strong> and enter the following
-					<div data-markdown>
-					```python
-					print(range (10))
-					print(range (1,10))
-					print(range (1,10,2))
-					```
-					Now run your script from the terminal:
-					```bash
-					python arguments.py
-					```
-					</div>
-					<p>What does range do? How does changing the arguments to range affect the output?</p>
 				</section>
 
 				<section>
@@ -349,11 +328,11 @@
 					my_shopping_cart = ["cake", "plates", "plastic forks", "juice", "cups"]
 
 					for item in my_shopping_cart:
-					     print (item)
+						print (item)
 
 					for x in my_shopping_cart:
-               print("hello!")
-               print(x)
+						print("hello!")
+						print(x)
 					```
 					</div>
 				</section>
