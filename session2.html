@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 1</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+				<section>
+					<h2> Session 2: User input, functions, loops, conditional statements </h2>
+					<p>
+					The session with the long title
+					</p>
+					<p class='author'> Christopher McIntyre
+					<br>
+				 <a href="http://twitter.com/cgmcintyr" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+					</i> @cgmcintyr
+				 </a>
+ 		 			</p>
+				</section>
+
+				<section>
+					<h2> Where can I find the material? </h2>
+					You can find all the slides, links to the curriculum, and
+					to the GitHub repository at:
+					<br>
+					<br>
+					<p class='fragment grow'>
+						<a href="http://bitsandchips.me/Shef_CodeFirst_Python/">
+							http://bitsandchips.me/Shef_CodeFirst_Python/</a></p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						 Recap: Using Python from the terminal </h3>
+					Open a terminal (Mac) or Git Bash (Windows) and open Python
+					in interactive mode by typing:
+					<code>python -i</code>
+					<br>
+					Your terminal will look similar to this:
+					<img src="./assets/python_i.png" alt="interactive">
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Creating a script</h3>
+					Open your text editor and create a new file called
+					<strong> session2.py </strong>
+					that contains the following:
+					<pre><code>print("Hello World!")</code></pre> and save the file.
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Running your script</h3>
+					<ul>
+						<li> Open your terminal if needed </li>
+						<li> Make sure you are in the file location
+						(if you need to make sure type <code>ls</code>)</li>
+						<li> Type the following command </li>
+						<pre><code>python session2.py</code></pre>
+						<li>Your script should reply with <strong>Hello world</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Strings and Variables</h3>
+					<div><em>String: a collection of characters denoted by " "</em></div>
+					<div><em>Variable: a named location that stores some data</em></div>
+				</section>
+
+				<section>
+					Let's change our code to print a <strong>variable</strong>
+					that stores a <strong>string</strong> representation of your name.
+					<div data-markdown>
+					```python
+					name = "Your name here"
+					print("Hello {}!".format(name))
+					```
+					Now run your script from the terminal:
+					```bash
+					python session2.py
+					```
+					</div>
+					<p>Your script should reply with <strong>Hello Your name here</strong></p>
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Changing variables</h3>
+					The contents of a variable can be changed any time after it has been <strong>declared</strong>
+					<div data-markdown>
+						```python
+						name = "Your name here"
+						name = name.upper()
+						print("Hello {}!".format(name))
+						```
+						Now run your script from the terminal:
+						```bash
+						python session2.py
+						```
+					</div>
+					<p>Your script should reply with <strong>Hello YOUR NAME HERE</strong></p>
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Github</h3>
+					<p>Lets push your code to github to keep a history of your changes.</p>
+					<p>We can use <strong>GitKraken</strong> to do this.</p>
+				</section>
+
+				<section>
+					<h2>And now</h2>
+				</section>
+
+				<section>
+					<h3>User input</h3>
+					<p>A program is made much more useful by allowing a user to interact with it</p>
+					<p>We can use the <strong>input</strong> method to get a user's name.</p>
+				</section>
+
+				<section>
+						Open your <strong>session2.py</strong> file and replace the contents with the following
+						<div data-markdown>
+						```python
+						print("What's your name?")
+						name = input()
+						print("Hello {}!".format(name))
+						```
+						Now run your script from the terminal:
+						```bash
+						python session2.py
+						```
+						</div>
+				</section>
+
+				<section>
+					<h3>Functions</h3>
+					<p>Programming the same task can get boring</p>
+					<p>A <strong>function</strong> allows us to reuse code by giving a 
+					name to a block of code</p>
+				</section>
+
+				<section>
+						Create a new file called <strong>my_first_function.py</strong> and enter the following
+						<div data-markdown>
+						```python
+						def hello_world():
+						    print"Hello World!"
+
+						hello_world()
+						hello_world()
+						hello_world()
+						```
+						Now run your script from the terminal:
+						```bash
+						python my_first_function.py
+						```
+						</div>
+						<p>It should print out <strong>Hello World!</strong> 3 times</p>
+				</section>
+
+				<section>
+					<ul>
+						<li><strong>def</strong> tells python we are <strong>defining</strong> a function</li>
+						<li><strong>hello_world</strong> is the unique name of our function*</li>
+						<li><strong>()</strong> the brackets tell python this function has zero <strong>arguments</strong></li>
+						<li><strong>:</strong> the colon tells python the indended lines below this line are a <strong>code block</strong></li> 
+						<li><strong>hello_world()</strong> is how we <strong>call</strong> our function</li> 
+					</ul>
+					<p>
+						<em>
+							*be careful not to overwrite default python functions like 
+							<strong>print</strong> or <strong>sum</strong>
+						</em>
+					</p>
+				</section>
+
+				<section>
+					<h3>Arguments</h3>
+					<p><strong>Arguments</strong> are values passed into a function<p>
+					<ul>
+						<li>Sometimes we have a block of code we want customise when we call it</li>
+						<li>Arguments go in the brackets <strong>()</strong> when calling a function</li>
+						<li>e.g. <strong>print("hello")</strong> prints the value of its argument, which happens to be the string <strong>"hello"</strong></li>
+					</ul>
+				</section>
+
+				<section>
+				Let's look at another python builtin function called <strong>range</strong>
+				</section>
+
+				<section>
+					<br>
+					Create a new file called <strong>arguments.py</strong> and enter the following
+					<div data-markdown>
+					```python
+					print(range (10))
+					print(range (1,10))
+					print(range (1,10,2))
+					```
+					Now run your script from the terminal:
+					```bash
+					python arguments.py
+					```
+					</div>
+					<p>What does range do? How does changing the arguments to range affect the output?</p>
+				</section>
+
+				<section>
+					<h3>Let's start some arguments!</h3>
+					<p>Let's see how we can use arguments ourselves<p>
+				</section>
+
+				<section>
+					<br>
+					Create a new file called <strong>more_arguments.py</strong> and enter the following
+					<div data-markdown>
+					```python
+					def add_two_numbers():
+					    number1 =1
+					    number2 =2
+					    answer = number1 + number2
+					    print("{} plus {} is {}".format(number1, number2, answer))
+
+					add_two_numbers()
+					```
+					</div>
+					<p>This is a function with zero arguments (the brackets are empty in the definition)</p>
+				</section>
+
+				<section>
+					<br>
+					Edit <strong>more_arguments.py</strong> and replace the old function with the following
+					<div data-markdown>
+					```python
+					def add_two_numbers_from_args(number1, number2):
+					    answer = number1 + number2
+					    print"{} plus {} is {}".format(number1, number2, answer)
+
+					add_two_numbers_from_args(5,10)
+					add_two_numbers_from_args(1,11)
+					add_two_numbers_from_args(1,12)
+					```
+					</div>
+					<p>This is a function with two arguments</p>
+					<p>Arguments are named variables only available in the function</p>
+				</section>
+
+				<section>
+					<h3>Returning stuff from functions</h3>
+					<p>Functions do stuff like crunch numbers or manipulate data, and can then <strong>return</strong> the information they calculate</p>
+				</section>
+
+				<section>
+					<br>
+					Create a new file called <strong>returning.py</strong> and enter the following
+					<div data-markdown>
+					```python
+					def add_two_numbers_and_return_value():
+					    number1 =1
+					    number2 =2
+					    answer = number1 + number2
+					    return answer
+
+					returned_value = add_two_numbers_and_return_value()
+					print (returned_value)
+					```
+					</div>
+					<p><strong>Extra challenge</strong> change the function to return the result of adding two arguments together</p>
+				</section>
+
+				<section>
+					<h2>Lists</h2>
+				</section>
+
+				<section>
+					<br>
+					Lists are used to store a list of items
+					<div data-markdown>
+					```python
+					empty_list = []
+					numbers = [0, 1, 2, 3, 4, 5]
+					fruits = ["pineapples", "oranges", "bananas"]
+					mixed = [15, "sunshine", "jumper", 4, "sky"]
+					```
+					</div>
+				</section>
+
+				<section>
+					Lists are:
+					<ul>
+						<li>List items go between square brackets</li>
+						<li>Items in a list are separated by commas</li>
+						<li>Strings in a list must be in quotation marks</li>
+					</ul>
+				</section>
+
+				<section>
+					<br>
+					You can access an item in a list by using its name and its index number, like this:
+					<div data-markdown>
+					```python
+					print(fruits[0])
+					```
+					</div>
+					In the world of programming, the first item in a list is always at position 0 (its "index" position). This means that [0] is the first item in the list, [1] is the second item, and so on.
+				</section>
+
+				<section>
+					<h2>For loops</h2>
+				</section>
+
+				<section>
+					<br>
+					For loops can be used to perform actions on each element in a list
+					<div data-markdown>
+					```python
+					my_shopping_cart = ["cake", "plates", "plastic forks", "juice", "cups"]
+
+					for item in my_shopping_cart:
+					     print (item)
+
+					for x in my_shopping_cart:
+               print("hello!")
+               print(x)
+					```
+					</div>
+				</section>
+
+				<section>
+					<h2>Programming with logic</h2>
+				</section>
+
+				<section>
+						<br>
+						Create a new file called <strong>logic.py</strong> and enter the following
+						<div data-markdown>
+						```python
+						number =input("Enter a number between 1 and 10: ")
+						number =int(number)
+
+						if number > 10:
+						    print("Too high!")
+
+							if number <= 0:
+						    print("Too low!")
+						```
+						</div>
+				</section>
+
+				<section data-background-video='./assets/silly.mp4' type="video/mp4" data-background-video-loop data-background-video-muted/>
+					<h2>The end!</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
