@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 1</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+
+				<section>
+					<h2>Collaborating with GitHub</h2>
+					<img src="./assets/gh_network.jpg" alt="network">
+				</section>
+
+				<section>
+					<img src="./assets/thesis.jpg" alt="thesis" width="500px">
+				</section>
+
+				<section>
+					<h2>Version Control</h2>
+					Management of <strong>changes</strong> (called revisions) to any types of
+					information <br>
+					<img src="./assets/dropbox.png" alt="db" class='fragment'>
+					<img src="./assets/drive.jpg" alt="dr" class='fragment'>
+					<img src="./assets/git.png" alt="git" class='fragment'
+					width="450px">
+				</section>
+
+				<section>
+					<h2>Github</h2>
+					<ul>
+						<li>Hosts yur repositories online</li>
+						<li>Helps you to collaborate with others</li>
+						<li>Web interface to version control....</li>
+						<img src="./assets/gitkraken.png" alt="gtk"
+						style="float:right; display:inline-block;">
+					<br>
+					<h3>Interfaces to GitHub</h3>
+					<ul>
+						<li>Website</li>
+						<li>Command line</li>
+						<li>Desktop apps</li>
+					</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Git/GitHub terms</h2>
+					<ul>
+						<li><strong>Repository [repo]:</strong>
+							<img src="./assets/fork.gif" alt="fork" style="float:right;"
+							width="400px">
+						a project where all of your files are, online or in your laptop</li>
+						<li><strong>Commit:</strong> saving a given version of file(s)</li>
+						<li><strong>Fork:</strong> make a copy of someone's else repository</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Git/GitHub terms</h2>
+					<ul>
+						<li><strong>Clone:</strong> copy a repo to your local computer</li>
+						<img src="./assets/merge.png" alt="merge" style="float:right;
+						padding:15px;"
+						width="400px">
+						<li><strong>Pull request:</strong> request to add your changes into a forked repo</li>
+						<li><strong>Merge:</strong> incorporating new changes from a PR/branch</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>My first Pull Request</h2>
+					<img src="./assets/repo.png" alt="repo">
+				</section>
+
+				<section>
+					<h2> Extra challenge!</h2>
+					<ul>
+						<li> Add two variables: your name and your favourite food</li>
+						<li> Add a statement to print the variables in a sentence </li>
+						<li> Make sure this runs </li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+	</html>
