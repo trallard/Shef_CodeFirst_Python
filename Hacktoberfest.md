@@ -31,7 +31,7 @@ Fun with functions!
 
 
 ## Task 3!!! You are almost done!  :fire:
-1. Complete Exercise 21 in the Learn the Python the hard way. Save your script as `<username>21.py` (e.g. trallard.py) in the Hacktoberfest folder.
+1. Complete Exercise 21 in the Learn the Python the hard way. Save your script as `<username>21.py` (e.g. trallard21.py) in the Hacktoberfest folder.
 2. Once completed commit your changes, and push to your repository!
 3. Make your final pull request to the repository.
 
