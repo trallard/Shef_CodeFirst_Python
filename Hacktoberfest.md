@@ -1,3 +1,5 @@
+# Let's get CodeFirst in Hacktoberfest... and practice what you have learned this week!
+
 1. Go to [https://hacktoberfest.digitalocean.com/](https://hacktoberfest.digitalocean.com/)  :jack_o_lantern:
  and Sign up using your GitHub account
 2. Make sure that your local repository is up to date (Pull your repo! see the GIF below)
