@@ -15,7 +15,7 @@ see 'master')
 3. Stage your files, write a commit message and push to your GitHub account
 ![commit](./assets/com.gif)
 4. Create a pull request from your repository to the main `trallard/Shef_CodeFirst_Python` one
-![pr](./assets/PR.mp4)
+(remember what we checked in class choose on the right side your repo an on the left one trallard/....)
 
 
 ## Task 2
