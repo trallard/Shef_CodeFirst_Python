@@ -10,7 +10,7 @@ see 'master')
 
 ## Task 1
 1. Open the `team.md` file contained in the Hacktoberfest folder
-![hack](./assets/hack.PNG)
+![hack](./assets/hack.PNG). Use atom or sublime to open and modify the file. 
 2. Copy the lines in the document and paste them below the dashes (---) replace this with your own personal information and save the document
 3. Stage your files, write a commit message and push to your GitHub account
 ![commit](./assets/com.gif)
