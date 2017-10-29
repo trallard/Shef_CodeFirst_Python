@@ -10,4 +10,5 @@
 * [Session 3](session-3.md)
 * [Session 4](session-4.md)
 * [Appendix: terminal mini tutorial](terminal.md)
+* [Hacktoberfest](Hacktoberfest.md)
 
