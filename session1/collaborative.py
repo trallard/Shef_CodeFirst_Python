@@ -1,6 +1,11 @@
 # Hi there welcome to the collaborative exercise!
 # Start typing your answers below
 
+my_name2 = 'Hannah'
+my_favourite_food = 'chocolate cookies'
+description = "My name is {} and I like {}".format(my_name2, my_favourite_food)
+print (description)
+
 name4 = 'Maureen'
 fav_food = 'Thai & Mexican food'
 
