@@ -22,7 +22,7 @@
 
 #### Getting input from a user
 
-From last week's session we now know how to create variables and how to print them, but what if we don't know what the value of our variable should be, because we need to get it from a user? Using the method `raw_input()` we can prompt a user for information.
+From last week's session we now know how to create variables and how to print them, but what if we don't know what the value of our variable should be, because we need to get it from a user? Using the method `input()` we can prompt a user for information.
 
 
 ---
@@ -33,7 +33,7 @@ From last week's session we now know how to create variables and how to print th
 
 ```python
 print("What's your name?")
-name = raw_input()
+name = input()
 print("Hello {}!".format(name))
 ```
 
@@ -60,8 +60,8 @@ def hello_world():
 
 Any time you write a function in Python, it'll have the following things:
 
-- def at the very beginning, so that Python knows the indented code below is part of a function (you're "defining" your function below this line).
-- A unique name, with no spaces in it. It's important that you don't have two functions with the exact same name in your code. You also don't want to name your function "function", "sum" or "python" (or later on in this course "email", "mailgun", or "tweepy"). If you name your function after a Python library or package or built-in function, Python will get really confused and your code won't run.
+- **def** at the very beginning, so that Python knows the indented code below is part of a function (you're "defining" your function below this line).
+- **A unique name**, with no spaces in it. It's important that you don't have two functions with the exact same name in your code. You also don't want to name your function "function", "sum" or "python" (or later on in this course "email", "mailgun", or "tweepy"). If you name your function after a Python library or package or built-in function, Python will get really confused and your code won't run.
 
 - You'll also need to put brackets and a colon right after the name.
 
@@ -69,7 +69,10 @@ Notice how, after the first line of code in a function, the other lines are inde
 
 #### Calling a function
 
-A function by itself doesn't actually do anything. You have to "call" it by its name, to run the code inside it. Calling a function is really easy! All you have to do is type the name of your function with () after it, like this: hello_world()
+A function by itself doesn't actually do anything. You have to "call" it by its name, to run the code inside it. Calling a function is really easy! All you have to do is type the name of your function with () after it, like this:
+```python
+hello_world()
+```
 
 Notice that the function call is NOT indented, because it's not part of the function definition!
 
@@ -144,7 +147,7 @@ You must use variable names for your arguments when you're defining your functio
 
 You can use functions to do stuff like crunch numbers or manipulate data, and then "return" information from your function so that you can use it somewhere else in your program.
 
-Functions can return a number, a string, a list, or even another function (we'll learn about one called render_template() later on in this course). Today, we're going to learn how to return a simple number value from your function.
+Functions can return a number, a string, a list, or even another function (we'll learn about one called `render_template()` later on in this course). Today, we're going to learn how to return a simple number value from your function.
 
 Let's have a look at the code below:
 ```python
@@ -169,7 +172,7 @@ If you're returning something, the return statement should be the last line you 
 ---
 #### Task
 
-1. What do you think returned_value will be if you don't have a return line in your function? Copy the code from the example above into your **my_arguments.py** file and run the file. Then remove only the line return answer and see what happens.
+1. What do you think `returned_value `will be if you don't have a return line in your function? Copy the code from the example above into your **my_arguments.py** file and run the file. Then remove only the line return answer and see what happens.
 
 ----
 
@@ -277,7 +280,7 @@ Copy and paste the code below into a new file called **numbers.py** and run the 
 
 ```python
 
-number =raw_input("Enter a number between 1 and 10: ")
+number =input("Enter a number between 1 and 10: ")
 number =int(number)        #Converts the input string to an integer
 
 if number > 10:
@@ -294,7 +297,7 @@ if number <=0:
 
 If none of your conditions are met, Python will simply carry on through the rest of your code. In the example above, we didn't write any code for the situation where the user enters a number between 1 and 10, so you didn't see any sort of helpful message or feedback in your terminal.
 
-Notice how we used `int() `to convert the user input into a number. raw_input() treats all input as a string, so we used information in [Python's documentation](https://docs.python.org/2.7/library/stdtypes.html#typesnumeric) to figure out how to convert the user input to a number. You don't need to worry about this right now, but it's an example of something useful you can do with Python.
+Notice how we used `int() `to convert the user input into a number. input() treats all input as a string, so we used information in [Python's documentation](https://docs.python.org/2.7/library/stdtypes.html#typesnumeric) to figure out how to convert the user input to a number. You don't need to worry about this right now, but it's an example of something useful you can do with Python.
 
 ---
 
