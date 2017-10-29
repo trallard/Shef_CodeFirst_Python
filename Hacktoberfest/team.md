@@ -7,3 +7,8 @@ Add your twitter username here: @ixek
 What sort of website would you like to build?
 
 ---
+Name: P. C.
+Did you do the CSS beginners course? No
+Add your twitter username here: @pragy30
+What sort of website would you like to build? data statistics
+---
