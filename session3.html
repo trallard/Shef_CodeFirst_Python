@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 3</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+				<section>
+					<h2> Session 3: Flask, linking Python & HTML
+						<span style="margin-left: 10px">together</span> (Part 1)
+					</h2>
+					<p>Linking together the back-end with the front-end</p>
+					<p class='author'> Darren Vong
+					<br>
+				 <a href="http://twitter.com/mrdarrenv" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+					</i> @mrdarrenv
+				 </a>
+ 		 			</p>
+				</section>
+
+				<section>
+					<h2> Where can I find the material? </h2>
+					You can find all the slides, links to the curriculum, and
+					to the GitHub repository at:
+					<br>
+					<br>
+					<p class='fragment grow'>
+						<a href="http://bitsandchips.me/Shef_CodeFirst_Python/">
+							http://bitsandchips.me/Shef_CodeFirst_Python/</a></p>
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Functions
+					</h3>
+					<ul>
+						<li>A function is a named block of <strong>reusable code</strong>.</li>
+						<li class="fragment">
+							A function can have no arguments...
+						</li>
+						<li class="fragment">
+							... or it can take any number of arguments,
+							which goes inside the brackets <strong>()</strong> when we define
+							our function.
+						</li>
+						<li class="fragment">
+							A function may optionally <strong>return</strong> some information
+						</li>
+						<li class="fragment">
+							This could be <strong>some value</strong> from a result of a calculation, or
+							it can be <strong>another function</strong>!
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-exclamation-triangle"></i>
+						Some words of caution about functions...
+					</h3>
+					<em>
+						Be careful not to overwrite built-in Python functions like <strong>print</strong>!
+					</em>
+				</section>
+
+				<section>
+					<p>Create a file named <strong>session2_recap.py</strong> and enter the following:</p>
+					<div data-markdown>
+						```python
+						def print_hello():
+							print("Hello world!")
+						
+						def add_one(number):
+							return number + 1
+						
+						print_hello()
+						eight_plus_one = add_one(8)
+						print(eight_plus_one)
+						```
+					</div>
+					<p>
+						It should print <strong>Hello world!</strong> followed by
+						<strong>9</strong> on the next line.
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Lists
+					</h3>
+					<ul>
+						<li>Lists are an <strong>ordered</strong> collection of items</li>
+						<li class="fragment">List items go between square brackets <strong>[ ]</strong></li>
+						<li class="fragment">
+							We can put any items in a list, each of which is separated by a comma
+						</li>
+						<li class="fragment">The first item starts at position (index) 0!</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						instructors = ["Chris", "Darren", "Nina", "Tania"]
+						print(f"The second instructor in the list is {instructors[1]}")
+						```
+					</div>
+					<p>
+						It should print <strong>The second instructor in the list is Darren</strong>.
+					</p>
+				</section>
+
+				<section>
+					<h3>Title</h3>
+					<p>Some stuff here (template)</p>
+				</section>
+
+				<section>
+					<h2>The end!</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
