@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
 		<!-- Font awesome -->
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -64,18 +64,18 @@
 					</h3>
 					<ul>
 						<li>A function is a named block of <strong>reusable code</strong>.</li>
-						<li class="fragment">
+						<li>
 							A function can have no arguments...
 						</li>
-						<li class="fragment">
+						<li>
 							... or it can take any number of arguments,
 							which goes inside the brackets <strong>()</strong> when we define
 							our function.
 						</li>
-						<li class="fragment">
+						<li>
 							A function may optionally <strong>return</strong> some information
 						</li>
-						<li class="fragment">
+						<li>
 							This could be <strong>some value</strong> from a result of a calculation, or
 							it can be <strong>another function</strong>!
 						</li>
@@ -118,11 +118,11 @@
 					</h3>
 					<ul>
 						<li>Lists are an <strong>ordered</strong> collection of items</li>
-						<li class="fragment">List items go between square brackets <strong>[ ]</strong></li>
-						<li class="fragment">
+						<li>List items go between square brackets <strong>[ ]</strong></li>
+						<li>
 							We can put any items in a list, each of which is separated by a comma
 						</li>
-						<li class="fragment">The first item starts at position (index) 0!</li>
+						<li>The first item starts at position (index) 0!</li>
 					</ul>
 				</section>
 
@@ -140,8 +140,167 @@
 				</section>
 
 				<section>
-					<h3>Title</h3>
-					<p>Some stuff here (template)</p>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: For loops
+					</h3>
+					<p>
+						Commonly used to go through each items in <strong>a collection of items</strong>,
+						such as <strong>a list</strong> or <strong>a dictionary</strong>.
+					</p>
+					<p class="fragment">Since we saw how to loop through a list last time, for completeness,
+						let's see an example on how to loop through a dictionary...</p>
+				</section>
+				
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						member = {"name": "Darren", "favourite_language": "Python"}
+						for key, value in member.items():
+							print(f"The member's {key.replace('_', ' ')} is {value}.")
+						```
+					</div>
+					<p>
+						It should print <strong>The member's name is Darren.</strong> followed by
+						<strong>The member's favourite language is Python.</strong>
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Logic
+					</h3>
+					<ul>
+						<li>Logic allows our program to <strong>make decisions</strong> based on given conditions.</li>
+						<li>
+							A <strong>condition</strong> tests whether something is <strong>True</strong>
+							or not
+						</li>
+					</ul>
+					<p class="fragment">Let's see our final recap example before moving on...</p>
+				</section>
+
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						age = 20
+						if age < 18:
+							print("You are too young to drink! Naughty!")
+						elif age > 65:
+							print("You're old... maybe you should chill out on drinking!")
+						else:
+							print("Drink responsibly (if you must)!")
+						```
+					</div>
+					<p>
+						It should print <strong>Drink responsibly (if you must)!</strong>
+					</p>
+				</section>
+
+				<section>
+					<h3>And now...</h3>
+					<p>Let's talk about <strong>Flask</strong>!</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-truck" aria-hidden="true"></i>
+						A detour...
+					</h3>
+					<p>
+						Before we cover <strong>Flask</strong> in more details, there are some important concepts we need to go
+						through first...
+					</p>
+					<p class="fragment">So for the time being:</p>
+					<p class="fragment">
+						<strong>Flask</strong> is a framework (more on what that means later)
+						which allows us to control <strong>our server</strong> using Python.
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-lightbulb-o"></i>
+						Why do we need/use a server?
+					</h3>
+					<p>
+						A server is used so we can <strong>share our web application</strong>
+						with the world over the Internet.
+					</p>
+					<p class="fragment">
+						But... <em>how</em> does it help make our application accessible over the Internet?
+					</p>
+					<p class="fragment">To understand that, we need to take a look at
+						<strong>what actually happens</strong> when we try to access our application
+						through our browser.
+					</p>
+				</section>
+
+				<section>
+					<img src="assets/req_res_cycle.png" alt="The Request-Response Cycle">
+				</section>
+
+				<section>
+					<ul>
+						<li>
+							When we type in a web address (URL) in our browser, we are in fact sending
+							<strong>a request</strong> to the server running the website we want to visit
+						</li>
+						<li class="fragment">
+							Based on the URL we typed in, the server uses this information to generate the
+							correct HTML page to send back as <strong>a response</strong>.
+						</li>
+						<li class="fragment">
+							Our browser then processes the received HTML, along with any CSS and JavaScript
+							on the page, and renders out the pretty web pages that we see!
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-link"></i>
+						If you did the Beginners course...
+					</h3>
+					<p>
+						Your pretty HTML pages are actually being run (served) over the GitHub server, which
+						is what allowed you to see your projects publicly online!
+					</p>
+				</section>
+				
+				<section>
+					<h3>And now...</h3>
+					<p>Let's talk about <strong>Flask</strong> for real this time!</p>
+				</section>
+				
+				<section>
+					<h3>What is Flask?</h3>
+				</section>
+				
+				<section>
+					<img src="assets/flask.webp" alt="Jokey flask">
+				</section>
+
+				<section>
+					<em>Alright, it's not quite the same kind of flask that Cumberbatch is holding...</em>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-server"></i>
+						What is Flask?
+					</h3>
+					<ul>
+						<li>
+							Flask is a <strong>framework</strong> - a set of code written by some other clever
+							people that <strong>we can re-use</strong>
+						</li>
+						<li>
+							It's better to use Flask's code, rather than writing our own, to handle the requests
+							and responses we talked about earlier since <strong>it's quite complicated!</strong>
+						</li>
+						<li>
+							Re-using Flask's code deals with said complex tasks, allowing us to focus on the
+							application we want to build!
+						</li>
+					</ul>
 				</section>
 
 				<section>
