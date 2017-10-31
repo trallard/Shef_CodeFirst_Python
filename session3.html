@@ -204,6 +204,15 @@
 				</section>
 
 				<section>
+					<h3>What is Flask?</h3>
+				</section>
+				
+				<section>
+					<div><img src="assets/flask.webp" alt="Jokey flask"></div>
+					<em class="fragment">Alright, it's not quite the same kind of flask that Cumberbatch is holding...</em>
+				</section>
+				
+				<section>
 					<h3><i class="fa fa-truck" aria-hidden="true"></i>
 						A detour...
 					</h3>
@@ -257,7 +266,7 @@
 				</section>
 
 				<section>
-					<h3><i class="fa fa-link"></i>
+					<h3><i class="fa fa-link" aria-hidden="true"></i>
 						If you did the Beginners course...
 					</h3>
 					<p>
@@ -270,21 +279,9 @@
 					<h3>And now...</h3>
 					<p>Let's talk about <strong>Flask</strong> for real this time!</p>
 				</section>
-				
-				<section>
-					<h3>What is Flask?</h3>
-				</section>
-				
-				<section>
-					<img src="assets/flask.webp" alt="Jokey flask">
-				</section>
 
 				<section>
-					<em>Alright, it's not quite the same kind of flask that Cumberbatch is holding...</em>
-				</section>
-
-				<section>
-					<h3><i class="fa fa-server"></i>
+					<h3><i class="fa fa-server" aria-hidden="true"></i>
 						What is Flask?
 					</h3>
 					<ul>
@@ -303,6 +300,50 @@
 					</ul>
 				</section>
 
+				<section>
+					<h3>So... how does Flask work?</h3>
+				</section>
+				
+				<section>
+					<p>
+						When we first start a Flask program, it starts up <strong>a server</strong> which we have
+						control over using Python. Users can then access our website in their browser!
+					</p>
+				</section>
+				
+				<section>
+					<p>Whenever a user type in the URL to go on our website, it goes through the exact journey
+						discussed on the request-response diagram earlier... with one exception
+					</p>
+					<p class="fragment">
+						A diagram will hopefully clear this up...
+					</p>
+				</section>
+				
+				<section>
+					<figure>
+						<img src="assets/webapp.png" alt="Flask app">
+					</figure>
+				</section>
+				
+				<section>
+					<p>
+						The only <strong>key difference</strong> from our previous diagram is that rather than returning the HTML
+						<strong>directly</strong>, Flask runs the HTML through a filter called <strong>a template engine</strong> (Jinja2).
+					</p>
+					<p class="fragment">
+						This allows HTML to be generated <strong>dynamically <i class="fa fa-rocket" aria-hidden="true"></i></strong>
+						rather than having to write them all <strong>in full</strong> (by hand) in advance, which can get tedious quickly! 
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						<i class="fa fa-cogs" aria-hidden="true"></i>
+						Hands on: our first Flask program
+					</h3>
+				</section>
+				
 				<section>
 					<h2>The end!</h2>
 				</section>
