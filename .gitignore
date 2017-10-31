@@ -2,3 +2,6 @@
 
 .sass-cache/*
 .vscode
+
+# Own HTML file for quickly seeing a slide quickly
+single.html
