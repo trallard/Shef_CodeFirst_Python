@@ -29,12 +29,17 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<style>
+			#req-url {position: absolute;top: 10px;left: 40%;font-size: 20px;color: #8E24AA;}
+			#res {position: absolute;color: #8E24AA;font-size: 18px;bottom: 38%;left: 42.5%;}
+		</style>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides logo">
 				<section>
-					<h2> Session 3: Flask, linking Python & HTML
+					<h2> Session 3: Flask - using Python & HTML
 						<span style="margin-left: 10px">together</span> (Part 1)
 					</h2>
 					<p>Linking together the back-end with the front-end</p>
@@ -144,7 +149,7 @@
 						Recap: For loops
 					</h3>
 					<p>
-						Commonly used to go through each items in <strong>a collection of items</strong>,
+						Commonly used to go through each item in <strong>a collection of items</strong>,
 						such as <strong>a list</strong> or <strong>a dictionary</strong>.
 					</p>
 					<p class="fragment">Since we saw how to loop through a list last time, for completeness,
@@ -236,7 +241,7 @@
 						with the world over the Internet.
 					</p>
 					<p class="fragment">
-						But... <em>how</em> does it help make our application accessible over the Internet?
+						But... <strong><em>how</em></strong> does it help make our application accessible over the Internet?
 					</p>
 					<p class="fragment">To understand that, we need to take a look at
 						<strong>what actually happens</strong> when we try to access our application
@@ -245,7 +250,14 @@
 				</section>
 
 				<section>
-					<img src="assets/req_res_cycle.png" alt="The Request-Response Cycle">
+					<div style="position:relative;">
+						<img src="assets/req_res_cycle.png" alt="The Request-Response Cycle">
+						<strong><p id="req-url" class="fragment">https://pawlean.com</p></strong>
+						<div id="res" class="fragment">
+							<strong><p style="margin:0;">&lt;!DOCTYPE html&gt;</p></strong>
+							<strong><p style="margin:0;">&lt;html&gt;...&lt;/html&gt;</p></strong>
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -313,7 +325,7 @@
 				
 				<section>
 					<p>Whenever a user type in the URL to go on our website, it goes through the exact journey
-						discussed on the request-response diagram earlier... with one exception
+						shown on the diagram earlier... with one exception
 					</p>
 					<p class="fragment">
 						A diagram will hopefully clear this up...
@@ -328,7 +340,7 @@
 				
 				<section>
 					<p>
-						The only <strong>key difference</strong> from our previous diagram is that rather than returning the HTML
+						The only <strong>key difference</strong> in this diagram from our previous one is that rather than returning the HTML
 						<strong>directly</strong>, Flask runs the HTML through a filter called <strong>a template engine</strong> (Jinja2).
 					</p>
 					<p class="fragment">
