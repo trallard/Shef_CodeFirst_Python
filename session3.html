@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 3</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			#req-url {position: absolute;top: 10px;left: 40%;font-size: 20px;color: #8E24AA;}
+			#res {position: absolute;color: #8E24AA;font-size: 18px;bottom: 38%;left: 42.5%;}
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+				<section>
+					<h2> Session 3: Flask - using Python & HTML
+						<span style="margin-left: 10px">together</span> (Part 1)
+					</h2>
+					<p>Linking together the back-end with the front-end</p>
+					<p class='author'> Darren Vong
+					<br>
+				 <a href="http://twitter.com/mrdarrenv" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+					</i> @mrdarrenv
+				 </a>
+ 		 			</p>
+				</section>
+
+				<section>
+					<h2> Where can I find the material? </h2>
+					You can find all the slides, links to the curriculum, and
+					to the GitHub repository at:
+					<br>
+					<br>
+					<p class='fragment grow'>
+						<a href="http://bitsandchips.me/Shef_CodeFirst_Python/">
+							http://bitsandchips.me/Shef_CodeFirst_Python/</a></p>
+				</section>
+
+				<section>
+					<h3> <i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Functions
+					</h3>
+					<ul>
+						<li>A function is a named block of <strong>reusable code</strong>.</li>
+						<li>
+							A function can have no arguments...
+						</li>
+						<li>
+							... or it can take any number of arguments,
+							which goes inside the brackets <strong>()</strong> when we define
+							our function.
+						</li>
+						<li>
+							A function may optionally <strong>return</strong> some information
+						</li>
+						<li>
+							This could be <strong>some value</strong> from a result of a calculation, or
+							it can be <strong>another function</strong>!
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-exclamation-triangle"></i>
+						Some words of caution about functions...
+					</h3>
+					<em>
+						Be careful not to overwrite built-in Python functions like <strong>print</strong>!
+					</em>
+				</section>
+
+				<section>
+					<p>Create a file named <strong>session2_recap.py</strong> and enter the following:</p>
+					<div data-markdown>
+						```python
+						def print_hello():
+							print("Hello world!")
+						
+						def add_one(number):
+							return number + 1
+						
+						print_hello()
+						eight_plus_one = add_one(8)
+						print(eight_plus_one)
+						```
+					</div>
+					<p>
+						It should print <strong>Hello world!</strong> followed by
+						<strong>9</strong> on the next line.
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Lists
+					</h3>
+					<ul>
+						<li>Lists are an <strong>ordered</strong> collection of items</li>
+						<li>List items go between square brackets <strong>[ ]</strong></li>
+						<li>
+							We can put any items in a list, each of which is separated by a comma
+						</li>
+						<li>The first item starts at position (index) 0!</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						instructors = ["Chris", "Darren", "Nina", "Tania"]
+						print(f"The second instructor in the list is {instructors[1]}")
+						```
+					</div>
+					<p>
+						It should print <strong>The second instructor in the list is Darren</strong>.
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: For loops
+					</h3>
+					<p>
+						Commonly used to go through each item in <strong>a collection of items</strong>,
+						such as <strong>a list</strong> or <strong>a dictionary</strong>.
+					</p>
+					<p class="fragment">Since we saw how to loop through a list last time, for completeness,
+						let's see an example on how to loop through a dictionary...</p>
+				</section>
+				
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						member = {"name": "Darren", "favourite_language": "Python"}
+						for key, value in member.items():
+							print(f"The member's {key.replace('_', ' ')} is {value}.")
+						```
+					</div>
+					<p>
+						It should print <strong>The member's name is Darren.</strong> followed by
+						<strong>The member's favourite language is Python.</strong>
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-reply" aria-hidden="true"></i>
+						Recap: Logic
+					</h3>
+					<ul>
+						<li>Logic allows our program to <strong>make decisions</strong> based on given conditions.</li>
+						<li>
+							A <strong>condition</strong> tests whether something is <strong>True</strong>
+							or not
+						</li>
+					</ul>
+					<p class="fragment">Let's see our final recap example before moving on...</p>
+				</section>
+
+				<section>
+					<p>Replace the content of <strong>session2_recap.py</strong> with the following:</p>
+					<div data-markdown>
+						```python
+						age = 20
+						if age < 18:
+							print("You are too young to drink! Naughty!")
+						elif age > 65:
+							print("You're old... maybe you should chill out on drinking!")
+						else:
+							print("Drink responsibly (if you must)!")
+						```
+					</div>
+					<p>
+						It should print <strong>Drink responsibly (if you must)!</strong>
+					</p>
+				</section>
+
+				<section>
+					<h3>And now...</h3>
+					<p>Let's talk about <strong>Flask</strong>!</p>
+				</section>
+
+				<section>
+					<h3>What is Flask?</h3>
+				</section>
+				
+				<section>
+					<div><img src="assets/flask.webp" alt="Jokey flask"></div>
+					<em class="fragment">Alright, it's not quite the same kind of flask that Cumberbatch is holding...</em>
+				</section>
+				
+				<section>
+					<h3><i class="fa fa-truck" aria-hidden="true"></i>
+						A detour...
+					</h3>
+					<p>
+						Before we cover <strong>Flask</strong> in more details, there are some important concepts we need to go
+						through first...
+					</p>
+					<p class="fragment">So for the time being:</p>
+					<p class="fragment">
+						<strong>Flask</strong> is a framework (more on what that means later)
+						which allows us to control <strong>our server</strong> using Python.
+					</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-lightbulb-o"></i>
+						Why do we need/use a server?
+					</h3>
+					<p>
+						A server is used so we can <strong>share our web application</strong>
+						with the world over the Internet.
+					</p>
+					<p class="fragment">
+						But... <strong><em>how</em></strong> does it help make our application accessible over the Internet?
+					</p>
+					<p class="fragment">To understand that, we need to take a look at
+						<strong>what actually happens</strong> when we try to access our application
+						through our browser.
+					</p>
+				</section>
+
+				<section>
+					<div style="position:relative;">
+						<img src="assets/req_res_cycle.png" alt="The Request-Response Cycle">
+						<strong><p id="req-url" class="fragment">https://pawlean.com</p></strong>
+						<div id="res" class="fragment">
+							<strong><p style="margin:0;">&lt;!DOCTYPE html&gt;</p></strong>
+							<strong><p style="margin:0;">&lt;html&gt;...&lt;/html&gt;</p></strong>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<ul>
+						<li>
+							When we type in a web address (URL) in our browser, we are in fact sending
+							<strong>a request</strong> to the server running the website we want to visit
+						</li>
+						<li class="fragment">
+							Based on the URL we typed in, the server uses this information to generate the
+							correct HTML page to send back as <strong>a response</strong>.
+						</li>
+						<li class="fragment">
+							Our browser then processes the received HTML, along with any CSS and JavaScript
+							on the page, and renders out the pretty web pages that we see!
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-link" aria-hidden="true"></i>
+						If you did the Beginners course...
+					</h3>
+					<p>
+						Your pretty HTML pages are actually being run (served) over the GitHub server, which
+						is what allowed you to see your projects publicly online!
+					</p>
+				</section>
+				
+				<section>
+					<h3>And now...</h3>
+					<p>Let's talk about <strong>Flask</strong> for real this time!</p>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-server" aria-hidden="true"></i>
+						What is Flask?
+					</h3>
+					<ul>
+						<li>
+							Flask is a <strong>framework</strong> - a set of code written by some other clever
+							people that <strong>we can re-use</strong>
+						</li>
+						<li>
+							It's better to use Flask's code, rather than writing our own, to handle the requests
+							and responses we talked about earlier since <strong>it's quite complicated!</strong>
+						</li>
+						<li>
+							Re-using Flask's code deals with said complex tasks, allowing us to focus on the
+							application we want to build!
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>So... how does Flask work?</h3>
+				</section>
+				
+				<section>
+					<p>
+						When we first start a Flask program, it starts up <strong>a server</strong> which we have
+						control over using Python. Users can then access our website in their browser!
+					</p>
+				</section>
+				
+				<section>
+					<p>Whenever a user type in the URL to go on our website, it goes through the exact journey
+						shown on the diagram earlier... with one exception
+					</p>
+					<p class="fragment">
+						A diagram will hopefully clear this up...
+					</p>
+				</section>
+				
+				<section>
+					<figure>
+						<img src="assets/webapp.png" alt="Flask app">
+					</figure>
+				</section>
+				
+				<section>
+					<p>
+						The only <strong>key difference</strong> in this diagram from our previous one is that rather than returning the HTML
+						<strong>directly</strong>, Flask runs the HTML through a filter called <strong>a template engine</strong> (Jinja2).
+					</p>
+					<p class="fragment">
+						This allows HTML to be generated <strong>dynamically <i class="fa fa-rocket" aria-hidden="true"></i></strong>
+						rather than having to write them all <strong>in full</strong> (by hand) in advance, which can get tedious quickly! 
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						<i class="fa fa-cogs" aria-hidden="true"></i>
+						Hands on: our first Flask program
+					</h3>
+				</section>
+				
+				<section>
+					<h2>The end!</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
