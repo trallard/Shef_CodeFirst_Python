@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hello there!</title>
+  <!-- For those of you who want a head start with using CSS, this is how you include your
+  own CSS files! -->
   <link rel="stylesheet" href={{url_for("static", filename="css/app.css")}}>
 </head>
 <body>
-  <p>Hello {{name}}</p>
+  <!-- To print out variable received from render_template(...) from our Python Flask
+  code, we put double curly braces around the name of the variable as shown. -->
+  <p>Hello {{person}}</p>
 </body>
 </html>
