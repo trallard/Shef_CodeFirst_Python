@@ -172,9 +172,9 @@
 						"magic function" <strong>binds</strong> the URL specified to the standard Python
 						function which will then handle the <strong>requests</strong> from users.
 					</p>
-					<p>
-						Flask uses <strong>relative URLs</strong>, so they work no matter where the
-						application is run.
+					<p class="fragment">
+						Flask uses <strong>relative URLs</strong> - this is usually the string after the
+						first single slash.
 					</p>
 				</section>
 
@@ -184,6 +184,10 @@
 						Recap: Routing (cont.)
 					</h3>
 					<p>
+						Relative URLs are used so that our application <strong>works in a consistent way</strong>,
+						regardless of where we host it.
+					</p>
+					<p class="fragment">
 						In our case where we have been developing locally, <strong>/hello</strong> is
 						a relative URL with respect to the host <strong>localhost:5000</strong>, and so
 						can be accessed by visiting <strong>localhost:5000/hello</strong>
@@ -211,7 +215,9 @@
 						when the user visits the page. These have to be written up <strong>in full</strong>
 						before a user visit our site.
 					</p>
-					<p class="fragment">This is essentially what you did if you completed the Beginners course! </p>
+					<p class="fragment">
+						This is essentially what you did if you completed the Beginners course!
+					</p>
 					<p class="fragment">Revisiting a familiar diagram might make this clearer...</p>
 				</section>
 
@@ -254,12 +260,14 @@
 						becomes tricky when we only know how to lay out & style the page, but we
 						<strong>don't know what the content looks like</strong> until they visit the page.
 					</p>
-					<p class="fragment">
-						Facebook and Twitter are great examples: the feed is different depending on
-						who's visiting, who they are friends with etc...
+				</section>
+				
+				<section>
+					<p>
+						Facebook and Twitter are great examples: the feed is different for everyone visiting,
+						as it <strong>depends on many variable factors</strong> such as who they follow/are friends with.
 					</p>
 				</section>
-
 				<section>
 					<h3>Solution: write and use HTML <span style="margin-left:10px;">templates!</span></h3>
 				</section>
@@ -271,8 +279,9 @@
 						<strong>we know for definite</strong>.
 					</p>
 					<p class="fragment">
-						The rest of the page can be generated moments after our user visits
-						our page using data from their <strong>request</strong>.
+						For parts we don't know, the HTML is generated with some logics using
+						Python-like code with data from a user's <strong>request</strong> when they
+						visit our website.
 					</p>
 					<p class="fragment">Let's see how we can do this in <strong>Flask</strong>!</p>
 				</section>
