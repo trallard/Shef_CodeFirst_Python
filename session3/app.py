@@ -1,6 +1,6 @@
 # To use functions from a library you installed via pip, you have to import them first.
 # Importing functions using the "from x import a, b, c" style allows you to use
-# the function directly as instead of having to write x.a(), x.b() etc each time.
+# the function directly instead of having to write x.a(), x.b() etc each time.
 from flask import Flask, render_template
 
 # This creates the all important Flask application which will give us the ability
