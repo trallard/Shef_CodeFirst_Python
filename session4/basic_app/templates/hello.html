@@ -1,0 +1,12 @@
+{% include "header.html" %}
+  <!-- Add your page specific CSS here! -->
+</head>
+<body>
+  <!-- To print out variable received from render_template(...) from our Python Flask
+  code, we put double curly braces around the name of the variable as shown. -->
+  <p>Hello {{person}}</p>
+  
+  {% include "footer.html" %}
+  <!-- Include any JavaScript here - best place to do so pages load faster. -->
+</body>
+</html>
