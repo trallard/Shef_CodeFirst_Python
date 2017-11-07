@@ -27,8 +27,8 @@ def show_hello_template(name):
     """Example showing to return and render an HTML template file back
     to the user's browser."""
 
-    # By default, our templates do not know about variables such as `name` in
-    # this case where we captured some value from the user with the web address (URL)
+    # By default, our templates do not know about variables such as `name`. In
+    # this case, `name` captured some value from the user with the web address (URL)
     # they typed in. So, to make use of such information, we need to pass this along
     # as additional variables after the name of the template in render_template(...).
     return render_template("hello.html", person=name)
