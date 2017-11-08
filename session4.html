@@ -292,6 +292,52 @@
 						Hands on: a Flask program using templates
 					</h3>
 				</section>
+
+				<section>
+					<h3>More about requests...</h3>
+					<p>
+						Hopefully by now, you'd have noticed that the word <strong>request</strong>
+						has been mentioned repeatedly.
+					</p>
+					<p class="fragment">
+						There's just <strong>one more</strong> little detail that we need to
+						understand about <strong>requests</strong> before we can move forward... the
+						<strong>request type</strong>!
+					</p>
+				</section>
+
+				<section>
+					<h3>More about requests...</h3>
+					<p>Earlier, we said:</p>
+					<p class="fragment">
+						"Typing in the URL of the page sends <strong>a request</strong> to the server
+						running the website."
+					</p>
+					<p class="fragment">
+						In fact, to be more precise, we are actually sending a <strong>GET request</strong>
+						to the server running the website.
+					</p>
+				</section>
+
+				<section>
+					<h3>The main problem with GET requests</h3>
+					<p>
+						If we want the user to send some extra data when they visit a page on our website,
+						the data are visible at the end of the URL.
+						This is all well and good <strong>if the data is not sensitive</strong>!
+					</p>
+					<p class="fragment">
+						To solve this problem, browsers allows data to be sent using a different kind of request
+						known as a <strong>POST request</strong>, which is only accessible on our server.
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						<i class="fa fa-cogs" aria-hidden="true"></i>
+						Hands on: handling POST requests in our Flask program
+					</h3>
+				</section>
 				
 				<section>
 					<h2>The end!</h2>
