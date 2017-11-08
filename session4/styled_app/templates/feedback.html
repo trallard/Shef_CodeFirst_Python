@@ -1,0 +1,18 @@
+{% include "header.html" %}
+
+<div class="container">
+  {% for name, value in form_data.items() %}  
+    <div class="row">
+      <div class="col-sm-12">
+        <p>{{name.title()}} submitted was: {{value}}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+  {% include "footer.html" %}
+  <!-- Include any JavaScript here - best place to do so pages load faster. -->
+
+</div>
+</body>
+
+</html>

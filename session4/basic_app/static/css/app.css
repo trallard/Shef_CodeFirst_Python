@@ -1,0 +1,19 @@
+p {
+  border: 1px solid purple;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body {
+  margin: 10px 15px 0;
+  font-size: 24px;
+}
+
+form {
+  margin: 15px 0;
+}
+
+footer {
+  border-top: 1px dashed black;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- In this styled up version of the app, we really start to notice the benefit of
+separating the header code into its own file, rather than having to copy and pasting this
+everywhere, as adding a link to the nav bar would require you to update all copies of the nav
+bar across every template, which becomes tedious and error-prone as you may easily forget
+to update one of them. -->
+<head>
+  <meta charset="utf-8">
+  <!-- The all important meta tag to ensure mobile responsive media queries work properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href={{url_for( 'static', filename='css/app.css' )}}>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Demo</a>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,11 @@
+{% include "header.html" %}
+</head>
+
+<body>
+  <ul>
+  {% for name, value in form_data.items() %}
+    <li>{{name.title()}} submitted was: {{value}}</li>
+  {% endfor %}
+  </ul>
+  {% include "footer.html" %}
+</body>
