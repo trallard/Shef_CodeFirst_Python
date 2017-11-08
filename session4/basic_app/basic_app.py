@@ -4,12 +4,12 @@ app = Flask("BasicDemoApp")
 
 @app.route("/")
 def index():
-    """Example showing how to return a string back to the user's browser
-    when they visit the root path of the website."""
+    """Example showing how to return an HTML template with a form, which
+    sends data back to this Flask app using a POST request."""
 
     return render_template("index.html", title="Home page")
 
-@app.route("/feedback")
+@app.route("/feedback", method=["POST"])
 def gather_feedback():
     """Example showing how to retrieve data from requests."""
 
@@ -17,28 +17,14 @@ def gather_feedback():
     data = request.values
 
     # We can have a peek at what the data looks like in the console if we
-    # print the result we got from the user
+    # print the result we got from the user. The keys we used
+    # (the `['name']` bit after `data`) to see the data matches the "name"
+    # we give on the input field in our HTML form. 
     print(f"Name submitted was: {data['name']}")
     print(f"Email submitted was: {data['email']}")
+
     return render_template("feedback.html", form_data=data, title="Feedback response")
 
-@app.route("/feedback", methods=["POST"])
-def gather_post_feedback():
-    """Example showing how to handle write a function to handle POST requests."""
-
-    return gather_feedback()
-
-@app.route("/get_feedback", methods=["GET", "POST"])
-def multi_method_gather_feedback():
-    """Example showing how to write a function handling both GET and POST#
-    requests at the same time."""
-
-    return gather_feedback()
-
-# More generic routes (i.e ones in angled brackets) should be placed nearer
-# the bottom of the code to act as fallback, as the order in which the
-# routes are defined matters. Try putting this above the `gather_feedback` function
-# and see what happens!
 @app.route("/<name>")
 def say_hello_to(name):
     """Example showing how to take URL parameter and capture its value, as

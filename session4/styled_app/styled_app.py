@@ -4,8 +4,8 @@ app = Flask("StyledDemoApp")
 
 @app.route("/")
 def say_hello():
-    """Example showing how to return a string back to the user's browser
-    when they visit the root path of the website."""
+    """Example showing how to return an HTML template with a form, which
+    sends data back to this Flask app using a POST request."""
 
     return render_template("index.html", title="Home page")
 
