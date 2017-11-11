@@ -12,8 +12,11 @@ def say_hello():
 
 @app.route("/feedback", methods=["POST"])
 def gather_feedback():
-    """Example showing how to make a function handle POST requests,
-    as well as retrieving data from requests."""
+    """Example showing how to retrieve data from POST requests.
+    By default, when writing @app.route(...) on top of a function,
+    it can only handle GET requests. As such, we need to explicitly
+    specify that we want the function to handle POST requests with
+    `method=["POST"]` bit."""
 
     # a neat way for accessing data for both GET and POST requests!
     data = request.values

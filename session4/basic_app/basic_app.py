@@ -9,9 +9,13 @@ def index():
 
     return render_template("index.html", title="Home page")
 
-@app.route("/feedback", method=["POST"])
+@app.route("/feedback", methods=["POST"])
 def gather_feedback():
-    """Example showing how to retrieve data from requests."""
+    """Example showing how to retrieve data from POST requests.
+    By default, when writing @app.route(...) on top of a function,
+    it can only handle GET requests. As such, we need to explicitly
+    specify that we want the function to handle POST requests with
+    `method=["POST"]` bit."""
 
     # a neat way for accessing data from both GET and POST requests!
     data = request.values
@@ -19,7 +23,7 @@ def gather_feedback():
     # We can have a peek at what the data looks like in the console if we
     # print the result we got from the user. The keys we used
     # (the `['name']` bit after `data`) to see the data matches the "name"
-    # we give on the input field in our HTML form. 
+    # we give on the input field in our HTML form.
     print(f"Name submitted was: {data['name']}")
     print(f"Email submitted was: {data['email']}")
 

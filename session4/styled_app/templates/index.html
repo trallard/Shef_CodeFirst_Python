@@ -1,7 +1,13 @@
 {% include "header.html" %}
 
+<!-- The values in the class attribute elements come from the Bootstrap framework. For more
+information on what they do, visit https://getbootstrap.com/docs/3.3/ -->
 <div class="container">
   <div class="row">
+    <!-- The "action" attribute of a form ("/feedback" in this case) denotes the URL
+    in which it will be a sending a request to. So, to handle this request, we
+    need to define a corresponding function back in our Flask app with
+    @app.route("/feedback", ...) above the function. -->
     <form class="form-horizontal" action="/feedback" method="post">
 
       <div class="form-group">

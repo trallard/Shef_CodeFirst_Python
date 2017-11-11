@@ -4,7 +4,12 @@
 <body>
   
   <!-- Example of how to make a form in HTML, and how to send it using a POST
-  request (the default is a GET request) -->
+  request (the default is a GET request).
+  The "action" attribute of a form ("/feedback" in this case) denotes the URL
+  in which it will be a sending a request to. So, to handle this request, we
+  need to define a corresponding function back in our Flask app with
+  @app.route("/feedback", ...) above the function.
+  -->
   <form action="/feedback" method="post">
     <label for="name">Name: </label>
     <input type="text" name="name" id="name">
