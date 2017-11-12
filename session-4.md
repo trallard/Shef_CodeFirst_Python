@@ -144,7 +144,7 @@ Jinja2 is really powerful, but beyond the scope of this course. We'll show you a
 1. Create a new folder called **templates**
 2. Below is some HTML code that uses Jinja2 syntax. Copy this code into a new file, and
 save that file in your templates folder as `hello.html`:
-```jinja
+```html
 <!doctype html>
 <html>
   <head>
@@ -169,7 +169,7 @@ Notice a few new things that we haven't seen before in HTML files:
 
 We're not using CSS or Javascript today, but here's an example of how you link to CSS in your HTML file using Jinja2, for a file called `main.css`:
 
-```jinja
+```html
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 ```
 
