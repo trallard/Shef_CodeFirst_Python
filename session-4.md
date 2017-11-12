@@ -144,7 +144,7 @@ Jinja2 is really powerful, but beyond the scope of this course. We'll show you a
 1. Create a new folder called **templates**
 2. Below is some HTML code that uses Jinja2 syntax. Copy this code into a new file, and
 save that file in your templates folder as `hello.html`:
-```html
+```jinja
 <!doctype html>
 <html>
   <head>
@@ -169,7 +169,7 @@ Notice a few new things that we haven't seen before in HTML files:
 
 We're not using CSS or Javascript today, but here's an example of how you link to CSS in your HTML file using Jinja2, for a file called `main.css`:
 
-```html
+```jinja
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 ```
 
@@ -299,7 +299,7 @@ If the answer isn't as clear as that, you can do some more sleuthing online to f
 1. Review what you've learned so far. If you have any questions, ask your fellow classmates, or an instructor.
 2. You can use HTML forms to get all sorts of information from visitors to your website, including text, email, numbers, dates, and more. You're not limited to just using text fields either – you can use input types like radio buttons, tick boxes, etc.
 
-  * Add another one or two input fields of your choice to your HTML form, and update your Python code to do something with that information (for example, display it back to your user). If you want to get a bit creative with input fields, have a look at the [W3](https://www.w3schools.com/html/html_forms.asp) [Schools HTML form tutorial](https://www.w3schools.com/html/html_forms.asp) [,](https://www.w3schools.com/html/html_forms.asp) and [W3 Schools input type tutorial](https://www.w3schools.com/html/html_form_input_types.asp)for inspiration.
+  * Add another one or two input fields of your choice to your HTML form, and update your Python code to do something with that information (for example, display it back to your user). If you want to get a bit creative with input fields, have a look at the [W3 Schools HTML form tutorial](https://www.w3schools.com/html/html_forms.asp), and [W3 Schools input type tutorial](https://www.w3schools.com/html/html_form_input_types.asp) for inspiration.
 
 3. Please make sure that you've emailed your instructors with your group name, the names of the members in your group, as well as each person's email and Twitter handle.
 
