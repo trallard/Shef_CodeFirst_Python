@@ -7,31 +7,33 @@
 			<div class="card card-signup">
 				<form class="form" method="post" action="/twitter_search">
 					<div class="header header-primary text-center">
-						<h4> Ok, collecting tweets then </h4>
+						<h4> Music it is then! </h4>
 					</div>
 
+					<br><br>
 					<div class="content">
+					<p> What are you looking for?</p>
+					<div class="togglebutton">
+						<label>
+							<input type="checkbox" checked="" name="type" id='type'>
+							Artist
+						</label>
+					</div>
 
-						<div class="form-group">
+					<div class="togglebutton">
+						<label>
+							<input type="checkbox" name="type" id='type'>
+							Album
+						</label>
+					</div>
+
+						<div class="form-group label-floating">
 							<input type="text" name="query" id="query" class="form-control"
-							placeholder="Search for (words, #)">
+							placeholder="Enter search term (e.g. FooFighters)">
 						</div>
 
-						<!-- <div class="form-group">
-							<input type="number" name="no_tweets" id="no_tweets" class="form-control"
-							placeholder="Number of tweets" value=1>
-						</div> -->
+					</div>
 
-
-						<!-- If you want to add a checkbox to this form, uncomment this code
-
-						<div class="checkbox">
-						<label>
-						<input type="checkbox" name="optionsCheckboxes" checked>
-						Subscribe to newsletter
-					</label>
-				</div> -->
-			</div>
 			<div class="footer text-center">
 				<button type="submit" class="btn btn-primary btn-round">Search</button>
 			</div>

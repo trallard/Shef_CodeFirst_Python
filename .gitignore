@@ -108,3 +108,7 @@ venv.bak/
 
 .vscode
 .idea/
+
+session5/CFG_app/config\.yml
+
+*.xml
