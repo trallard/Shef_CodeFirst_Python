@@ -12,6 +12,8 @@
 - What do we use `@app.route` for in our Python code?
 - What does `render\_template` do?
 
+---
+
 ## Let's get started!
 
 #### Introducing APIs
