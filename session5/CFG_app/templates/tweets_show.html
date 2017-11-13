@@ -1,0 +1,28 @@
+{% include "header.html" %}
+{% block title %}Twitter Search result for the keyword {{search_string}}{% endblock %}
+
+{% block content %}
+<div class="main main-raised">
+  <br>
+  <h1 class="text-center">Results from search: {{search_string}}</h1>
+  <br> <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class='table table-striped'>
+        <thead>
+            <th>User</th>
+            <th>Tweet</th>
+        </thead>
+        <tbody>
+          {% for tweet in tweets %}
+          <tr>
+            <td>  {{ tweet.user.name }}</td>
+            <td> {{ tweet.text }} </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

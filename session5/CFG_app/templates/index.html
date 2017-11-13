@@ -1,0 +1,47 @@
+{% include "header.html" %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+			<div class="card card-signup">
+				<form class="form" method="post" action="/twitter_search">
+					<div class="header header-primary text-center">
+						<h4> Twitter search </h4>
+					</div>
+
+					<div class="content">
+
+						<div class="form-group">
+							<input type="text" name="query" id="query" class="form-control" placeholder="Search for..">
+						</div>
+
+						<!-- <div class="form-group">
+							<input type="number" name="no_tweets" id="no_tweets" class="form-control"
+							placeholder="Number of tweets" value=1>
+						</div> -->
+
+
+						<!-- If you want to add a checkbox to this form, uncomment this code
+
+						<div class="checkbox">
+						<label>
+						<input type="checkbox" name="optionsCheckboxes" checked>
+						Subscribe to newsletter
+					</label>
+				</div> -->
+			</div>
+			<div class="footer text-center">
+				<button type="submit" class="btn btn-primary">Search</button>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+</div>
+
+
+{% include "footer.html" %}
+<!-- Include any JavaScript here - best place to do so pages load faster. -->
+
+</div>
+</body>
+</html>
