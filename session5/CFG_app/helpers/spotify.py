@@ -1,4 +1,4 @@
-# importing Requests: HTTP for Humans - installed previsouly
+# importing Requests: HTTP for Humans - installed previously
 import requests
 
 # making a search request to the Spotify API to return
@@ -19,3 +19,8 @@ data = {'query':'lil',
 }
 
 r = requests.get(url, params = data)
+
+def spotify_query(query, type):
+        url = 'https://api.spotify.com/v1/search'
+        response = request.get(url, params = data )
+        return response

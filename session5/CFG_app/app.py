@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets
+from helpers.spotify import spotify_query
 
 app = Flask("APIs query for CFG")
 session = {}
