@@ -1,0 +1,42 @@
+{% include "header.html" %}
+
+	<div class="main main-raised">
+		<div class="profile-content">
+			<div class="container">
+				<div class="row">
+					<div class="name text-center">
+						<h2 class="title">Welcome to the CFG Python course! </h2>
+					</div>
+				</div>
+			</div>
+			<div class="description text-center">
+				{% if bad_access %}
+					<div id="not-logged-in" class="alert alert-danger alert-dismissable fade in" role="alert">
+						<button type="button" id="dismiss" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<i class="fa fa-warning"></i>
+						{{message}}
+					</div>
+				{% endif %}
+				<p class="info-text">
+					Before you can access the content, you need to log in first.
+				</p>
+				<form action="/home" method="get" class="form-horizontal">
+					<div class="form-group">
+						<input type="text" name="name" id="name" class="form-control" placeholder="Your name ">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="password" class="form-control" placeholder="Password">
+					</div>
+					<button type="submit" class="btn">Log In</button>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+{% include "footer.html" %}

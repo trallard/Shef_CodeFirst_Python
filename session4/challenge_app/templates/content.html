@@ -1,0 +1,119 @@
+{% include "header.html" %}
+
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="profile">
+            <!-- avatar -->
+            <!-- <div class="avatar">
+					<img src="../assets/python.jpg" alt="Circle Image" class="img-circle img-responsive img-raised">
+				</div> -->
+
+            <div class="name">
+              <h2 class="title">Welcome to the CFG Python course! </h2>
+            </div>
+          </div>
+        </div>
+        <div class="description text-center">
+          <p>
+            Here you will find all the course content needed for the course!
+            <br> From direct links to the main
+            <a href='https://github.com/trallard/Shef_CodeFirst_Python' target="_blank">
+              GitHub repository </a> to the slides used on the sessions!
+            <br>
+            <br> Do not forget to check the
+            <a href="https://www.facebook.com/groups/342268399518243/">
+              Facebook group </a> and to use the hashtag
+            <a href="https://twitter.com/search?q=shefcodefirst&src=typd">
+              #ShefCodeFirst </a> on Twitter
+            <br>
+            <br> We also have a
+            <a href="https://cfgpythonsheffield.slack.com/">
+              Slack channel!!!</a> Go ahead and chat with your peers and instructors!
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Course material  -->
+      <div class="section text-center" id='slides'>
+        <hr>
+        <h3 class='title'> Course material </h3>
+
+        <div class="row">
+
+          <div class="col-md-6 col-md-offset-3">
+            <div class="list-group">
+              <a href="https://github.com/trallard/Shef_CodeFirst_Python" class="list-group-item list-group-item-action flex-column align-items-start"
+                target="_blank">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="text-primary">GitHub repository</h5>
+                </div>
+                <p class="mb-1">
+                  Additional content, including snnipets and exercises presented by the instructors over the sessions
+                </p>
+              </a>
+
+              <a href="https://trallard.gitbooks.io/code-first-girls-advanced-python-course/content/" class="list-group-item list-group-item-action flex-column align-items-start"
+                target="_blank">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="text-primary"> Session outlines </h5>
+                </div>
+                <p class="mb-1">
+                  Course materials covering the session content, examples, tasks, and homework.
+                  <br> Please make sure to read the Introduction, Code of Conduct, and set-up instructions by the end of your
+                  first class.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ends course material  -->
+
+      <!-- Slides -->
+      <div class="section text-center" id='slides'>
+        <hr>
+        <h3 class='title'> Slides </h3>
+        <p> Collection of slides used over the sessions </p>
+
+        <div class="grid">
+          <div class="talk">
+            <a class="no-underline" href="./session1.html">
+              <img src="{{ url_for('static', filename='img/session1_slide.png') }}" alt="session1" class="img-talk">
+            </a>
+          </div>
+
+          <div class="talk">
+            <a class="no-underline" href="./session2.html">
+              <img src="{{ url_for('static', filename='img/session2_slide.png') }}" alt="session2" class="img-talk">
+            </a>
+          </div>
+
+          <div class="talk">
+            <a class="no-underline" href="./collaborating_GH.html">
+              <img src="{{ url_for('static', filename='img/GH_exc.png') }}" alt="collab" class="img-talk">
+            </a>
+          </div>
+
+          <div class="talk">
+            <a class="no-underline" href="./session3.html">
+              <img src="{{ url_for('static', filename='img/session3_slide.png') }}" alt="session3" class="img-talk">
+            </a>
+          </div>
+
+          <div class="talk">
+            <a class="no-underline" href="./session4.html">
+              <img src="{{ url_for('static', filename='img/session4_slide.png') }}" alt="session4" class="img-talk">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+{% include "footer.html" %}
