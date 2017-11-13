@@ -68,14 +68,19 @@ You're nearly ready to test your code!
 
 To test whether your Mailgun API code works, you'll need to run the file you just created, and look at the Mailgun dashboard to see whether everything worked. Before you run the file, though, you need to add import requests at the very beginning, to import the requests library, and send\_simple\_message() at the end of it to call the function.
 
+---
+
 #### Task
 
 1. Run your file. What information do you see in the [Mailgun logs](https://app.mailgun.com/app/logs). You might need to click on the "Refresh" button. If you see the response code that looks like 2xx (such as 250), that means everything went well as far as Mailgun knows.
+
+---
 
 You can check your [Mailgun dashboard](https://app.mailgun.com/app/dashboard) to see whether an e-mail has been sent or not. E-mails that fail to send are marked as "dropped" and highlighted in red. You can see the details of the failure(s) by clicking on Open Logs. The logs show a list of all e-mail send attempts and whether they were successful or not, along with a representative error message if they failed.
 
 <img src='./assets/mailgun3.png'>
 
+---
 #### Task
 
 The code we've just run is completely independent from a Flask app. It's the "backend" code only, which does stuff on the server, but doesn't present anything to a user on a webpage (where, for example, you might want to ask a user to enter email address so you can do stuff in the backend code with it).
@@ -88,6 +93,7 @@ We use Flask to bring our backend code (Python) and front end code (HTML, CSS, a
 4. Using the form data, requests library and the Mailgun API code, trigger an e-mail send to that user. You can add whatever content you want! Be sure you're sending to a valid e-mail address though, and set your own e-mail address as the "from".
 
 Keep in mind that because your Mailgun account is test account, you'll need to make sure whatever email address you submit using your HTML form above has been added to your "authorised recipients" list in Mailgun, otherwise the email won't send to that address.
+---
 
 #### Using an API to find out what the weather is today
 
@@ -122,11 +128,15 @@ What data do you think is being sent in the payload above, to the endpoint? Noti
 
 The documentation for the service you're using will tell you what sort of options you can include in your payload, and what the endpoint's URL is.
 
+---
+
 #### Task
 
 1. Just like the Mailgun exercise, there's some placeholder information here that we need to update. `YOUR\_APP\_ID` is a placeholder, that, for testing purposes, you can update with your own API key (which you requested from OpenWeatherMap as part of the prep work for this session).
 
 2. As you can see in the code above, we can print the information we get back in the response.url is the actual `URL` that requests used to get a response for you. If you copy and paste the URL that printed to your command line into your browser, what do you see?
+
+---
 
 `response.status\_code` is the HTTP status code of the response. In HTTP, when a request succeeds, we expect to see the message `'200 OK'`. You don't need to include it for your code to work, but it can be helpful to print information like this in your command line window, so you can see what's happening when your code runs.
 
@@ -164,6 +174,7 @@ Remember how we used methods like `.upper()` and `.title()`? Just like those con
 
 You'll see from OpenWeatherMap's documentation that to access the value stored in JSON for temperature, we can use this notation: `data['main']['temp']`
 
+---
 
 #### Task
 
@@ -186,13 +197,13 @@ print response.text
 
 ```
 
-1. The value you printed for the temperature looks a bit odd, doesn't it? According to the [OpenWeatherMap API documentation](http://openweathermap.org/current) the default unit for temperature is Kelvin. Let's make sure we get the temperature back in either metric or imperial units, by updating the payload variable to pass a new parameter for units to our URL. Here's what your payload statement should look like if want temperature in metric units:
+2. The value you printed for the temperature looks a bit odd, doesn't it? According to the [OpenWeatherMap API documentation](http://openweathermap.org/current) the default unit for temperature is Kelvin. Let's make sure we get the temperature back in either metric or imperial units, by updating the payload variable to pass a new parameter for units to our URL. Here's what your payload statement should look like if want temperature in metric units:
 
 `payload = {"q": "London,UK", "units":"metric", "appid":"YOUR\_APP\_ID"}`
 
 Test this works as expected by running your file again.
 
-2. Update your Python file so that it prints out a nice statement to your command line about the weather:
+3. Update your Python file so that it prints out a nice statement to your command line about the weather:
 
 ```python
 temperature = data["main"]["temp"]
@@ -200,6 +211,7 @@ name = data["name"]
 weather = data["weather"][0]["main"]
 printu"It's {}C in {}, and the sky is {}".format(temperature, name, weather)
 ```
+---
 
 ## Homework
 
