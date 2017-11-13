@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets
 
-app = Flask("Tweets scraper")
+app = Flask("APIs query for CFG")
 session = {}
 
 @app.route('/')
@@ -12,7 +12,7 @@ def index():
     return render_template('index.html', title = 'Landing page')
 
 @app.route("/twitter")
-def twitter_example():
+def twitter_handler():
     return render_template("twitter.html")
 
 @app.route("/twitter_search", methods = ['POST'])
