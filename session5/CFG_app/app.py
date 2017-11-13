@@ -37,6 +37,20 @@ def spotify_handler():
     return render_template("spotify.html")
 
 
+@app.route("/spotify_search", methods = ['POST'])
+def spotify_search_app():
+    """When the search is submitted from the previous page,
+    this function passes the form data to our python scripts
+    and uses them to perform the query. It will then return the tweets
+    and display them in /tweets_show"""
+    query = request.form['query']
+    search_type = request.form.getlist('type')
+    tweets = collect_tweets(query)
+
+    return render_template('tweets_show.html', search_string=query,
+                           tweets =tweets)
+
+
 # "debug=True" causes Flask to automatically refresh upon any changes you
 # make to this file.
 app.run(debug=True)
