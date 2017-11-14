@@ -52,7 +52,7 @@ To get started, follow these steps:
 
  Before we can programmatically send emails, we need to amend a few placeholders in the code above, most importantly:
 
-- **YOUR_DOMAIN_NAME** :Since we're just testing with this account, Mailgun gives us a domain name we can use instead of having to get our own (more on that in a bit).
+- **YOUR_DOMAIN_NAME**: Since we're just testing with this account, Mailgun gives us a domain name we can use instead of having to get our own (more on that in a bit).
 - **YOUR_API_KEY**: An API key allows a service to identify you as a "customer" of their API. Services often ask you to register for one so they can give you a private key that allows them to monitor your account for any unusual usage patterns (like thousands of spam emails suddenly being sent). This means we need to get an API key and domain name from Mailgun, so that the service knows it's our app communicating with their server.
 
 To get your Mailgun API key, go to your [Mailgun Dashboard](https://mailgun.com/app/dashboard) and scroll down to the section called Your Sandbox Domain:
@@ -256,16 +256,14 @@ Update the placeholders in the Python code below with that information, so that 
 import tweepy
 
 auth = tweepy.OAuthHandler("consumer_key","consumer_secret")
-auth.set_access_token ("access\token", "access_token_secret")
+auth.set_access_token ("access_token", "access_token_secret")
 
 twitter_api = tweepy.API(auth)
 
-cfg_tweets = twitter_api.search(
-        q ="CodeFirstGirls"        _#Twitter handle you want to search by_
-)
+cfg_tweets = twitter_api.search(q ="CodeFirstGirls" )   #Twitter handle you want to search by
 
 for tweet in cfg_tweets:
-        print tweet.user.name +": "+ tweet.text +"\n"
+        print (tweet.user.name +": "+ tweet.text +"\n")
 ```
 
 The code above gets and prints tweets that mention the CodeFirstGirls user. To discover more things you can do with Twitter's API, check out [tweepy's API documentation](http://tweepy.readthedocs.org/en/v3.2.0/api.html). Try these exercises to start:
