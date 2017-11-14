@@ -16,7 +16,8 @@ def index():
 def twitter_handler():
     """ This should display a form where the users introduce the terms
     they want to look for in Twitter"""
-    return render_template("twitter.html")
+    login = authenticate()
+    return render_template("twitter.html", login = login)
 
 @app.route("/twitter_search", methods = ['POST'])
 def twitter_search_app():
@@ -28,7 +29,7 @@ def twitter_search_app():
     tweets = collect_tweets(query)
 
     return render_template('tweets_show.html', search_string=query,
-                           tweets =tweets)
+                           tweets = tweets)
 
 
 @app.route("/spotify")

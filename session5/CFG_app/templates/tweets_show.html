@@ -11,12 +11,14 @@
       <table class='table table-striped'>
         <thead>
             <th>User</th>
+            <th>Twitter handle</th>
             <th>Tweet</th>
         </thead>
         <tbody>
           {% for tweet in tweets %}
           <tr>
             <td>  {{ tweet.user.name }}</td>
+            <td> @{{ tweet.user.screen_name }} </td>
             <td> {{ tweet.text }} </td>
           </tr>
           {% endfor %}
