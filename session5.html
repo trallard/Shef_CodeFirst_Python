@@ -29,6 +29,13 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<style media="screen">
+			pre{
+				white-space: pre-wrap;
+				font-size: 0.85em;
+			}
+		</style>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -38,6 +45,7 @@
 					<p>
 						 Quering data effectively from other websites
 					</p>
+					<img src="./assets/api.png" alt="api1">
 					<p class='author'> Tania Allard, PhD
 					<br>
 				 <a href="http://twitter.com/ixek" target="_blank">
@@ -64,6 +72,7 @@
 						<li>How to use various APIs to get data</li>
 						<li>How can I handle and format the API's data</li>
 						<li>How to collect data from a user and use that in an API call
+							<hr>
 							<p class='fragment'> Essentially: how to link <strong>
 								all the the things you've learned so far together
 							</strong></p></li>
@@ -81,42 +90,130 @@
 				<section>
 					<h2> <i class="fa fa-cogs" aria-hidden="true"></i>
 					What is an API?</h2>
-					Aplication Programming Interfaces or API's act as an
+					<strong>Aplication Programming Interfaces </strong>or API's act as an
 					interface between your Python code and other services
 					allowing you to collect data <strong>programatically</strong>
-					<img src="./assets/API.png" alt="API">
 				</section>
 
 				<section>
-					**Add link to API's video **
+					<h3><i class="fa fa-video-camera" aria-hidden="true"></i>
+						Let's check this video</h3>
+					<a href="https://www.youtube.com/watch?v=s7wmiS2mSXY">
+					Check me out!</a>
 				</section>
 
 				<section>
 					<h3>What do you mean by programatically?</h3>
-					It means that your Python code will communicate
-					to a service (Twitter for example) using their API, collect the
-					data and will posteriorly process it somewhow.
+					It means that your <strong>Python code</strong> will communicate
+					with a service (Twitter for example) using their API, <strong>collect the
+					data </strong> and will posteriorly process it somewhow.
 				</section>
 
 				<section>
-					<h3>Full disclose!</h3>
-					The regular curriculum focuses on using Mailgun API...
+					<h3><i class="fa fa-fire" aria-hidden="true"></i>
+						Full disclose!</h3>
+					The regular curriculum focuses on using Mailgun and the weather app API...
 					but we thought we would make it more interesting by
 					focusing on: <strong>Twitter, Spotify, and NASA's</strong>
 					APIs.
 				</section>
 
 				<section>
-					<h2>There are various ways to access services APIs with Python</h2>
+					<h2>So how can I talk to APIs?</h2>
 					<ul>
-						<li>Using the <strong>endopints</strong> </li>
+						<li>Using <a href="http://docs.python-requests.org/en/master/">
+						requests</a> (HTTP for humans) and the aPI in question</li>
+						<li>Using a Python specific library (e.g.<a href="http://www.tweepy.org">
+						Tweepy</a>) to access the API</li>
 					</ul>
 				</section>
 
-
-				<section data-background-video='./assets/silly.mp4' type="video/mp4" data-background-video-loop data-background-video-muted/>
-					<h2>The end!</h2>
+				<section>
+					<h3>Setting your first API in Python</h3>
+					We will use <a href="http://openweathermap.org/api">
+					Open Weather Map</a>
+					<br>
+					You will need:
+					<ul>
+						<li>An app id... don't worry you can use mine </li>
+						<li> `requests` installed... you know the drill:</li>
+						<code>pip install requests</code>
+					</ul>
 				</section>
+
+				<section data-markdown>
+					```python
+					import requests
+
+					id = "84600bca7507293656495e8972aec659"
+					payload = {'q':'Sheffield, UK', 'units':'metric', 'appid':id}
+
+					def query_weather(payload):
+					    endpoint = "http://api.openweathermap.org/data/2.5/weather"
+					    response = requests.get(endpoint, params=payload)
+
+					    return response
+
+					response = query_weather(payload)
+
+					```
+				</section>
+
+				<section>
+					You might have noticed something familiar by now... <code>
+					response = requests.get(endpoint, params=payload)</code>
+					<br> We are using <strong>HTTP GET</strong> requests to collect data.
+				</section>
+
+				<section>
+					<h3>New terms introduced here</h3>
+					<ul>
+						<li><strong>endpoint</strong>: the location or destination of the data</li>
+						<li><strong>payload</strong>: information sent to the endpoint... think of
+						them of search terms</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Response content</h3>
+					We now have a <code>response</code> object from which we can extract all the
+					information we need.
+					<hr>
+					<br> Add a <code>print(response.status)</s></code>
+					<br>
+					<p class='fragment'>If you get <strong>200</strong> it means your request
+						was sucessful</p>
+				</section>
+
+				<section>
+					<h3>Retrieving the content</h3>
+					You can check the content by adding a <code>print(response.text)</code>
+					<br><br><p class='fragment'>
+						<accent-text> I know it is not a very nice format</p></accent-text>
+				</section>
+
+				<section>
+					<h3>JSON</h3>
+					We can use <a href="http://www.json.org">JSON</a> (JavaScript ), which
+					is a <strong>human readable</strong> notation.
+					<br> And consists on pairs of <strong>keys</strong> and <strong>values</strong>
+				</section>
+
+				<section data-markdown>
+					Add the following to your script:
+					```python
+					def jsonify(response):
+					    json_response = response.json()
+					    return json_response
+
+
+					json_response = jsonify(response)
+					print("\n")
+					print(json_response)
+					```
+				</section>
+
+
 
 			</div>
 		</div>
