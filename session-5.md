@@ -10,7 +10,7 @@
 
 - What do we use Flask for?
 - What do we use `@app.route` for in our Python code?
-- What does `render\_template` do?
+- What does `render_template` do?
 
 ---
 
@@ -46,14 +46,14 @@ To get started, follow these steps:
 
 <img src='./assets/mailgun.png'>
 
-4. Copy and paste this code into a new file, and save the file as a .py file (make sure you don't call that file "email", or "send\_simple\_message", or "mailgun").
+4. Copy and paste this code into a new file, and save the file as a .py file (make sure you don't call that file "email", or "send_simple_message", or "mailgun").
 
 ---
 
  Before we can programmatically send emails, we need to amend a few placeholders in the code above, most importantly:
 
-- **YOUR\_DOMAIN\_NAME** :Since we're just testing with this account, Mailgun gives us a domain name we can use instead of having to get our own (more on that in a bit).
-- **YOUR\_API\_KEY**: An API key allows a service to identify you as a "customer" of their API. Services often ask you to register for one so they can give you a private key that allows them to monitor your account for any unusual usage patterns (like thousands of spam emails suddenly being sent). This means we need to get an API key and domain name from Mailgun, so that the service knows it's our app communicating with their server.
+- **YOUR_DOMAIN_NAME** :Since we're just testing with this account, Mailgun gives us a domain name we can use instead of having to get our own (more on that in a bit).
+- **YOUR_API_KEY**: An API key allows a service to identify you as a "customer" of their API. Services often ask you to register for one so they can give you a private key that allows them to monitor your account for any unusual usage patterns (like thousands of spam emails suddenly being sent). This means we need to get an API key and domain name from Mailgun, so that the service knows it's our app communicating with their server.
 
 To get your Mailgun API key, go to your [Mailgun Dashboard](https://mailgun.com/app/dashboard) and scroll down to the section called Your Sandbox Domain:
 
@@ -68,7 +68,7 @@ Under the Domain Name column, you'll see something that starts with "sandbox". C
 
 You're nearly ready to test your code!
 
-To test whether your Mailgun API code works, you'll need to run the file you just created, and look at the Mailgun dashboard to see whether everything worked. Before you run the file, though, you need to add import requests at the very beginning, to import the requests library, and send\_simple\_message() at the end of it to call the function.
+To test whether your Mailgun API code works, you'll need to run the file you just created, and look at the Mailgun dashboard to see whether everything worked. Before you run the file, though, you need to add import requests at the very beginning, to import the requests library, and send_simple_message() at the end of it to call the function.
 
 ---
 
@@ -95,6 +95,7 @@ We use Flask to bring our backend code (Python) and front end code (HTML, CSS, a
 4. Using the form data, requests library and the Mailgun API code, trigger an e-mail send to that user. You can add whatever content you want! Be sure you're sending to a valid e-mail address though, and set your own e-mail address as the "from".
 
 Keep in mind that because your Mailgun account is test account, you'll need to make sure whatever email address you submit using your HTML form above has been added to your "authorised recipients" list in Mailgun, otherwise the email won't send to that address.
+
 ---
 
 #### Using an API to find out what the weather is today
@@ -111,12 +112,12 @@ Now, we're going to play with [OpenWeatherMap's API](http://openweathermap.org/a
 import requests
 
 endpoint ="http://api.openweathermap.org/data/2.5/weather"
-payload = {"q": "London,UK", "units":"metric", "appid":"YOUR\_APP\_ID"}
+payload = {"q": "London,UK", "units":"metric", "appid":"YOUR_APP_ID"}
 
 response = requests.get(endpoint, params=payload)
 
 print response.url
-print response.status\_code
+print response.status_code
 print response.headers["content-type"]
 ```
 
@@ -134,13 +135,13 @@ The documentation for the service you're using will tell you what sort of option
 
 #### Task
 
-1. Just like the Mailgun exercise, there's some placeholder information here that we need to update. `YOUR\_APP\_ID` is a placeholder, that, for testing purposes, you can update with your own API key (which you requested from OpenWeatherMap as part of the prep work for this session).
+1. Just like the Mailgun exercise, there's some placeholder information here that we need to update. `YOUR_APP_ID` is a placeholder, that, for testing purposes, you can update with your own API key (which you requested from OpenWeatherMap as part of the prep work for this session).
 
 2. As you can see in the code above, we can print the information we get back in the response.url is the actual `URL` that requests used to get a response for you. If you copy and paste the URL that printed to your command line into your browser, what do you see?
 
 ---
 
-`response.status\_code` is the HTTP status code of the response. In HTTP, when a request succeeds, we expect to see the message `'200 OK'`. You don't need to include it for your code to work, but it can be helpful to print information like this in your command line window, so you can see what's happening when your code runs.
+`response.status_code` is the HTTP status code of the response. In HTTP, when a request succeeds, we expect to see the message `'200 OK'`. You don't need to include it for your code to work, but it can be helpful to print information like this in your command line window, so you can see what's happening when your code runs.
 
 Likewise, you can use `response.headers["content-type"]` to print the content type of the response (as defined in the HTTP header) in your command line.
 
@@ -186,22 +187,22 @@ You'll see from OpenWeatherMap's documentation that to access the value stored i
 import requests
 
 endpoint ="http://api.openweathermap.org/data/2.5/weather"
-payload = {"q": "London,UK", "units":"metric", "appid":"YOUR\_APP\_ID"}
+payload = {"q": "London,UK", "units":"metric", "appid":"YOUR_APP_ID"}
 
 response = requests.get(endpoint, params=payload)
 data = response.json()
 
-print data'main'
-print response.url
-print response.status\_code
-print response.headers["content-type"]
-print response.text
+print (data'main')
+print (response.url)
+print (response.status_code)
+print (response.headers["content-type"])
+print (response.text)
 
 ```
 
 2. The value you printed for the temperature looks a bit odd, doesn't it? According to the [OpenWeatherMap API documentation](http://openweathermap.org/current) the default unit for temperature is Kelvin. Let's make sure we get the temperature back in either metric or imperial units, by updating the payload variable to pass a new parameter for units to our URL. Here's what your payload statement should look like if want temperature in metric units:
 
-`payload = {"q": "London,UK", "units":"metric", "appid":"YOUR\_APP\_ID"}`
+`payload = {"q": "London,UK", "units":"metric", "appid":"YOUR_APP_ID"}`
 
 Test this works as expected by running your file again.
 
@@ -211,7 +212,7 @@ Test this works as expected by running your file again.
 temperature = data["main"]["temp"]
 name = data["name"]
 weather = data["weather"][0]["main"]
-printu"It's {}C in {}, and the sky is {}".format(temperature, name, weather)
+print("It's {}C in {}, and the sky is {}".format(temperature, name, weather))
 ```
 ---
 
