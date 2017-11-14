@@ -1,7 +1,7 @@
 # importing Requests: HTTP for Humans - installed previously
 import requests
 
-# Making a search request to the Spotify API to return
+# making a search request to the Spotify API to return
 # any artist with **** in their name.
 
 # Info on the Spotify API is https://developer.spotify.com/web-api/endpoint-reference/
