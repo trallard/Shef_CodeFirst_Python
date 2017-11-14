@@ -122,21 +122,25 @@
 					<h2>So how can I talk to APIs?</h2>
 					<ul>
 						<li>Using <a href="http://docs.python-requests.org/en/master/">
-						requests</a> (HTTP for humans) and the aPI in question</li>
+						requests</a> (HTTP for humans) and the API in question</li>
 						<li>Using a Python specific library (e.g.<a href="http://www.tweepy.org">
 						Tweepy</a>) to access the API</li>
 					</ul>
 				</section>
 
 				<section>
+					<h2>Hands on time!</h2>
+				</section>
+
+				<section>
 					<h3>Setting your first API in Python</h3>
-					We will use <a href="http://openweathermap.org/api">
-					Open Weather Map</a>
-					<br>
+					<accent-text>We will use <a href="http://openweathermap.org/api">
+					Open Weather Map</a> </accent-text>
+					<br><br>
 					You will need:
 					<ul>
 						<li>An app id... don't worry you can use mine </li>
-						<li> `requests` installed... you know the drill:</li>
+						<li> <code>requests</code> installed... you know the drill:</li>
 						<code>pip install requests</code>
 					</ul>
 				</section>
@@ -162,7 +166,10 @@
 				<section>
 					You might have noticed something familiar by now... <code>
 					response = requests.get(endpoint, params=payload)</code>
-					<br> We are using <strong>HTTP GET</strong> requests to collect data.
+					<br><br>
+					<p class='fragment'>
+						We are using <strong>HTTP GET</strong> requests to collect data!
+					</p>
 				</section>
 
 				<section>
@@ -170,16 +177,19 @@
 					<ul>
 						<li><strong>endpoint</strong>: the location or destination of the data</li>
 						<li><strong>payload</strong>: information sent to the endpoint... think of
-						them of search terms</li>
+						them to be some sort of search terms</li>
 					</ul>
+					<p>Add to your script: <code>print(response.url)</code> </p>
+					<hr>
+				 	<small>Note the payload 'parameters' are defined byt the API</small>
 				</section>
 
 				<section>
 					<h3>Response content</h3>
 					We now have a <code>response</code> object from which we can extract all the
-					information we need.
+					information we need
 					<hr>
-					<br> Add a <code>print(response.status)</s></code>
+					<br> On your script add: <code>print(response.status)</s></code>
 					<br>
 					<p class='fragment'>If you get <strong>200</strong> it means your request
 						was sucessful</p>
@@ -195,8 +205,9 @@
 				<section>
 					<h3>JSON</h3>
 					We can use <a href="http://www.json.org">JSON</a> (JavaScript ), which
-					is a <strong>human readable</strong> notation.
-					<br> And consists on pairs of <strong>keys</strong> and <strong>values</strong>
+					has a <strong>human readable</strong> notation and can be easily
+					interpreted by computers.
+					<br> JSON data consists on pairs of <strong>keys</strong> and <strong>values</strong>
 				</section>
 
 				<section data-markdown>
@@ -213,7 +224,63 @@
 					```
 				</section>
 
+				<section>
+					That is much more understandable!
+					<br>
+					So if you wanted to get the temprature you'd query
+					your data as: <br>
+					<code>json_response['main']['temp']</code>
+					<p class='fragment'>How would you query the location,
+					and weather?</p>
+				</section>
 
+			<section>
+				<h2><i class="fa fa-twitter" aria-hidden="true"></i>
+					Having fun with Twitter</h2>
+			</section>
+
+			<section>
+				We will use <strong>Tweepy</strong> for the next exercises
+				so if you have not installed it yet do it now:
+				<pre> <code>pip install tweepy</code> </pre>
+			</section>
+
+			<section>
+				<h2>Authentication</h2>
+				We need to authenticate before accessing the
+				data from Twitter. We will need the<strong>
+				consumer_key, consumer_secret, set_access_token,
+			access_token_secret</strong> you got when you created
+			the app online.
+			</section>
+
+			<section>
+				<h2><i class="fa fa-bookmark" aria-hidden="true">
+				</i> Very important stuff</h2>
+				You have to be very careful with your keys.
+				<strong>Never</strong> share them on GitHub.
+				<br><hr>
+				For apps deployment you'd normally have a separate
+				<strong>encrypted config</strong> file (config.ini, config.yml)
+				and usually additional authentication measures.
+			</section>
+
+			<section data-markdown>
+				```python
+				from Tweepy import OAuthHandler
+
+				consumer_key = 'xxx'
+				consumer_secret = 'xxx'
+				access_token = 'xxx'
+				access_token_secret = 'xxx'
+
+				auth = tweepy.OAuthHandler("consumer_key","consumer_secret")
+				auth.set_access_token ("access_token", "access_token_secret")
+				twitter_api = tweepy.API(auth)
+
+				print('Logged in as {}'.format(twitter_api.me().name))
+				```
+			</section>
 
 			</div>
 		</div>
