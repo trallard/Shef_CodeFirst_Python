@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> CFG session 5</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<!-- or you can use the dark theme
+		rel="stylesheet" href="reveal.js/css/theme/black.css"> -->
+
+		<!-- Customised theme  -->
+		<link rel="stylesheet" href="reveal.js/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Font awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style media="screen">
+			pre{
+				white-space: pre-wrap;
+				font-size: 0.85em;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides logo">
+				<section>
+					<h2> Session 5: APIs </h2>
+					<p>
+						 Quering data effectively from other websites
+					</p>
+					<img src="./assets/api.png" alt="api1">
+					<p class='author'> Tania Allard, PhD
+					<br>
+				 <a href="http://twitter.com/ixek" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true">
+					</i> @ixek
+				 </a>
+ 		 			</p>
+				</section>
+
+				<section>
+					<h2> Where can I find the material? </h2>
+					You can find all the slides, links to the curriculum, and
+					to the GitHub repository at:
+					<br>
+					<br>
+					<p class='fragment grow'>
+						<a href="http://bitsandchips.me/Shef_CodeFirst_Python/">
+							http://bitsandchips.me/Shef_CodeFirst_Python/</a></p>
+				</section>
+
+				<section>
+					<h2>What am I going to learn today?</h2>
+					<ul>
+						<li>How to use various APIs to get data</li>
+						<li>How can I handle and format the API's data</li>
+						<li>How to collect data from a user and use that in an API call
+							<hr>
+							<p class='fragment'> Essentially: how to link <strong>
+								all the the things you've learned so far together
+							</strong></p></li>
+						<p class='fragment text-center'>
+						<accent-text>
+						 <i class="fa fa-flask" aria-hidden="true"></i>
+						 <i class="fa fa-plus" aria-hidden="true"></i>
+						 <i class="fa fa-cogs" aria-hidden="true"></i>
+						 <i class="fa fa-plus" aria-hidden="true"></i>
+						 <i class="fa fa-terminal" aria-hidden="true"></i>
+					 </accent-text> </p>
+					</ul>
+				</section>
+
+				<section>
+					<h2> <i class="fa fa-cogs" aria-hidden="true"></i>
+					What is an API?</h2>
+					<strong>Aplication Programming Interfaces </strong>or API's act as an
+					interface between your Python code and other services
+					allowing you to collect data <strong>programatically</strong>
+				</section>
+
+				<section>
+					<h3><i class="fa fa-video-camera" aria-hidden="true"></i>
+						Let's check this video</h3>
+					<a href="https://www.youtube.com/watch?v=s7wmiS2mSXY">
+					Check me out!</a>
+				</section>
+
+				<section>
+					<h3>What do you mean by programatically?</h3>
+					It means that your <strong>Python code</strong> will communicate
+					with a service (Twitter for example) using their API, <strong>collect the
+					data </strong> and will posteriorly process it somewhow.
+				</section>
+
+				<section>
+					<h3><i class="fa fa-fire" aria-hidden="true"></i>
+						Full disclose!</h3>
+					The regular curriculum focuses on using Mailgun and the weather app API...
+					but we thought we would make it more interesting by
+					focusing on: <strong>Twitter, Spotify, and NASA's</strong>
+					APIs.
+				</section>
+
+				<section>
+					<h2>So how can I talk to APIs?</h2>
+					<ul>
+						<li>Using <a href="http://docs.python-requests.org/en/master/">
+						requests</a> (HTTP for humans) and the API in question</li>
+						<li>Using a Python specific library (e.g.<a href="http://www.tweepy.org">
+						Tweepy</a>) to access the API</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Hands on time!</h2>
+				</section>
+
+				<section>
+					<h3>Setting your first API in Python</h3>
+					<accent-text>We will use <a href="http://openweathermap.org/api">
+					Open Weather Map</a> </accent-text>
+					<br><br>
+					You will need:
+					<ul>
+						<li>An app id... don't worry you can use mine </li>
+						<li> <code>requests</code> installed... you know the drill:</li>
+						<code>pip install requests</code>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					```python
+					import requests
+
+					id = "84600bca7507293656495e8972aec659"
+					payload = {'q':'Sheffield, UK', 'units':'metric', 'appid':id}
+
+					def query_weather(payload):
+					    endpoint = "http://api.openweathermap.org/data/2.5/weather"
+					    response = requests.get(endpoint, params=payload)
+
+					    return response
+
+					response = query_weather(payload)
+
+					```
+				</section>
+
+				<section>
+					You might have noticed something familiar by now... <code>
+					response = requests.get(endpoint, params=payload)</code>
+					<br><br>
+					<p class='fragment'>
+						We are using <strong>HTTP GET</strong> requests to collect data!
+					</p>
+				</section>
+
+				<section>
+					<h3>New terms introduced here</h3>
+					<ul>
+						<li><strong>endpoint</strong>: the location or destination of the data</li>
+						<li><strong>payload</strong>: information sent to the endpoint... think of
+						them to be some sort of search terms</li>
+					</ul>
+					<p>Add to your script: <code>print(response.url)</code> </p>
+					<hr>
+				 	<small>Note the payload 'parameters' are defined byt the API</small>
+				</section>
+
+				<section>
+					<h3>Response content</h3>
+					We now have a <code>response</code> object from which we can extract all the
+					information we need
+					<hr>
+					<br> On your script add: <code>print(response.status)</s></code>
+					<br>
+					<p class='fragment'>If you get <strong>200</strong> it means your request
+						was successful</p>
+				</section>
+
+				<section>
+					<h3>Retrieving the content</h3>
+					You can check the content by adding a <code>print(response.text)</code>
+					<br><br><p class='fragment'>
+						<accent-text> I know it is not a very nice format</p></accent-text>
+				</section>
+
+				<section>
+					<h3>JSON</h3>
+					We can use <a href="http://www.json.org">JSON</a> (JavaScript Object Notation),
+					which
+					has a <strong>human readable</strong> notation and can be easily
+					interpreted by computers.
+					<br> JSON data consists on pairs of <strong>keys</strong> and <strong>values</strong>
+				</section>
+
+				<section data-markdown>
+					Add the following to your script:
+					```python
+					def jsonify(response):
+					    json_response = response.json()
+					    return json_response
+
+
+					json_response = jsonify(response)
+					print("\n")
+					print(json_response)
+					```
+				</section>
+
+				<section>
+					That is much more understandable!
+					<br>
+					So if you wanted to get, for example, the temperature you'd query
+					your data as: <br><br>
+					<code>json_response['main']['temp']</code>
+					<p class='fragment'>How would you query the location,
+					and weather?</p>
+				</section>
+
+			<section>
+				<h2><i class="fa fa-twitter" aria-hidden="true"></i>
+					Having fun with Twitter</h2>
+			</section>
+
+			<section>
+				We will use <strong>Tweepy</strong> for the next exercises
+				so if you have not installed it yet do it now:
+				<pre> <code>pip install tweepy</code> </pre>
+			</section>
+
+			<section>
+				<h2><i class="fa fa-key" aria-hidden="true"></i>Authentication</h2>
+				We need to authenticate before accessing the
+				data from Twitter. We will need the<strong>
+				consumer_key, consumer_secret, set_access_token,
+			access_token_secret</strong> you got when you created
+			the app online.
+			</section>
+
+			<section>
+				<h2><i class="fa fa-bookmark" aria-hidden="true">
+				</i> Very important stuff</h2>
+				You have to be very careful with your keys.
+				<strong>Never</strong> share them on GitHub.
+				<br><hr>
+				For apps deployment you'd normally have a separate
+				<strong>encrypted config</strong> file (config.ini, config.yml)
+				and usually additional authentication measures.
+			</section>
+
+			<section data-markdown>
+				```python
+				from Tweepy import OAuthHandler
+
+				consumer_key = 'xxx'
+				consumer_secret = 'xxx'
+				access_token = 'xxx'
+				access_token_secret = 'xxx'
+
+				auth = tweepy.OAuthHandler("consumer_key","consumer_secret")
+				auth.set_access_token ("access_token", "access_token_secret")
+				twitter_api = tweepy.API(auth)
+
+				print('Logged in as {}'.format(twitter_api.me().name))
+				```
+			</section>
+
+			<section>
+				<h2>Tweets contain a lot of information</h2>
+				<a href="https://goo.gl/ogbn3D">https://goo.gl/ogbn3D</a>
+			</section>
+
+			<section>
+				<img src="./assets/tweet.png" alt="tweet">
+			</section>
+
+			<section data-markdown>
+				### Let's start by checking our timeline
+				```python
+				def see_timeline(no_tweets):
+					for tweet in tweepy.Cursor(twitter.home_timeline).items(no_tweets):
+					print("\n {} tweeted by {}".format(status.text, status.user.name))
+				```
+			</section>
+
+			<section>
+				<h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+				So far all the examples are on the 'backend'</h3>
+				All the data has been collected using Python.. so how do we combine
+				Flask, html/css, and the data?
+				<p class='fragment'><strong>Let's find out</strong></p>
+			</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
