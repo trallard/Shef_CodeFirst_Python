@@ -7,23 +7,21 @@
   <h1 class="text-center">Results from search: {{query}}</h1>
   <br> <br>
   <div class="row">
-      {% for artist in data %}
-      <div class="col-sm-3">
-      <div class="card" style='width: 25rem; padding: 20px;
-      margin: 10px;'>
-        {% if artist.images %}
-        <div class="card-img-top">
-        <img src="{{artist.images[0].url}}" alt="{{artist.name}}"
-        style = 'max-width: 100%;'>
-      </div>
-        {% endif %}
-        <div class="card-block">
-          <h4 class="title text-danger">{{ artist.name }} </h4>
-          <p class="card-text">{{ artist.genres | join(', ')}}</p>
-        </div>
-      </div>
-          </div>
-      {% endfor %}
+
+    {% if search_type == "artist" %}
+    {% include 'partials/search_artist.html' %}
+
+    {% elif search_type == "album" %}
+    {% include 'partials/search_albums.html' %}
+
+    {% elif search_type == "playlist" %}
+    {% include 'partials/search_play.html' %}
+
+    {% elif search_type == "track" %}
+    {% include 'partials/search_track.html' %}
+
+    {% endif %}
+
   </div>
 </div>
 {% endblock %}

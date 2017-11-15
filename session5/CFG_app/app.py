@@ -72,7 +72,7 @@ def spotify_search_app():
 
     data = spotify_search(search_type, query, auth_header)
 
-    return render_template('spotify_show.html', data = data, query = query)
+    return render_template('spotify_show.html', data = data, query = query, search_type = search_type)
 
 # "debug=True" causes Flask to automatically refresh upon any changes you
 # make to this file.

@@ -1,0 +1,17 @@
+  {% for search_albums in data %}
+  <div class="col-sm-3">
+  <div class="card" style='width: 25rem; padding: 20px;
+  margin: 10px;'>
+    {% if album.images %}
+    <div class="card-img-top">
+    <img src="{{album.images[0].url}}" alt="{{artist.name}}"
+    style = 'max-width: 100%;'>
+  </div>
+    {% endif %}
+    <div class="card-block">
+      <h4 class="title text-danger">{{ album.name }} </h4>
+      <p class="card-text">{{ album.artists | join(', ')}}</p>
+    </div>
+  </div>
+      </div>
+  {% endfor %}
