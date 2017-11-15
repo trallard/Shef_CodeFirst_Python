@@ -103,7 +103,6 @@ def authorize_spotify(auth_token, client_id = client_id, client_secret = client_
 # -----------------  ACCESSING THE API----------------
 
 def spotify_search( search_type, query, auth_header):
-        auth_header = auth_header
 
         endpoint = 'https://api.spotify.com/v1/search'
 
@@ -113,15 +112,22 @@ def spotify_search( search_type, query, auth_header):
                 }
 
         response = requests.get(endpoint, params = data, headers = auth_header)
+        
+        response_json = response.json()
 
-        data = response.json()
+        print(search_type)
+        filtered = {}
 
         if search_type == ['artist']:
-                items = data['artists']['items']
-        elif search_type == ['album']:
-                items = data['albums']['items']
-        elif search_type == ['playlist']:
-                items = data['playlists']['items']
+                filtered = response_json['artists']['items']
+        elif search_type == 'album':
+                filtered = response_json['album']['items']
+        elif search_type == 'playlist':
+                filtered = response_json['playlists']['items']
+        else:
+                filtered = {}
 
-        return items
+        print(filtered)
+        return  filtered
+
 

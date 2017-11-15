@@ -7,40 +7,22 @@
   <h1 class="text-center">Results from search: {{query}}</h1>
   <br> <br>
   <div class="row">
-    <div class="col-sm-12">
-      <table class='table table-striped'>
-        <thead>
-            <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Genre</th>
-              <th>Followers</th>
-              <th>Popularity</th>
-            </tr>
-          </thead>
-
-          {% for artist in data %}
-            <tr>
-              <td>
-                {% if artist.images %}
-                  <img src="{{artist.images[0].url}}" alt="{{artist.name}}" class="img-search">
-                {% else %}
-                  <img src="http://bit.ly/2nXRRfX" class="img-search">
-                {% endif %}
-              </td>
-
-              <td>
-                {{ artist.name }} </a>
-              </td>
-
-              <td> {{ artist.genres | join(', ')}} </td>
-
-              <td class="number">{{ artist.followers.total }}</td>
-              <td class="number">{{ artist.popularity }}</td>
-            </tr>
-          {% endfor %}
-
-    </div>
+      {% for artist in data %}
+      <div class="col-sm-4">
+      <div class="card" >
+        {% if artist.images %}
+        <div class="view overlay hm-white-slight">
+        <img class="img-fluid" src="{{artist.images[0].url}}" alt="{{artist.name}}"
+        style = 'max-width: 200px;'>
+      </div>
+        {% endif %}
+        <div class="card-block">
+          <h4 class="card-title">{{ artist.name }} </h4>
+          <p class="card-text">{{ artist.genres | join(', ')}}</p>
+        </div>
+      </div>
+          </div>
+      {% endfor %}
   </div>
 </div>
 {% endblock %}

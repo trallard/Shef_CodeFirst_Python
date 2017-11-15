@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets, get_config
-from helpers.spotify import auth_spotify, authorize_spotify, AUTH_URL, spotify_search
+from helpers.spotify import  authorize_spotify, AUTH_URL, spotify_search
 
 import requests
 
@@ -72,8 +72,7 @@ def spotify_search_app():
 
     data = spotify_search(search_type, query, auth_header)
 
-
-    return render_template('spotify_show.html', data = data)
+    return render_template('spotify_show.html', data = data, query = query)
 
 # "debug=True" causes Flask to automatically refresh upon any changes you
 # make to this file.
