@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets
-from helpers.spotify import spotify_query
+from helpers.spotify import auth_spotify
 
 app = Flask("APIs query for CFG")
 session = {}
@@ -34,9 +34,8 @@ def twitter_search_app():
 
 @app.route("/spotify")
 def spotify_handler():
-    """ This should display a form where the users introduce the terms
-    they want to look for in Twitter"""
-    return render_template("spotify.html")
+    auth_url = auth_spotify()
+    return redirect(auth_url)
 
 
 @app.route("/spotify_search", methods = ['POST'])

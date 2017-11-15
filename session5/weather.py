@@ -28,7 +28,7 @@ with open("sample_weather.json", "w") as file:
     file.write(json.dumps(response.json(), indent=4))
 
 
-    # extracting the data you want
-    temperature = data['main']['temp']      # current temperature
-    temperature_unit = 'F' if (unit == 'imperial') else 'C'
-    conditions = data['weather'][0]['description'] #current weather
+# extracting the data you want
+temperature = data['main']['temp']      # current temperature
+temperature_unit = 'F' if (unit == 'imperial') else 'C'
+conditions = data['weather'][0]['description'] #current weather
