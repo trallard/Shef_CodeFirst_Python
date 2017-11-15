@@ -192,7 +192,7 @@
 					<br> On your script add: <code>print(response.status)</s></code>
 					<br>
 					<p class='fragment'>If you get <strong>200</strong> it means your request
-						was sucessful</p>
+						was successful</p>
 				</section>
 
 				<section>
@@ -204,7 +204,8 @@
 
 				<section>
 					<h3>JSON</h3>
-					We can use <a href="http://www.json.org">JSON</a> (JavaScript ), which
+					We can use <a href="http://www.json.org">JSON</a> (JavaScript Object Notation),
+					which
 					has a <strong>human readable</strong> notation and can be easily
 					interpreted by computers.
 					<br> JSON data consists on pairs of <strong>keys</strong> and <strong>values</strong>
@@ -227,8 +228,8 @@
 				<section>
 					That is much more understandable!
 					<br>
-					So if you wanted to get the temprature you'd query
-					your data as: <br>
+					So if you wanted to get, for example, the temperature you'd query
+					your data as: <br><br>
 					<code>json_response['main']['temp']</code>
 					<p class='fragment'>How would you query the location,
 					and weather?</p>
@@ -246,7 +247,7 @@
 			</section>
 
 			<section>
-				<h2>Authentication</h2>
+				<h2><i class="fa fa-key" aria-hidden="true"></i>Authentication</h2>
 				We need to authenticate before accessing the
 				data from Twitter. We will need the<strong>
 				consumer_key, consumer_secret, set_access_token,
@@ -280,6 +281,32 @@
 
 				print('Logged in as {}'.format(twitter_api.me().name))
 				```
+			</section>
+
+			<section>
+				<h2>Tweets contain a lot of information</h2>
+				<a href="https://goo.gl/ogbn3D">https://goo.gl/ogbn3D</a>
+			</section>
+
+			<section>
+				<img src="./assets/tweet.png" alt="tweet">
+			</section>
+
+			<section data-markdown>
+				### Let's start by checking our timeline
+				```python
+				def see_timeline(no_tweets):
+					for tweet in tweepy.Cursor(twitter.home_timeline).items(no_tweets):
+					print("\n {} tweeted by {}".format(status.text, status.user.name))
+				```
+			</section>
+
+			<section>
+				<h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+				So far all the examples are on the 'backend'</h3>
+				All the data has been collected using Python.. so how do we combine
+				Flask, html/css, and the data?
+				<p class='fragment'><strong>Let's find out</strong></p>
 			</section>
 
 			</div>
