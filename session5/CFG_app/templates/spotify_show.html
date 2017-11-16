@@ -7,40 +7,9 @@
     <div class="title">
       <h2>Cards</h2>
     </div>
-
-    <div class="row">
-
-      {% for artist in data %}
-      {% if artist.images %}
-      <div class="col-sm-4">
-        <div class="card card-profile">
-          <div class="card-image">
-            <a href="#pablo">
-              <img class="img" src="{{artist.images[0].url}}" alt="{{artist.name}}" />
-
-              <div class="card-title text-center text-primary">
-                {{ artist.name }}
-              </div>
-            </a>
-          </div>
-
-          <div class="card-body text-center">
-            <p class="card-description">{{ artist.genres | join(', ')}}</p>
-          </div>
-        </div>
-        </div>
-      {% else %}
-      <div class="col-sm-4">
-      <div class="card">
-        <div class='card-body content-info'>
-          <h5>{{artist.name}}</h5>
-          <p class="card-description">{{ artist.genres | join(', ')}}</p>
-        </div>
-      </div>
-    </div>
-      {% endif %}
-      {% endfor %}
-    </div>
+    {% if search_type == ['artist'] %}
+    {% include partials/artists.html %}
+    {% endif %}
     </div>
   </div>
 </div>
