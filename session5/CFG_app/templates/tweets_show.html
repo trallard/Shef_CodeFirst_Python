@@ -1,29 +1,47 @@
 {% include "header.html" %}
-{% block title %}Twitter Search result for the keyword {{search_string}}{% endblock %}
+{% block title %} Twitter Search result for the keyword {{search_string}}{% endblock %}
 
 {% block content %}
-<div class="main main-raised">
-  <br>
-  <h1 class="text-center">Results from search: {{search_string}}</h1>
-  <br> <br>
-  <div class="row">
-    <div class="col-sm-12">
-      <table class='table table-striped'>
-        <thead>
-            <th>User</th>
-            <th>Twitter handle</th>
-            <th>Tweet</th>
-        </thead>
-        <tbody>
-          {% for tweet in tweets %}
-          <tr>
-            <td>  {{ tweet.user.name }}</td>
-            <td> @{{ tweet.user.screen_name }} </td>
-            <td> {{ tweet.text }} </td>
-          </tr>
-          {% endfor %}
-        </tbody>
+<!-- Main content will be displayed on a gray background -->
+<div class="section-gray">
 
+  <!-- Hard coded to be displayed at a certain height -->
+  <div class='container' style='top: 200px; position:relative;'>
+    <div class="row">
+      <div class="col-sm-12">
+
+        <!-- Card conatining the table with the tweets -->
+        <div class="card card-signup">
+
+          <div class="header header-primary text-center">
+            <h4> Results from search: {{search_string}}</h4>
+          </div>
+
+          <!-- START TABLE -->
+          <div class="card-body table-responsive">
+            <table class='table'>
+              <thead class='text-primary'>
+                <th>User</th>
+                <th>Twitter handle</th>
+                <th>Tweet</th>
+              </thead>
+              <tbody>
+                <!-- It will iterate over the tweets returned, here we are
+              displaying specific content of each tweet -->
+                {% for tweet in tweets %}
+                <tr>
+                  <td>  {{ tweet.user.name }}</td>
+                  <td> @{{ tweet.user.screen_name }} </td>
+                  <td> {{ tweet.text }} </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <!-- END TABLE -->
+        </div>
+        <!--End of card  -->
+      </div>
     </div>
   </div>
 </div>
