@@ -7,11 +7,11 @@
   <h1 class="text-center">Results from search: {{query}}</h1>
   <br> <br>
   <div class="row">
-
-    {% if search_type == "artist" %}
+  {{search_type}}
+    {% if search_type == ["artist"] %}
     {% include 'partials/search_artist.html' %}
 
-    {% elif search_type == "album" %}
+    {% elif search_type == ["album"] %}
     {% include 'partials/search_albums.html' %}
 
     {% elif search_type == "playlist" %}

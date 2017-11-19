@@ -1,32 +1,39 @@
 <div class="row">
   {% for artist in data %}
+  <!--If the search returned an image for the artist-->
   {% if artist.images %}
-  <div class="col-sm-4">
+  <div class="col-md-4 col-sm-4">
     <div class="card card-profile">
       <div class="card-image">
-        <a href="#pablo">
+        <a href="{{artist.uri}}">
           <img class="img" src="{{artist.images[0].url}}" alt="{{artist.name}}" />
-
-          <div class="card-title text-center text-primary">
-            {{ artist.name }}
-          </div>
         </a>
       </div>
+      <div class="card-title text-center text-primary">
+        {{artist.name}}
+      </div>
 
-      <div class="card-body text-center">
-        <p class="card-description">{{ artist.genres | join(', ')}}</p>
+      <div class="card-content text-center">
+        <p class="card-description"> {{ artist.genres | join(', ')}} </p>
+        <a href="{{artist.uri}}">Check in Spotify</a>
       </div>
     </div>
-    </div>
+  </div>
   {% else %}
+  <!--If no images were returned for the artist-->
   <div class="col-sm-4">
-  <div class="card">
-    <div class='card-body content-info'>
-      <h5>{{artist.name}}</h5>
-      <p class="card-description">{{ artist.genres | join(', ')}}</p>
+    <div class="card">
+      <div class='card-body content-info'>
+        <h5>{{artist.name}}</h5>
+        <p class="card-description">{{ artist.genres | join(', ')}}</p>
+        <a href="{{artist.uri}}">Check in Spotify</a>
+      </div>
     </div>
   </div>
-</div>
   {% endif %}
   {% endfor %}
 </div>
+
+
+
+
