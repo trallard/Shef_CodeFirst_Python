@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets, get_config
-from helpers.spotify import  authorize_spotify, AUTH_URL, spotify_search
+from helpers.spotify import  authorize_spotify, spotify_search, get_auth
 
 import requests
 
@@ -45,7 +45,7 @@ def twitter_search_app():
 def spotify_handler():
     """Spotify Authorisation is done in 5 steps:
      Auth Step 1: Authorisation"""
-
+    AUTH_URL = get_auth()
     return redirect(AUTH_URL.url)
 
 @app.route('/callback/')

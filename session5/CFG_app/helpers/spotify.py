@@ -60,11 +60,16 @@ with open("config.yml", 'r') as ymlfile:
 client_id = config['spotify']['client_id']
 client_secret = config['spotify']['client_secret']
 
-auth_vars = {'response_type': 'code',
-                     'redirect_uri': REDIRECT_URI,
-                     'client_id': client_id}
+def get_auth(REDIRECT_URI = REDIRECT_URI, client_id = client_id,
+             SPOTIFY_AUTH_URL = SPOTIFY_AUTH_URL):
 
-AUTH_URL = requests.get(SPOTIFY_AUTH_URL, auth_vars)
+        auth_vars = {'response_type': 'code',
+                             'redirect_uri': REDIRECT_URI,
+                             'client_id': client_id}
+
+        AUTH_URL = requests.get(SPOTIFY_AUTH_URL, auth_vars)
+
+        return AUTH_URL
 
 def auth_spotify(client_id = client_id, redirect_uri = REDIRECT_URI):
         """This function will handle the authorisation for
