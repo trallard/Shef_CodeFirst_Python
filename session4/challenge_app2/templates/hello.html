@@ -1,0 +1,25 @@
+<!-- This is how we include parts of HTML from another file, needed for each page
+to have information displaying correctly. -->
+{% include "header.html" %}
+  <!-- Add your page specific CSS here! -->
+  {% if not antidote %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/evil.css')}}">
+  {% endif %}
+</head>
+<body>
+  <h1>I'm a first level (h1) header in a template.</h1>
+  <h2>I'm a second level (h2) header in a template.</h2>
+  <h3>I'm a third level (h3) header in a template.</h3>
+  <h4>I'm a fourth level (h4) header in a template.</h4>
+  <h5>I'm a fifth level (h5) header in a template.</h5>
+  <h6>I'm a sixth level (h6) header in a template.</h6>
+  
+  <!-- Include your between here... -->
+  
+  <!-- ... and here!
+  
+  <!-- Same reason as to why we need to include the header -->
+  {% include "footer.html" %}
+  <!-- Include any JavaScript here - best place to do so pages load faster. -->
+</body>
+</html>
