@@ -14,7 +14,8 @@
         <div class="card card-signup">
 
           <div class="header header-primary text-center">
-            <h4> Results from search: {{search_string}}</h4>
+            <h4> Results from search:
+              <p class='text-primary'>{{search_string}}</p></h4>
           </div>
 
           <!-- START TABLE -->
@@ -30,7 +31,7 @@
               displaying specific content of each tweet -->
                 {% for tweet in tweets %}
                 <tr>
-                  <td>  {{ tweet.user.name }}</td>
+                  <td> {{ tweet.user.name }}</td>
                   <td> @{{ tweet.user.screen_name }} </td>
                   <td> {{ tweet.text }} </td>
                 </tr>

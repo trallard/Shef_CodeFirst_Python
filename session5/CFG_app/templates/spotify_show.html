@@ -14,10 +14,10 @@
     {% elif search_type == ["album"] %}
     {% include 'partials/search_albums.html' %}
 
-    {% elif search_type == "playlist" %}
+    {% elif search_type == ["playlist"] %}
     {% include 'partials/search_play.html' %}
 
-    {% elif search_type == "track" %}
+    {% elif search_type == ["track"] %}
     {% include 'partials/search_track.html' %}
 
     {% endif %}
