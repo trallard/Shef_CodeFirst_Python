@@ -43,7 +43,7 @@
 				<section>
 					<h2> Session 5: APIs </h2>
 					<p>
-						 Quering data effectively from other websites
+						 Quering data <strong>efficiently</strong> from other websites
 					</p>
 					<img src="./assets/api.png" alt="api1">
 					<p class='author'> Tania Allard, PhD
@@ -189,7 +189,7 @@
 					We now have a <code>response</code> object from which we can extract all the
 					information we need
 					<hr>
-					<br> On your script add: <code>print(response.status)</s></code>
+					<br> On your script add: <code>print(response.status_code)</s></code>
 					<br>
 					<p class='fragment'>If you get <strong>200</strong> it means your request
 						was successful</p>
@@ -302,11 +302,38 @@
 			</section>
 
 			<section>
+				<h3>Other things to do</h3>
+				- Check someone else's timeline
+				- Collect tweets contatining certain <strong>keywords</strong>
+				or <strong>hashtags</strong>
+				- Post a tweet using Python
+			</section>
+
+			<section>
 				<h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i>
 				So far all the examples are on the 'backend'</h3>
-				All the data has been collected using Python.. so how do we combine
+				All the data has been collected using Python... so how do we combine
 				Flask, html/css, and the data?
 				<p class='fragment'><strong>Let's find out</strong></p>
+			</section>
+
+			<section>
+				<h3>Working on an app that integrates everything</h3>
+			<code><pre>
+~/CFG_app
+	    |-- config.py        # or config.yml config.ini
+	    |-- /env             # Virtual Environment
+	    |-- /app             # Our Application Module
+	         |-- /helpers
+	             |-- __init__.py
+	             |-- twitter.py
+	             |-- spotify.py
+	         |-- /templates
+	             |--- index.html
+	             |--- /partials
+	                 |-- artist.html
+	         |-- /static
+	 	</pre></code>
 			</section>
 
 			</div>
