@@ -2,27 +2,30 @@
 {% block title %}Spotify Search result for the keyword {{query}}{% endblock %}
 
 {% block content %}
-<div class="main main-raised">
-  <br>
-  <h1 class="text-center">Results from search: {{query}}</h1>
-  <br> <br>
-  <div class="row">
-  {{search_type}}
-    {% if search_type == ["artist"] %}
-    {% include 'partials/search_artist.html' %}
+<div class="main" >
+  <div class='container' style = 'position: relative; top: 100px;'>
+    <div class="header text-center" >
+      <h1 class="title">Search results for: <span class="text-primary">
+      "{{query}}"</span></h1>
+    </div>
+    <div class="row">
+      {% if search_type == ["artist"] %}
+      {% include 'partials/artists.html' %}
 
-    {% elif search_type == ["album"] %}
-    {% include 'partials/search_albums.html' %}
+      {% elif search_type == ["album"] %}
+      {% include 'partials/albums.html' %}
 
-    {% elif search_type == ["playlist"] %}
-    {% include 'partials/search_play.html' %}
+      {% elif search_type == ["playlist"] %}
+      {% include 'partials/playlists.html' %}
 
-    {% elif search_type == ["track"] %}
-    {% include 'partials/search_track.html' %}
+      {% elif search_type == ["track"] %}
+      {% include 'partials/search_track.html' %}
 
-    {% endif %}
+      {% endif %}
 
+    </div>
   </div>
+
 </div>
 
 

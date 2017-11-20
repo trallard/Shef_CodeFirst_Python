@@ -6,7 +6,7 @@
     <div class="card card-profile">
       <div class="card-image">
          <a href="{{album.uri}}">
-             <img class="img" src="{{album.images[0].url}}" alt="{{artist.name}}" />
+             <img class="img" src="{{album.images[0].url}}" alt="{{album.name}}" />
           </a>
       </div>
       <div class="card-title text-center text-primary">
@@ -14,10 +14,9 @@
       </div>
 
       <div class="card-content text-center">
-          <p class="'card-category"> {{album.artists | join(',')}} </p>
-          <p class="card-description">Genre: {{ album.genres | join(', ')}} |
+          <p class="'card-category"> {{album.artists[0].name}} </p>
+          <p class="card-description">
           Type: {{album.album_type}}</p>
-           <a href="{{album.uri}}"> Check in Spotify </a>
       </div>
     </div>
   </div>
@@ -30,7 +29,6 @@
           <p class="'card-category"> {{album.artists | join(',')}} </p>
           <p class="card-description">Genre: {{ album.genres | join(', ')}} |
           Type: {{album.album_type}}</p>
-          <a href="{{album.uri}}"> Check in Spotify </a>
       </div>
     </div>
   </div>

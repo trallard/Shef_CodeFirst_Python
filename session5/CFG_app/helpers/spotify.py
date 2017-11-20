@@ -132,9 +132,9 @@ def spotify_search( search_type, query, auth_header):
 
         if search_type == ['artist']:
                 filtered = response_json['artists']['items']
-        elif search_type == 'album':
+        elif search_type == ['album']:
                 filtered = response_json['albums']['items']
-        elif search_type == 'playlist':
+        elif search_type == ['playlist']:
                 filtered = response_json['playlists']['items']
         else:
                 filtered = {}

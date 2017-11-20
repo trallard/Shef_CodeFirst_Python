@@ -9,13 +9,15 @@
           <img class="img" src="{{artist.images[0].url}}" alt="{{artist.name}}" />
         </a>
       </div>
-      <div class="card-title text-center text-primary">
+      <div class="card-title text-center">
         {{artist.name}}
       </div>
 
       <div class="card-content text-center">
         <p class="card-description"> {{ artist.genres | join(', ')}} </p>
-        <a href="{{artist.uri}}">Check in Spotify</a>
+        <!-- <a href="{{artist.uri}}" target="_blank">
+        <button class="btn btn-primary btn-round">Check in Spotify</button>
+        </a> -->
       </div>
     </div>
   </div>
@@ -26,14 +28,12 @@
       <div class='card-body content-info'>
         <h5>{{artist.name}}</h5>
         <p class="card-description">{{ artist.genres | join(', ')}}</p>
-        <a href="{{artist.uri}}">Check in Spotify</a>
+        <!-- <a href="{{artist.uri}}" target="_blank">
+        <button class="btn btn-primary btn-round">Check in Spotify</button>
+        </a> -->
       </div>
     </div>
   </div>
   {% endif %}
   {% endfor %}
 </div>
-
-
-
-

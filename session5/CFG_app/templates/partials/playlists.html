@@ -14,9 +14,8 @@
       </div>
 
       <div class="card-content text-center">
-          <p class="card-description">Public: {{ list.public }} |
-          Owner: {list.owner.name}}</p>
-           <a href="{{list.uri}}"> Check in Spotify </a>
+          <p class="card-description">
+          Owner: {{list.owner.display_name}}</p>
       </div>
     </div>
   </div>
@@ -26,10 +25,8 @@
     <div class="card">
       <div class='card-body content-info'>
         <h5>{{list.name}}</h5>
-          <p class="'card-category"> {{list.lists | join(',')}} </p>
-          <p class="card-description">Genre: {{ list.genres | join(', ')}} |
-          Type: {{list.list_type}}</p>
-          <a href="{{list.uri}}"> Check in Spotify </a>
+        <p class="card-description">
+        Owner: {{list.owner.display_name}}</p>
       </div>
     </div>
   </div>
