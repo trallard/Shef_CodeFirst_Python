@@ -43,7 +43,7 @@
 				<section>
 					<h2> Session 5: APIs </h2>
 					<p>
-						 Quering data <strong>efficiently</strong> from other websites
+						 Querying data <strong>efficiently</strong> from other websites
 					</p>
 					<img src="./assets/api.png" alt="api1">
 					<p class='author'> Tania Allard, PhD
@@ -106,7 +106,7 @@
 					<h3>What do you mean by programatically?</h3>
 					It means that your <strong>Python code</strong> will communicate
 					with a service (Twitter for example) using their API, <strong>collect the
-					data </strong> and will posteriorly process it somewhow.
+					data </strong> and will posteriorly process it somehow.
 				</section>
 
 				<section>
@@ -181,7 +181,7 @@
 					</ul>
 					<p>Add to your script: <code>print(response.url)</code> </p>
 					<hr>
-				 	<small>Note the payload 'parameters' are defined byt the API</small>
+				 	<small>Note the payload 'parameters' are defined by the API</small>
 				</section>
 
 				<section>
@@ -208,7 +208,7 @@
 					which
 					has a <strong>human readable</strong> notation and can be easily
 					interpreted by computers.
-					<br> JSON data consists on pairs of <strong>keys</strong> and <strong>values</strong>
+					<br> JSON data consists of pairs of <strong>keys</strong> and <strong>values</strong>
 				</section>
 
 				<section data-markdown>
@@ -268,15 +268,15 @@
 
 			<section data-markdown>
 				```python
-				from Tweepy import OAuthHandler
+				import tweepy
 
 				consumer_key = 'xxx'
 				consumer_secret = 'xxx'
 				access_token = 'xxx'
 				access_token_secret = 'xxx'
 
-				auth = tweepy.OAuthHandler("consumer_key","consumer_secret")
-				auth.set_access_token ("access_token", "access_token_secret")
+				auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+				auth.set_access_token(access_token, access_token_secret)
 				twitter_api = tweepy.API(auth)
 
 				print('Logged in as {}'.format(twitter_api.me().name))
@@ -304,7 +304,7 @@
 			<section>
 				<h3>Other things to do</h3>
 				- Check someone else's timeline
-				- Collect tweets contatining certain <strong>keywords</strong>
+				- Collect tweets containing certain <strong>keywords</strong>
 				or <strong>hashtags</strong>
 				- Post a tweet using Python
 			</section>

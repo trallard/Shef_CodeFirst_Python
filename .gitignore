@@ -3,7 +3,9 @@
 .sass-cache/*
 .vscode
 .idea/*
-__pychache__
+__pycache__
 
 # Own HTML file for quickly seeing a slide quickly
 single.html
+
+config.*
