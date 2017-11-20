@@ -10,7 +10,7 @@ def hello():
 def gather_feedback():
     antidote = request.form["antidote"]
     
-    # How should you modify this to fix this corrupted app?
+    # How would you modify this to fix the corrupted app?
     return render_template("hello.html")
 
 # "debug=True" causes Flask to automatically refresh upon any changes you
