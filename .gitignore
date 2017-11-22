@@ -5,3 +5,5 @@ __pychache__
 
 # Own HTML file for quickly seeing a slide quickly
 single.html
+
+config.*
