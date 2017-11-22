@@ -1,6 +1,4 @@
-.DS_Store
-spotify_general.py
-.sass-cache/*
+.DS_Store.sass-cache/*
 .vscode
 .idea/*
 __pychache__
