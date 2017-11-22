@@ -2,11 +2,12 @@
 {% block title %} NASA API search {% endblock %}
 
 {% block content %}
-<div class="main" >
-  <div class='container' style = 'position: relative; top: 100px;'>
+<div class="section section-gray" >
+  <div class='container' style = 'position: relative; top: 70px;'>
     <div class="header text-center" >
       <h1 class="title">Search results for: <span class="text-primary">
       "{{query}}"</span></h1>
+      <br>
     </div>
     <div class="row">
       {% if search_type == ["artist"] %}
