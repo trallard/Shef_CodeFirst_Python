@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": -1.47,
+        "lat": 53.38
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 12.17,
+        "pressure": 1021,
+        "humidity": 82,
+        "temp_min": 11,
+        "temp_max": 13
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.7,
+        "deg": 280
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1510669200,
+    "sys": {
+        "type": 1,
+        "id": 5062,
+        "message": 0.0041,
+        "country": "GB",
+        "sunrise": 1510644632,
+        "sunset": 1510675780
+    },
+    "id": 2638077,
+    "name": "Sheffield",
+    "cod": 200
+}

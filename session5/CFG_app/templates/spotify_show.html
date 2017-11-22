@@ -1,0 +1,34 @@
+{% include "header.html" %}
+{% block title %} NASA API search {% endblock %}
+
+{% block content %}
+<div class="section section-gray" >
+  <div class='container' style = 'position: relative; top: 70px;'>
+    <div class="header text-center" >
+      <h1 class="title">Search results for: <span class="text-primary">
+      "{{query}}"</span></h1>
+      <br>
+    </div>
+    <div class="row">
+      {% if search_type == ["artist"] %}
+      {% include 'partials/artists.html' %}
+
+      {% elif search_type == ["album"] %}
+      {% include 'partials/albums.html' %}
+
+      {% elif search_type == ["playlist"] %}
+      {% include 'partials/playlists.html' %}
+
+      {% elif search_type == ["track"] %}
+      {% include 'partials/search_track.html' %}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+{% include "footer.html" %}

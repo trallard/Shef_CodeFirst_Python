@@ -1,0 +1,37 @@
+<div class="row">
+  {% for album in data %}
+  <!--If the search returned an image for the artist-->
+  {% if album.images %}
+  <div class="col-md-4 col-sm-4">
+    <div class="card card-profile">
+      <div class="card-image">
+         <a href="{{album.uri}}">
+             <img class="img" src="{{album.images[0].url}}" alt="{{album.name}}" />
+          </a>
+      </div>
+      <div class="card-title text-center text-primary">
+        {{album.name}}
+      </div>
+
+      <div class="card-content text-center">
+          <p class="'card-category"> {{album.artists[0].name}} </p>
+          <p class="card-description">
+          Type: {{album.album_type}}</p>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <!--If no images were returned for the artist-->
+  <div class="col-sm-4">
+    <div class="card">
+      <div class='card-body content-info'>
+        <h5>{{artist.name}}</h5>
+          <p class="'card-category"> {{album.artists | join(',')}} </p>
+          <p class="card-description">Genre: {{ album.genres | join(', ')}} |
+          Type: {{album.album_type}}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

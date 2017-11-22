@@ -1,0 +1,31 @@
+{% include "header.html" %}
+{% block title %} NASA API search {% endblock %}
+
+{% block content %}
+<div class="main" >
+  <div class='container' style = 'position: relative; top: 100px;'>
+    <div class="header text-center" >
+      <h1 class="title">Search results for: <span class="text-primary">
+      "{{date}}"</span></h1>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <img class="img" src="{{apod.url}}" alt="{{apod.title}}"
+          width="100%;" />
+          <br>
+          <div class="title text-primary text-center">
+						<h3>{{apod.title}} <br />
+						</h3>
+					</div>
+          <div class="col-md-12">
+            <p>{{apod.explanation}}</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

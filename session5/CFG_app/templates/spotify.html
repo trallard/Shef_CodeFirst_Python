@@ -1,0 +1,66 @@
+{% include "header.html" %}
+<div class="wrapper">
+
+<div class="container" style="top: 100px; position:relative;">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+			<div class="card card-signup">
+				<form class="form" method="post" action="/spotify_search">
+					<div class="header header-primary text-center">
+						<h4> Music it is then! </h4>
+					</div>
+
+					<br><br>
+					<div class="card-content">
+					<p> What are you looking for?</p>
+					<div class="togglebutton">
+						<label>
+							<input type="checkbox" checked="" name="type" value='artist'>
+							Artist
+						</label>
+					</div>
+
+					<div class="togglebutton">
+						<label>
+							<input type="checkbox" name="type" id='type' value='album'>
+							Album
+						</label>
+					</div>
+
+					<div class="togglebutton">
+						<label>
+							<input type="checkbox" name="type" value='playlist'>
+							Playlist
+						</label>
+					</div>
+
+						<div class="form-group label-floating">
+							<input type="text" name="query" id="query" class="form-control"
+							placeholder="Enter search term (e.g. FooFighters)">
+						</div>
+
+					</div>
+
+			<div class="footer text-center">
+				<button type="submit" class="btn btn-primary btn-round">Search</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+	<div class="alert alert-success" role="alert">
+	Login success!
+</div>
+</div>
+
+</div>
+</div>
+
+
+{% include "footer.html" %}
+<!-- Include any JavaScript here - best place to do so pages load faster. -->
+
+</div>
+</body>
+</html>

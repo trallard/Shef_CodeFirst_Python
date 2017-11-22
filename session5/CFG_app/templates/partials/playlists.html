@@ -1,0 +1,35 @@
+<div class="row">
+  {% for list in data %}
+  <!--If the search returned an image for the list-->
+  {% if list.images %}
+  <div class="col-md-4 col-sm-4">
+    <div class="card card-profile">
+      <div class="card-image">
+         <a href="{{list.uri}}">
+             <img class="img" src="{{list.images[0].url}}" alt="{{list.name}}" />
+          </a>
+      </div>
+      <div class="card-title text-center text-primary">
+        {{list.name}}
+      </div>
+
+      <div class="card-content text-center">
+          <p class="card-description">
+          Owner: {{list.owner.display_name}}</p>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <!--If no images were returned for the list-->
+  <div class="col-sm-4">
+    <div class="card">
+      <div class='card-body content-info'>
+        <h5>{{list.name}}</h5>
+        <p class="card-description">
+        Owner: {{list.owner.display_name}}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

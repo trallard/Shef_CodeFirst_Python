@@ -1,5 +1,6 @@
 
 \.DS_Store
+config.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -107,3 +108,8 @@ venv.bak/
 .mypy_cache/
 
 .vscode
+.idea/
+
+session5/CFG_app/config\.yml
+
+*.xml
