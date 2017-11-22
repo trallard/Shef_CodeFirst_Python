@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 from helpers.twitter import authenticate, collect_tweets, get_config
 from helpers.spotify import  authorize_spotify, spotify_search, get_auth
+from helpers.NASA import get_APOD
 
 import requests
 
@@ -80,6 +81,28 @@ def spotify_search_app():
     data = spotify_search(search_type, query, auth_header)
 
     return render_template('spotify_show.html', data = data, query = query, search_type = search_type)
+
+
+# -------------- Functions and decorators for NASA API queries --------------
+
+@app.route("/NASA")
+def NASA_handler():
+    """ This will only take you to the NASA search page"""
+
+    return render_template("NASA.html")
+
+
+@app.route("/NASA_search", methods = ['POST'])
+def NASA_search_app():
+    """When the search is submitted from the previous page,
+    this function passes the form data to our python scripts
+    and uses them to perform the query. It will then return the tweets
+    and display them in /tweets_show"""
+    date = request.form['date']
+    APOD = get_APOD(date)
+
+    return render_template('NASA_show.html', apod = APOD, date = date)
+
 
 # "debug=True" causes Flask to automatically refresh upon any changes you
 # make to this file.

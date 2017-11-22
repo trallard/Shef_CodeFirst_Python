@@ -1,0 +1,34 @@
+{% include "header.html" %}
+<div class="wrapper">
+
+<div class="container" style="top: 100px; position:relative;">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+			<div class="card card-signup">
+				<form class="form" method="post" action="/NASA_search">
+					<div class="header header-primary text-center">
+						<h4> NASA's picture of the day API</h4>
+					</div>
+
+					<div class="card-content">
+				<div class='form-group'>
+					<label class='label-control'>Choose a date</label>
+					<input class="form-control datepicker" type="text" value="2017-11-22",
+					name = "date" id="date"/>
+					<span class="material-input"></span>
+				</div>
+
+			</div>
+			<div class="footer text-center">
+				<button type="submit" class="btn btn-primary btn-round">Search</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+{% include "footer.html" %}
