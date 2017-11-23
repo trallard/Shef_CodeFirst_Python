@@ -15,8 +15,12 @@ to have information displaying correctly. -->
   <h6>I'm a sixth level (h6) header in a template.</h6>
   
   <!-- Include your fixes between here... -->
-  
-  <!-- ... and here!
+  <form action="/" method="post">
+    <label for="antidote">Antidote: </label>
+    <input type="checkbox" name="antidote" id="antidote">
+    <input type="submit" value="Send antidote data"/>
+  </form>
+  <!-- ... and here! -->
   
   <!-- Same reason as to why we need to include the header -->
   {% include "footer.html" %}

@@ -11,7 +11,7 @@ def gather_feedback():
     antidote = request.form["antidote"]
     
     # How would you modify this to fix the corrupted app?
-    return render_template("hello.html")
+    return render_template("hello.html", antidote=antidote)
 
 # "debug=True" causes Flask to automatically refresh upon any changes you
 # make to this file.
