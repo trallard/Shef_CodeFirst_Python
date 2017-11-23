@@ -6,7 +6,7 @@ Created on Sat Nov 11 17:30:02 2017
 """
 
 import tweepy
-from twitter_keys import *
+from twitter_keys import * # or just add your keys here
 import json
 
 
@@ -58,4 +58,3 @@ if __name__ == '__main__':
     collect_tweets('#ShefCodeFirst',  10)
 
     post_tweet()
-    
