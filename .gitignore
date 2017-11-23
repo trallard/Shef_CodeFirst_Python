@@ -1,4 +1,5 @@
-.DS_Store.sass-cache/*
+.DS_Store
+.sass-cache/*
 .vscode
 .idea/*
 __pychache__
