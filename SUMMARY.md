@@ -12,4 +12,4 @@
 * [Session 5](session-5.md)
 * [Appendix: terminal mini tutorial](terminal.md)
 * [Hacktoberfest](Hacktoberfest.md)
-
+* [Using Git with GitKraken](git-with-gitkraken.md)
