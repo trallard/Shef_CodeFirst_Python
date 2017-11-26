@@ -163,8 +163,8 @@ and the branches under "LOCAL" should be updated to look like this:
 ![branches side bar](assets/branches_side_gitkraken.png)
 
 Once you've committed your new features in your branch (in my example, a CSS stylesheet), before you push your update to
-GitHub, you may see a blue status bar asking you "What remote/branch should "styling" push to and pull from?".
-Simply use the default option and press "Sumbit" to complete the push.
+GitHub, you may see a blue status bar asking you **"What remote/branch should "styling" push to and pull from?"**.
+Simply use the default option and press "Submit" to complete the push.
 
 ### Creating a pull request
 The easiest way to create a pull request is to drag the branch you are on (the `styling` badge
@@ -187,7 +187,7 @@ a **merge conflict**.
 
 Luckily, GitKraken has a fairly simple editor to help you resolve merge conflicts, which looks like the following:
 
-![merge conflict editor](assets/merge_conflict_editor.png)
+![merge conflict editor](assets/merge_conflict_editor.PNG)
 
 To resolve the conflict, you can choose to include the changes from either A or B (or both!) and the resultant
 file will appear in the "Output" editor in the lower half of the screen. If you don't like the changes from either A or
