@@ -106,7 +106,7 @@ to the GitHub's copy.
 and on GitHub (under "REMOTE"). Any "pull requests" for this repository can also be seen here.
 - As this is a new repository, we have only one branch named "master", the default branch created whenever
 you make a new repository on GitHub.
-- A **remote** is what Git used to synchronise changes between the local and GitHub's copy of your repository.
+- A **remote** is what Git uses to synchronise changes between the local and GitHub's copy of your repository.
 You **push** updates to GitHub and **pull** in content from GitHub to update the local copy
 of your repository on your laptop.
 - A **branch** is a copy of the repository **up to the version** (number of commits) where it was created.
