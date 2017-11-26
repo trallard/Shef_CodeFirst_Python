@@ -87,17 +87,21 @@ def spotify_search_app():
 
 @app.route("/NASA")
 def NASA_handler():
-    """ This will only take you to the NASA search page"""
+    """ This will only take you to the NASA search page. This will be used to perform
+     get requests on the NASA picture of the day API, Thee user will need to
+    choose a date to find a picture. It seems only pictures from 1999 onwards
+    can be queried"""
 
     return render_template("NASA.html")
 
 
 @app.route("/NASA_search", methods = ['POST'])
 def NASA_search_app():
-    """When the search is submitted from the previous page,
-    this function passes the form data to our python scripts
-    and uses them to perform the query. It will then return the tweets
-    and display them in /tweets_show"""
+    """Since we are using the Picture of the Day API
+    (APOD) this function will query the API using the
+    provided date. Once the request is completed
+    the picture as well as the title and description
+    will be displayed in the next page"""
     date = request.form['date']
     APOD = get_APOD(date)
 
