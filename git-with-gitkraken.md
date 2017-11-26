@@ -6,9 +6,9 @@
   - [On GitHub](#creating-a-new-git-repository)
   - [Cloning it locally to laptop](#cloning-your-repository-to-your-laptop)
 - [Setting up the repository](#setting-up-the-repository)
-- Branches
-  - Pull requests
-- Merge conflicts
+- [Creating branches](#creating-a-new-branch)
+  - [Pull requests](#creating-a-pull-request)
+- [Merge conflicts](#resolving-merge-conflicts)
 
 ### A few words about organisation...
 In this guide, we will go through the basics of working with Git using GitKraken as introduced in class.
