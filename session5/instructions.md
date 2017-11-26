@@ -35,4 +35,17 @@ spotify:
 ```
 - Make sure to save your config file. Also super super important **make sure not to add this to GitHub**
 
-Once you have your credentials we are going to need one more step. Go to your Spotify developers account where you created your app and got your keys. Find the input labelled as **callback uri** and type in : `http://127.0.0.1/5000/callback/`. Make sure to save the changes. 
+Once you have your credentials we are going to need one more step. Go to your Spotify developers account where you created your app and got your keys. Find the input labelled as **callback uri** and type in : `http://127.0.0.1/5000/callback/`. Make sure to save the changes.
+
+## Running the app
+
+You should now be able to runt he app and query all the 3 queries. On your terminal (command line) make sure to navigate to the app directory. You can confirm this by typing `ls` in the directory and you should be able to see the `app.py` fil as well as the `helpers, static and templates` directories.
+
+Now you can do your usual `python app.py` open your web browser and navigate to `localhost:5000` and see the web app in action.
+
+
+## Additional stuff
+The three APIs have different levels of authentication:
+- The NASA API performs queries using a `DEMO_KEY` meaning that you are not logged in but you can still perform queries
+- The Twitter API will log you in using your credentials as we did in the class. Once you click on the Twitter icon it will redirect you to the query page and indicate who you are logged in as
+- The Spotify API follows a 5 step authentication method. So once you click on the icon you'll be prompted to the familiar Spotify grant access webpage.
