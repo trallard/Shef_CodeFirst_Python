@@ -10,6 +10,8 @@
 * [Session 3](session-3.md)
 * [Session 4](session-4.md)
 * [Session 5](session-5.md)
-* [Appendix: terminal mini tutorial](terminal.md)
+* [Appendix A: terminal mini tutorial](terminal.md)
 * [Hacktoberfest](Hacktoberfest.md)
-* [Using Git with GitKraken](git-with-gitkraken.md)
+* [Appendix B: Using Git with GitKraken](git-with-gitkraken.md)
+* [Appendix C: Running the provided web app in your computer](session5/instructions.md)
+
