@@ -43,6 +43,7 @@
 			#res code {background: transparent; color: #8E24AA;}
 			#res .hljs-number {color:rgb(143, 62, 165);}
 			#python {position: absolute;top:-15px;left:13.5%;transform:scale(0.85);}
+			.full-width pre {width:100%;}
 		</style>
 
 	</head>
@@ -179,8 +180,8 @@
 							flask app up and running.
 						</li>
 						<li class="fragment">
-							Since the sole purpose of computers on a cloud-based platform is to <strong>listen
-							out to user requests</strong>, it's on 24/7 unlike our laptops.
+							Since one of the main purposes of computers on a cloud-based platform is to <strong>listen
+							out to user requests</strong> at all times, it's on 24/7 unlike our laptops.
 						</li>
 						<li class="fragment">
 							Using Heroku also means that if our app becomes super popular, we can
@@ -200,6 +201,71 @@
 							Check out the step-by-step guide here
 						</a>
 					</p>
+				</section>
+
+				<section>
+					<h3>
+						<i class="fa fa-key" aria-hidden="true"></i>
+						More on API keys
+					</h3>
+					<p>
+						Recall from earlier (and last session) that API keys should be stored in a
+						<strong>separate config file</strong> that should never be committed to GitHub.
+					</p>
+					<p class="fragment">
+						But the only way to add
+						<strong>any files</strong> to our app on Heroku is by pushing them to GitHub...
+					</p>
+					<p class="fragment">
+						Although using a config file for API keys is normally the best practice, we'll have to forget it
+						<strong>due to the quirks</strong> of Heroku.
+					</p>
+				</section>
+
+				<section>
+					<p>Remember this minor modification we made earlier to our Flask code?</p>
+					<div class="full-width" data-markdown>
+						```python
+						if "PORT" in os.environ:
+							app.run(host="0.0.0.0", port=int(os.environ["PORT"]))
+						else:
+							app.run(debug=True)
+						```
+					</div>
+					<p class="fragment">
+						This gives us a hint on how we might store and access our API keys:
+						in <strong>config (environment) variables</strong>!</p>
+				</section>
+
+				<section>
+					<h3>Config (environment) variables</h3>
+					<p>
+						Instead of storing our API keys in a config file, Heroku lets us store our API keys in
+						<strong>config variables instead.</strong>
+					</p>
+					<p class="fragment">
+						The values of these config variables can be set in our app on the Heroku website under
+						<strong>Settings > Config Variables</strong>, then click the <strong>Reveal Config Vars</strong> button.
+					</p>
+				</section>
+
+				<section>
+					<img src="assets/heroku_settings.png" alt="Heroku settings">
+				</section>
+
+				<section>
+					<p>And here's how we'd access the values in our Python code:</p>
+					<div class="full-width" data-markdown>
+						```python
+						import os
+						import tweepy
+
+						consumer_key = os.environ["twitter_consumer_key"]
+						consumer_secret = os.environ["twitter_consumer_secret"]
+						auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+						...
+						```
+					</div>
 				</section>
 			</div>
 		</div>
