@@ -26,7 +26,6 @@ Without further ado, let's go through how you can deploy your first app to Herok
    flask
    requests
    tweepy
-   requests
    ```
    
    * In `app.py` (or whatever you named your main file containing the Flask code), add the following line to the top
