@@ -49,7 +49,7 @@
 					<i class="fa fa-twitter" aria-hidden="true">
 					</i> @mrdarrenv
 				 </a>
- 		 			</p>
+						</p>
 				</section>
 
 				<section>
@@ -162,7 +162,10 @@
 						```python
 						member = {"name": "Darren", "favourite_language": "Python"}
 						for key, value in member.items():
-							print(f"The member's {key.replace('_', ' ')} is {value}.")
+							# replaces underscores with spaces so it reads nicer
+							key = key.replace("_", " ")
+
+							print(f"The member's {key} is {value}.")
 						```
 					</div>
 					<p>
@@ -205,7 +208,14 @@
 
 				<section>
 					<h3>And now...</h3>
-					<p>Let's talk about <strong>Flask</strong>!</p>
+					<p>
+						Now that you know some Python, for the rest of the course,
+						we will take a look specific things we can do with it!
+					</p>
+					<p>
+						In particular, let's talk about how we can control the back-end
+						with <strong>Flask</strong>!
+					</p>
 				</section>
 
 				<section>
@@ -306,8 +316,8 @@
 							and responses we talked about earlier since <strong>it's quite complicated!</strong>
 						</li>
 						<li>
-							Re-using Flask's code deals with said complex tasks, allowing us to focus on the
-							application we want to build!
+							Re-using Flask's code allows us to jump straight into designing and building
+							our applications!
 						</li>
 					</ul>
 				</section>
@@ -317,19 +327,26 @@
 				</section>
 				
 				<section>
-					<p>
-						When we first start a Flask program, it starts up <strong>a server</strong> which we have
-						control over using Python. Users can then access our website in their browser!
-					</p>
+					<ul>
+						<li>
+							When we first start a Flask program, it starts up <strong>a server</strong> which we have
+							control over using Python.
+						</li>
+						<li class="fragment">
+							Users can then access our website in their browser!
+						</li>
+					</ul>
 				</section>
 				
 				<section>
-					<p>Whenever a user type in the URL to go on our website, it goes through the exact journey
-						shown on the diagram earlier... with one exception
-					</p>
-					<p class="fragment">
-						A diagram will hopefully clear this up...
-					</p>
+					<ul>
+						<li>Whenever a user type in the URL to go on our website, it goes through the exact journey
+							shown on the diagram earlier... with one exception
+						</li>
+						<li class="fragment">
+							A diagram will hopefully clear this up...
+						</li>
+					</ul>
 				</section>
 				
 				<section>
@@ -345,7 +362,7 @@
 					</p>
 					<p class="fragment">
 						This allows HTML to be generated <strong>dynamically <i class="fa fa-rocket" aria-hidden="true"></i></strong>
-						rather than having to write them all <strong>in full</strong> (by hand) in advance, which can get tedious quickly! 
+						rather than having to write them all <strong>in full</strong> (by hand) in advance (more details next session)! 
 					</p>
 				</section>
 
@@ -354,6 +371,33 @@
 						<i class="fa fa-cogs" aria-hidden="true"></i>
 						Hands on: our first Flask program
 					</h3>
+					<p>
+						Before we begin, make a <strong>new folder</strong> in a location that you can easily find.
+					</p>
+					<p>
+						This is important as we'll set up a new git repository together to make sure you have
+						the right folder structure that can be used for your competition entry.
+					</p>
+				</section>
+
+				<section>
+					Inside the new folder you've just made, and assuming you called it <strong>CFG_app</strong>,
+					create more folders and files in here until it structurally looks like this:
+					<code><pre>
+~/CFG_app       # or whatever you named your folder
+		|-- /templates
+				|--- index.html
+		|-- /static
+		|-- app.py      
+					</pre></code>
+					<p><strong><i class="fa fa-exclamation-triangle"></i></strong>
+						It's <strong>very important</strong> you name the folders <strong>exactly</strong>
+						the way they are shown in this diagram!
+					</p>
+				</section>
+
+				<section>
+					<!-- TO-DO: Some more notes on the hands-on so the girls can catch up more easily -->
 				</section>
 				
 				<section>

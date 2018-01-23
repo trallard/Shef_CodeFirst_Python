@@ -33,6 +33,7 @@
 			.gist {transform: scale(0.9) translateY(-8%);}
 			#req-url {position: absolute;top: 10px;left: 40%;font-size: 20px;color: #8E24AA;}
 			#res {position: absolute;color: #8E24AA;font-size: 18px;bottom: 38%;left: 42.5%;}
+			#static-problem-list li {font-size:90%;}
 		</style>
 	</head>
 	<body>
@@ -49,7 +50,7 @@
 					<i class="fa fa-twitter" aria-hidden="true">
 					</i> @mrdarrenv
 				 </a>
- 		 			</p>
+						</p>
 				</section>
 
 				<section>
@@ -80,10 +81,10 @@
 					</p>
 					<p class="fragment">
 						<i class="fa fa-times" aria-hidden="true" style="color:#ef3a34;"></i>
-						1. Be careful not to name your Python file <strong>flask.py</strong>, or
-						for future references, any name that's identical to the library you are
-						going to import, as your copy of the code will <em><strong>hide</strong></em>
-						the actual flask library you want to import!
+						1. <strong>Don't</strong> name your Python file <strong>flask.py</strong>, or
+						any name that's identical to the library you are going to import, as your copy
+						of the code will <em><strong>hide</strong></em> the actual flask library you
+						want to import!
 					</p>
 				</section>
 
@@ -92,7 +93,7 @@
 						<i class="fa fa-times" aria-hidden="true" style="color:#ef3a34;"></i>
 						2. The <strong><em>app.run(debug=True)</em></strong> line is
 						<strong>wrongly indented</strong>: unlike other languages which
-						mark a block of code with some form of brackets, Python relies on the
+						mark a block of code with brackets, Python relies on the
 						<strong>indentations</strong> to do the same job, so pay attention to
 						them in your code!
 					</p>
@@ -142,26 +143,31 @@
 					<h3><i class="fa fa-reply" aria-hidden="true"></i>
 						Recap: Flask <i class="fa fa-flask" aria-hidden="true"></i>
 					</h3>
+					<ul>
+						<li>
+							A<strong>framework</strong> which handles the complexity of
+							<strong>requests</strong> & <strong>responses</strong>
+						</li>
+						<li class="fragment">
+							This allows us to focus on the more <strong>fun stuff</strong> like
+							designing and writing our application.
+						</li>
+					</ul>
 				</section>
-
+				
 				<section>
-					<p>
-						<strong>A framework</strong> containing code written by somebody else
-						which deals with the complexity of handling <strong>requests</strong> &
-						<strong>responses</strong>, so we can focus on writing the interesting part of
-						our application.
-					</p>
+					<ul>
+						<li>
+							Recall from the last session that Flask uses templates, and they are run
+							through a template engine to generate the full HTML page <strong>dynamically</strong>.
+						</li>
+						<li class="fragment">
+							The full HTML page are then returned as a response back to our browser.
+						</li>
+					</ul>
 				</section>
-
-				<section>
-					<p>
-						Before returning the HTML, Flask runs it through a
-						<strong>template engine</strong>
-						which generates most of the HTML
-						<strong>dynamically</strong> before returning it as a response to our browser.
-					</p>
-				</section>
-
+				
+				<!-- TO-DO: Move the routing section to session 3 in between that session's hands-on part -->
 				<section>
 					<h3>
 						<i class="fa fa-reply" aria-hidden="true"></i>
@@ -202,11 +208,16 @@
 					<h3><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
 						What is a template engine? Why do we use it?
 					</h3>
-					<p>
-						To understand why we write HTML templates and use a
-						template engine to process them, we need to take a quick look
-						at how web pages were made <strong>before template engines existed</strong>.
-					</p>
+					<ul>
+						<li>
+							A template engine is a tool which allows us to write our HTML pages in
+							smaller, re-usable parts called <strong>templates</strong>.
+						</li>
+						<li class="fragment">
+							To understand why we use a template engine, we need to take a quick look
+							at how web pages were made <strong>before template engines existed</strong>.
+						</li>
+					</ul>
 				</section>
 
 				<section>
@@ -218,56 +229,41 @@
 					<p class="fragment">
 						This is essentially what you did if you completed the Beginners course!
 					</p>
-					<p class="fragment">Revisiting a familiar diagram might make this clearer...</p>
-				</section>
-
-				<section>
-					<figure style="position: relative;">
-						<img src="assets/req_res_cycle.png" alt="The Request-Response Cycle">
-						<strong>
-							<p id="req-url">https://pawlean.com</p>
-						</strong>
-						<div id="res">
-							<strong>
-								<p style="margin:0;">&lt;!DOCTYPE html&gt;</p>
-							</strong>
-							<strong>
-								<p style="margin:0;">&lt;html&gt;...&lt;/html&gt;</p>
-							</strong>
-						</div>
-					</figure>
 				</section>
 
 				<section>
 					<h3>
 						Problems with static HTML <span style="margin-left:10px;">pages</span>...
 					</h3>
-					<p>
-						It gets <strong>tedious</strong> as we'd have to write the HTML for
-						each page we intend our users to visit <strong>from scratch</strong>
-						(or lots of copy and pasting of common parts), even though there are only
-						small differences between pages. 
-					</p>
-					<p class="fragment">Repetition of code is (generally) a bad idea.</p>
+					<ul>
+						<li>
+							Re-writing (or lots of copy and pasting) common HTML parts each time we make
+							a new page gets <strong>tedious</strong>
+						</li>
+						<li class="fragment">Repetition of code is (generally) a bad idea.</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>
 						Problems with static HTML <span style="margin-left:10px;">pages</span>... (cont.)
 					</h3>
-					<p>
-						Writing the HTML ahead of the user's visit for <strong>dynamic pages</strong>
-						becomes tricky when we only know how to lay out & style the page, but we
-						<strong>don't know what the content looks like</strong> until they visit the page.
-					</p>
+					<ul id="static-problem-list">
+						<li>
+							Static pages can't be adapted (easily) to cases where the content is different
+							depending on, say, the user visiting the page.
+						</li>
+						<li class="fragment">
+							This is what we'd referred to as <strong>dynamic pages</strong>, where we only know
+							how to lay out & style the page but not all contents up front.
+						</li>
+						<li class="fragment">
+							Facebook and Twitter are great examples: the feed is different for everyone visiting, as it
+							depends on <strong>many variable factors</strong> such as who they follow/are friends with etc.
+						</li>
+					</ul>
 				</section>
 				
-				<section>
-					<p>
-						Facebook and Twitter are great examples: the feed is different for everyone visiting,
-						as it <strong>depends on many variable factors</strong> such as who they follow/are friends with.
-					</p>
-				</section>
 				<section>
 					<h3>Solution: write and use HTML <span style="margin-left:10px;">templates!</span></h3>
 				</section>
