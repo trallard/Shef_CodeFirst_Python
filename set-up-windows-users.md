@@ -33,7 +33,7 @@ Python does not come pre-installed with Windows
 2. Make sure you choose a '3.x' version
 3. Once this has been downloaded click on the **.exe** file and follow the installer instructions
 
-*Make sure you check the box that says add Python to the PATH**, otherwise you won't be able to run python programs properly!
+**Make sure you check the box that says add Python to the PATH**, otherwise you won't be able to run python programs properly!
 
 ### Install pip
 
