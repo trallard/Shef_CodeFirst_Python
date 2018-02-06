@@ -33,6 +33,8 @@ Python does not come pre-installed with Windows
 2. Make sure you choose a '3.x' version
 3. Once this has been downloaded click on the **.exe** file and follow the installer instructions
 
+*Make sure you check the box that says add Python to the PATH**, otherwise you won't be able to run python programs properly!
+
 ### Install pip
 
 **pip** is a package management system for installing and managing software packages (libraries) written in Python. We'll be using it to install things like Flask and any other libraries we want to make use of during this course.
@@ -43,7 +45,9 @@ A library is a collection of pre-written code we want to re-use. As an example, 
 
 `pip –V`
 
-you should see a legend stating the version of pip you have installed and the location of this package. If you do not have pip installed go to [https://pip.pypa.io/en/stable/installing/ - do-i-need-to-install-pip](https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip) and download **get-pip.py**
+you should see a legend stating the version of pip you have installed and the location of this package. You're good to go now 🤩!
+
+If you do not have pip installed go to [https://pip.pypa.io/en/stable/installing/ - do-i-need-to-install-pip](https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip) and download **get-pip.py**
 
 Download  [get-pip.py](https://bootstrap.pypa.io/get-pip.py), being careful to save it as a .py file rather than .txt. Then, run it from the command prompt:
 

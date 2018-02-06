@@ -1,4 +1,4 @@
-# Code First Girls Advanced Python Course 2017
+# Code First Girls Advanced Python Course 2018
 
 # Course Summary
 
